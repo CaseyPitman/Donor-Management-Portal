@@ -1,1 +1,121 @@
-<mxfile host="app.diagrams.net" modified="2020-12-23T17:59:47.690Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" version="14.0.4" etag="nVS_FhhM3IebkCTceeou" type="github"><diagram id="11RlurzQhzoUebMFB0YL">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-12-23T18:21:50.808Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="08uvXDrcSSNoMGBjBKgX" version="14.0.4" type="github" pages="7">
+  <diagram id="11RlurzQhzoUebMFB0YL" name="Intro">
+    <mxGraphModel dx="1617" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0QXbPmVa6hBXSN8NAZim-1" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="0QXbPmVa6hBXSN8NAZim-2" value="Name" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="0QXbPmVa6hBXSN8NAZim-1">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="0QXbPmVa6hBXSN8NAZim-3" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="0QXbPmVa6hBXSN8NAZim-1">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="eNcSXCgCScnLrWwxI5PJ" name="Login page">
+    <mxGraphModel dx="1501" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="hCrZSSwuMSFBlCKorMi4-0" />
+        <mxCell id="hCrZSSwuMSFBlCKorMi4-1" parent="hCrZSSwuMSFBlCKorMi4-0" />
+        <mxCell id="hCrZSSwuMSFBlCKorMi4-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="hCrZSSwuMSFBlCKorMi4-1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="hCrZSSwuMSFBlCKorMi4-3" value="Login" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="hCrZSSwuMSFBlCKorMi4-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="hCrZSSwuMSFBlCKorMi4-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="hCrZSSwuMSFBlCKorMi4-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="kQh_vUFwbTeBFC4TUwWA" name="DonorList">
+    <mxGraphModel dx="1051" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="xoh6RNcC_CODg-02hu7a-0" />
+        <mxCell id="xoh6RNcC_CODg-02hu7a-1" parent="xoh6RNcC_CODg-02hu7a-0" />
+        <mxCell id="xoh6RNcC_CODg-02hu7a-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="xoh6RNcC_CODg-02hu7a-1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="xoh6RNcC_CODg-02hu7a-3" value="Donors" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="xoh6RNcC_CODg-02hu7a-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xoh6RNcC_CODg-02hu7a-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="xoh6RNcC_CODg-02hu7a-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="yd9WDU15sgLTnPXRVf8Q" name="ViewDonor">
+    <mxGraphModel dx="1051" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="-qfiXtJK9LNl96hq0cOu-0" />
+        <mxCell id="-qfiXtJK9LNl96hq0cOu-1" parent="-qfiXtJK9LNl96hq0cOu-0" />
+        <mxCell id="-qfiXtJK9LNl96hq0cOu-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="-qfiXtJK9LNl96hq0cOu-1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="-qfiXtJK9LNl96hq0cOu-3" value="Name" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="-qfiXtJK9LNl96hq0cOu-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-qfiXtJK9LNl96hq0cOu-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="-qfiXtJK9LNl96hq0cOu-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="lKwjFx7wIHndI1xSLc1X" name="EditDonor">
+    <mxGraphModel dx="1051" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="8EEcXy7yCxZbe1MKKIte-0" />
+        <mxCell id="8EEcXy7yCxZbe1MKKIte-1" parent="8EEcXy7yCxZbe1MKKIte-0" />
+        <mxCell id="8EEcXy7yCxZbe1MKKIte-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="8EEcXy7yCxZbe1MKKIte-3" value="Name" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8EEcXy7yCxZbe1MKKIte-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Lx9nnCrqYa6KnrTCO0aV" name="CreateDonor">
+    <mxGraphModel dx="1051" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="mkixJI_j57sLKI0pymia-0" />
+        <mxCell id="mkixJI_j57sLKI0pymia-1" parent="mkixJI_j57sLKI0pymia-0" />
+        <mxCell id="mkixJI_j57sLKI0pymia-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="mkixJI_j57sLKI0pymia-1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="mkixJI_j57sLKI0pymia-3" value="Name" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="mkixJI_j57sLKI0pymia-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="mkixJI_j57sLKI0pymia-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="mkixJI_j57sLKI0pymia-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="NndGDrXR0StpkDRtpBjm" name="DeleteDonor">
+    <mxGraphModel dx="1051" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="oqI4mUWNoj37LKa7Bf2o-0" />
+        <mxCell id="oqI4mUWNoj37LKa7Bf2o-1" parent="oqI4mUWNoj37LKa7Bf2o-0" />
+        <mxCell id="oqI4mUWNoj37LKa7Bf2o-2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-1">
+          <mxGeometry x="50" y="40" width="1200" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="oqI4mUWNoj37LKa7Bf2o-3" value="Name" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+          <mxGeometry x="60" y="12" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="oqI4mUWNoj37LKa7Bf2o-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+          <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
