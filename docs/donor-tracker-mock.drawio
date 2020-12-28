@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-28T02:50:46.212Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="w2FKsLKWoYQHpAle_2yB" version="14.1.2" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2020-12-28T02:55:37.564Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="n-Pt6RCWgHvvQUrdRG8Z" version="14.1.2" type="github" pages="7">
   <diagram id="11RlurzQhzoUebMFB0YL" name="Intro">
     <mxGraphModel dx="2403" dy="2100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -28,17 +28,11 @@
         <mxCell id="i14s7asJomfsqrZps5iT-15" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="0QXbPmVa6hBXSN8NAZim-1" vertex="1">
           <mxGeometry x="25.8" y="119.8" width="30.2" height="30.2" as="geometry" />
         </mxCell>
-        <mxCell id="i14s7asJomfsqrZps5iT-23" value="" style="group" parent="0QXbPmVa6hBXSN8NAZim-1" vertex="1" connectable="0">
-          <mxGeometry x="1069" y="114.9" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="i14s7asJomfsqrZps5iT-22" value="Sign In" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" parent="i14s7asJomfsqrZps5iT-23" vertex="1">
-          <mxGeometry width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="i14s7asJomfsqrZps5iT-21" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" parent="i14s7asJomfsqrZps5iT-23" vertex="1">
-          <mxGeometry x="9" y="5" width="20" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="2RklkywdM4n0sd5ncvwx-1" value="&lt;h1 style=&quot;font-size: 30px&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 30px&quot; face=&quot;Georgia&quot;&gt;The more that you read, the more things you will know. The more that you learn, the more places you’ll go.&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 30px&quot;&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 30px&quot; face=&quot;Georgia&quot;&gt;&lt;br&gt;&lt;div style=&quot;text-align: right&quot;&gt;&lt;span&gt;—Dr. Seuss&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="0QXbPmVa6hBXSN8NAZim-1" vertex="1">
           <mxGeometry x="226" y="770" width="752" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e5Wrti_kPDGys5BWhCfG-1" value="Sign In" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#0085FC;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;" vertex="1" parent="0QXbPmVa6hBXSN8NAZim-1">
+          <mxGeometry x="1107" y="115" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -71,15 +65,6 @@
         </mxCell>
         <mxCell id="uvib_oJJTMdTMpAqqTXs-7" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="uvib_oJJTMdTMpAqqTXs-0" vertex="1">
           <mxGeometry x="24.8" y="119.8" width="30.2" height="30.2" as="geometry" />
-        </mxCell>
-        <mxCell id="uvib_oJJTMdTMpAqqTXs-8" value="" style="group" parent="uvib_oJJTMdTMpAqqTXs-0" vertex="1" connectable="0">
-          <mxGeometry x="1069" y="114.9" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="uvib_oJJTMdTMpAqqTXs-9" value="Sign In" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" parent="uvib_oJJTMdTMpAqqTXs-8" vertex="1">
-          <mxGeometry width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="uvib_oJJTMdTMpAqqTXs-10" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" parent="uvib_oJJTMdTMpAqqTXs-8" vertex="1">
-          <mxGeometry x="9" y="5" width="20" height="30" as="geometry" />
         </mxCell>
         <mxCell id="g9se3ZAYeLQbfn3NCMed-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fillColor=#2c2c2c;opacity=80;" parent="uvib_oJJTMdTMpAqqTXs-0" vertex="1">
           <mxGeometry y="160" width="1250" height="860" as="geometry" />
@@ -119,11 +104,8 @@
         <mxCell id="T0CEUP_DVVjIpFyBPUZ7-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="T0CEUP_DVVjIpFyBPUZ7-6" vertex="1">
           <mxGeometry x="25.80000000000001" y="9.799999999999997" width="30.2" height="30.2" as="geometry" />
         </mxCell>
-        <mxCell id="T0CEUP_DVVjIpFyBPUZ7-4" value="Log Out" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" parent="T0CEUP_DVVjIpFyBPUZ7-6" vertex="1">
-          <mxGeometry x="1069" y="4.900000000000006" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="T0CEUP_DVVjIpFyBPUZ7-5" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" parent="T0CEUP_DVVjIpFyBPUZ7-6" vertex="1">
-          <mxGeometry x="1078" y="9.900000000000006" width="20" height="30" as="geometry" />
+        <mxCell id="mjKU7rrX_XkW4ckD8BnH-0" value="Sign Out" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#343A40;fontColor=#ffffff;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;" vertex="1" parent="T0CEUP_DVVjIpFyBPUZ7-6">
+          <mxGeometry x="1090" y="4.900000000000006" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="S6tgKm7_VAGLzSL1uqmA-152" value="&lt;font color=&quot;#c9c9c9&quot;&gt;Search Donors&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeWidth=1;fontSize=16;fontColor=#FF8000;align=center;fillColor=none;strokeColor=#2c2c2c;shadow=0;" vertex="1" parent="xoh6RNcC_CODg-02hu7a-2">
           <mxGeometry x="980" y="225" width="200" height="30" as="geometry" />
@@ -423,12 +405,6 @@
         <mxCell id="3TfxJTbRsjkTT1O-LdaE-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="mkixJI_j57sLKI0pymia-2" vertex="1">
           <mxGeometry x="25.80000000000001" y="119.80000000000001" width="30.2" height="30.2" as="geometry" />
         </mxCell>
-        <mxCell id="3TfxJTbRsjkTT1O-LdaE-4" value="Log Out" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" parent="mkixJI_j57sLKI0pymia-2" vertex="1">
-          <mxGeometry x="1069" y="114.9" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="3TfxJTbRsjkTT1O-LdaE-5" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" parent="mkixJI_j57sLKI0pymia-2" vertex="1">
-          <mxGeometry x="1078" y="119.9" width="20" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="AmaPLXdWyoqFq36pelWn-104" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=0;strokeColor=#2c2c2c;strokeWidth=1;fillColor=none;fontSize=16;align=left;fontColor=#2C2C2C;glass=0;" vertex="1" parent="mkixJI_j57sLKI0pymia-2">
           <mxGeometry x="630" y="480" width="470" height="130" as="geometry" />
         </mxCell>
@@ -693,6 +669,9 @@
         <mxCell id="C132SLcpKMyDcXFxIFNi-0" value="&lt;font color=&quot;#2c2c2c&quot;&gt;Donation Date&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;labelBackgroundColor=none;sketch=0;fontSize=16;fontColor=#FF8000;" vertex="1" parent="C132SLcpKMyDcXFxIFNi-3">
           <mxGeometry x="260" y="50" width="160" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="3JwTzH2Lt3ZWeu3N4jPv-0" value="Sign Out" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#343A40;fontColor=#ffffff;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;" vertex="1" parent="mkixJI_j57sLKI0pymia-2">
+          <mxGeometry x="1120" y="115" width="90" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -722,17 +701,14 @@
         <mxCell id="GKnTY8rnSybK5QBbzsAb-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="-qfiXtJK9LNl96hq0cOu-2" vertex="1">
           <mxGeometry x="25.80000000000001" y="119.80000000000001" width="30.2" height="30.2" as="geometry" />
         </mxCell>
-        <mxCell id="GKnTY8rnSybK5QBbzsAb-4" value="Log Out" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" parent="-qfiXtJK9LNl96hq0cOu-2" vertex="1">
-          <mxGeometry x="1069" y="114.9" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="GKnTY8rnSybK5QBbzsAb-5" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" parent="-qfiXtJK9LNl96hq0cOu-2" vertex="1">
-          <mxGeometry x="1078" y="119.9" width="20" height="30" as="geometry" />
+        <mxCell id="KQoo_PK6zvcUPmjlR_yl-0" value="Sign Out" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#343A40;fontColor=#ffffff;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;" vertex="1" parent="-qfiXtJK9LNl96hq0cOu-2">
+          <mxGeometry x="1110" y="114.9" width="90" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="lKwjFx7wIHndI1xSLc1X" name="EditDonor">
-    <mxGraphModel dx="1553" dy="958" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="932" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="8EEcXy7yCxZbe1MKKIte-0" />
         <mxCell id="8EEcXy7yCxZbe1MKKIte-1" parent="8EEcXy7yCxZbe1MKKIte-0" />
@@ -745,29 +721,26 @@
         <mxCell id="8EEcXy7yCxZbe1MKKIte-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" parent="8EEcXy7yCxZbe1MKKIte-2" vertex="1">
           <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;gradientDirection=north;strokeColor=#C73500;fontColor=#ffffff;fillColor=#fa6800;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
+        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;gradientDirection=north;strokeColor=#C73500;fontColor=#ffffff;fillColor=#fa6800;" parent="8EEcXy7yCxZbe1MKKIte-2" vertex="1">
           <mxGeometry y="110" width="1250" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-1" value="&lt;h2&gt;&lt;font size=&quot;1&quot; color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;font-size: 24px ; font-weight: normal&quot;&gt;Shermer Literacy Council Donor Management Portal&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
+        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-1" value="&lt;h2&gt;&lt;font size=&quot;1&quot; color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;font-size: 24px ; font-weight: normal&quot;&gt;Shermer Literacy Council Donor Management Portal&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" parent="8EEcXy7yCxZbe1MKKIte-2" vertex="1">
           <mxGeometry x="70" y="125" width="730" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=#ffffff;fontSize=17;align=left;strokeColor=#36393d;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
+        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=#ffffff;fontSize=17;align=left;strokeColor=#36393d;" parent="8EEcXy7yCxZbe1MKKIte-2" vertex="1">
           <mxGeometry x="20" y="115" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
+        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="8EEcXy7yCxZbe1MKKIte-2" vertex="1">
           <mxGeometry x="25.80000000000001" y="119.80000000000001" width="30.2" height="30.2" as="geometry" />
         </mxCell>
-        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-4" value="Log Out" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
-          <mxGeometry x="1069" y="114.9" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="4zXn7M1ZD7DJxwGu6Zlc-5" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-2">
-          <mxGeometry x="1078" y="119.9" width="20" height="30" as="geometry" />
+        <mxCell id="T8yuiSOLBNuERt4aMoTH-0" value="Sign Out" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#343A40;fontColor=#ffffff;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;" vertex="1" parent="8EEcXy7yCxZbe1MKKIte-1">
+          <mxGeometry x="1150" y="155" width="90" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="NndGDrXR0StpkDRtpBjm" name="DeleteDonor">
-    <mxGraphModel dx="1331" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="932" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="oqI4mUWNoj37LKa7Bf2o-0" />
         <mxCell id="oqI4mUWNoj37LKa7Bf2o-1" parent="oqI4mUWNoj37LKa7Bf2o-0" />
@@ -780,23 +753,20 @@
         <mxCell id="oqI4mUWNoj37LKa7Bf2o-4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" parent="oqI4mUWNoj37LKa7Bf2o-2" vertex="1">
           <mxGeometry x="130" y="60" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;gradientDirection=north;strokeColor=#C73500;fontColor=#ffffff;fillColor=#fa6800;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;gradientDirection=north;strokeColor=#C73500;fontColor=#ffffff;fillColor=#fa6800;" parent="oqI4mUWNoj37LKa7Bf2o-2" vertex="1">
           <mxGeometry y="110" width="1250" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-1" value="&lt;h2&gt;&lt;font size=&quot;1&quot; color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;font-size: 24px ; font-weight: normal&quot;&gt;Shermer Literacy Council Donor Management Portal&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-1" value="&lt;h2&gt;&lt;font size=&quot;1&quot; color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;font-size: 24px ; font-weight: normal&quot;&gt;Shermer Literacy Council Donor Management Portal&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" parent="oqI4mUWNoj37LKa7Bf2o-2" vertex="1">
           <mxGeometry x="70" y="125" width="730" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=#ffffff;fontSize=17;align=left;strokeColor=#36393d;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=#ffffff;fontSize=17;align=left;strokeColor=#36393d;" parent="oqI4mUWNoj37LKa7Bf2o-2" vertex="1">
           <mxGeometry x="20" y="115" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-52-128.png;fillColor=#FFFFFF;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;" parent="oqI4mUWNoj37LKa7Bf2o-2" vertex="1">
           <mxGeometry x="25.80000000000001" y="119.80000000000001" width="30.2" height="30.2" as="geometry" />
         </mxCell>
-        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-4" value="Log Out" style="shape=delay;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fillColor=#ffffff;gradientColor=none;fontSize=17;align=center;fontColor=#2C2C2C;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
-          <mxGeometry x="1069" y="114.9" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="qrvmDuBz0Fh1yzTZbYH3-5" value="" style="shape=actor;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;strokeColor=#000000;gradientColor=none;fontSize=17;fontColor=#FFFFFF;align=left;fillColor=#2C2C2C;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
-          <mxGeometry x="1078" y="119.9" width="20" height="30" as="geometry" />
+        <mxCell id="lyS321DQTV6lYiIdu3_h-1" value="Sign Out" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#343A40;fontColor=#ffffff;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;rounded=0;glass=0;labelBackgroundColor=none;sketch=0;" vertex="1" parent="oqI4mUWNoj37LKa7Bf2o-2">
+          <mxGeometry x="1100" y="115" width="90" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
