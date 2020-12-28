@@ -6,7 +6,7 @@ soliciation of future donations.
 
 /* 
 "No one has ever become poor by giving."
-                            -Anne Frank
+-Anne Frank
 */
 
 import React from "react";
