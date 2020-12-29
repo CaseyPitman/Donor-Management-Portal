@@ -16,17 +16,27 @@ This file contains custom CSS for the header component.
   align-items: center;
   max-width: 1200px;
   margin: auto;
-  padding-left:10px;
+  padding-left: 10px;
   padding-right: 10px;
 }
 
-.logo {
+.logo-container {
   background-color: white;
   border: 1px solid rgb(44, 44, 44);
   border-radius: 50%;
-  color: rgb(44, 44, 44);
-  margin-right: 10px;
-  padding: 5px;
+  height: 50px;
+  width:50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.logo {
+  height: 35px;
+
 }
 
 .header-title {

@@ -8,6 +8,10 @@ import React from "react";
 //Components
 import Button from "./Button";
 
+// Assets
+
+import logo from "../images/logo.svg";
+
 // Styles
 import "../css/header.css";
 
@@ -19,11 +23,17 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='header-content'>
+      
+        <div className='logo-container'>
+          <img src={logo} className='logo' />
+        </div>
+
         <h1 className='header-title'>
-          <i className='fas fa-book-reader logo'></i>
+          {/* <i className='fas fa-book-reader logo'></i> */}
           Krakoa Literacy Council
           <br></br>Donor Management Portal
         </h1>
+        
         <Button
           btnColor='blue-button'
           btnSize='small-button'
