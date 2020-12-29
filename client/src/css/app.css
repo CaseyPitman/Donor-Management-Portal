@@ -9,3 +9,7 @@ This file contains global custom CSS for the Donor Managemant Portal
   margin: 0px;
   padding: 0px;
 }
+
+html {
+  font-family: 'Helvetica', sans-serif;
+}

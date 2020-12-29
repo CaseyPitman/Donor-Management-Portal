@@ -20,7 +20,7 @@ const Header = () => {
     <div className='header'>
       <div className='header-content'>
         <h1 className='header-title'>
-          <i class='fas fa-book-reader logo'></i>
+          <i className='fas fa-book-reader logo'></i>
           Krakoa Literacy Council Donor Management Portal
         </h1>
         <Button

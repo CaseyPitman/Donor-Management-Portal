@@ -4,8 +4,9 @@ This file contains custom CSS for the header component.
 
 .header {
   background-color: rgb(250, 104, 0);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  height: 60px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .header-content {
@@ -18,11 +19,14 @@ This file contains custom CSS for the header component.
 
 .logo {
   background-color: white;
+  border: 1px solid rgb(44, 44, 44);
   border-radius: 50%;
+  color: rgb(44, 44, 44);
   margin-right: 10px;
   padding: 5px;
 }
 
 .header-title {
+  color: white;
   font-size: 30px;
 }
