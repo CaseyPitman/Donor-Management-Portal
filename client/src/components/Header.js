@@ -29,10 +29,11 @@ const Header = () => {
           </div>
 
           <h1 className='header-title'>
-            {/* <i className='fas fa-book-reader logo'></i> */}
             Krakoa Literacy Council
             <br></br>
-            <span className = 'header-title-secondary'>Donor Management Portal</span>
+            <span className='header-title-secondary'>
+              Donor Management Portal
+            </span>
           </h1>
         </div>
 

@@ -4,34 +4,69 @@ a splash image and quote about reading.
 */
 
 .home {
-  background-image:url('../images/child-reading.jpg') ;
+  background-image: url("../images/child-reading.jpg");
   height: 100vh;
-  display:flex;
-  justify-content:start;
+  display: flex;
+  justify-content: start;
   align-content: center;
 }
 
 .quote-container {
   align-self: center;
-   line-height: 1.5;
-   margin-left: 5%;
-   width:50%;
+  line-height: 1.5;
+  margin-left: 5%;
+  width: auto;
 }
 
 .quote {
-  color:white;
+  color: white;
   font-size: calc(12px + 2vw);
   font-weight: 300;
 }
 
 .quotation-mark {
-  color:#03A9F4;
+  color: #03a9f4;
 }
 
 .quote-attribution {
-  color:white;
+  color: white;
   font-size: calc(12px + 1.75vw);
   font-weight: 400;
-  margin-top:20px;
-  text-align:center;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Tablet adjustments for Home view */
+
+@media only screen and (max-width: 1024px) {
+  .home {
+    background-position: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .quote-container {
+    align-self: flex-end;
+    margin: 0 auto 15%;
+  }
+
+  .quote {
+    text-align: justify;
+  }
+}
+
+
+/* Tablet adjustments for landscape view */
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .quote-container {
+      align-self: flex-end;
+      margin: 0 auto 8%;
+    }
 }
