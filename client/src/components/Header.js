@@ -12,11 +12,15 @@ import { BookHalf } from "react-bootstrap-icons";
 import Button from "./Button";
 
 const Header = () => {
+  const handleLogin = () => {
+    console.log("login button has been clicked.");
+  };
+
   return (
-    <div>
+    <div className='header'>
       <h1>Header</h1>
       <BookHalf />
-      <Button btnStyle = 'primary'/>
+      <Button btnStyle='primary' btnSize={"sm"} onClick={handleLogin} />
     </div>
   );
 };
