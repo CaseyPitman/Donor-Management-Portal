@@ -1,3 +1,40 @@
 /* 
 This file contains styles for the Button component
  */
+
+/* All buttons */
+.button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: 30px;
+}
+
+/* Button sizes */
+
+.large-button {
+}
+
+.medium-button {
+}
+
+.small-button {
+  width: 60px;
+}
+
+/* Button colors */
+
+.blue-button {
+
+}
+
+.red-button {
+}
+
+.green-button {
+}
+
+.yellow-button {
+}
+
+.dark-button {
+}

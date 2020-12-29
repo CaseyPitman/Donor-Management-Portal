@@ -1,3 +1,11 @@
 /* 
 This file contains global custom CSS for the Donor Managemant Portal
 */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}

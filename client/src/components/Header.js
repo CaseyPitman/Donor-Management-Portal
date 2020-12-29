@@ -5,9 +5,6 @@ The login button will dynamically render based on user login status.
 
 import React from "react";
 
-//Assets
-import { BookHalf } from "react-bootstrap-icons";
-
 //Components
 import Button from "./Button";
 
@@ -27,8 +24,8 @@ const Header = () => {
           Krakoa Literacy Council Donor Management Portal
         </h1>
         <Button
-          btnStyle='primary'
-          btnSize={"sm"}
+          btnColor='blue-button'
+          btnSize='small-button'
           btnText='Sign In'
           onClick={handleLogin}
         />

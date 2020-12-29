@@ -4,12 +4,12 @@
 
 import React from "react";
 
-const Button = ({ btnStyle, btnSize, onClick, btnText }) => {
+//Styles
+import "../css/button.css";
+
+const Button = ({btnColor, btnSize, onClick, btnText }) => {
   return (
-    <button
-      type='button'
-      className={``}
-      onClick={() => onClick()}>
+    <button type='button' className={`button ${btnSize} ${btnColor}`} onClick={() => onClick()}>
       {btnText}
     </button>
   );
