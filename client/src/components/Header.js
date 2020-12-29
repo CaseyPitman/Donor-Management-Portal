@@ -11,6 +11,9 @@ import { BookHalf } from "react-bootstrap-icons";
 //Components
 import Button from "./Button";
 
+// Styles
+import "../css/header.css";
+
 const Header = () => {
   const handleLogin = () => {
     console.log("login button has been clicked.");
@@ -18,9 +21,18 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <h1>Header</h1>
-      <BookHalf />
-      <Button btnStyle='primary' btnSize={"sm"} onClick={handleLogin} />
+      <div className='header-content'>
+        <h1 className='header-title'>
+          <i class='fas fa-book-reader logo'></i>
+          Krakoa Literacy Council Donor Management Portal
+        </h1>
+        <Button
+          btnStyle='primary'
+          btnSize={"sm"}
+          btnText='Sign In'
+          onClick={handleLogin}
+        />
+      </div>
     </div>
   );
 };

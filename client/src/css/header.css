@@ -1,0 +1,27 @@
+/* 
+This file contains custom CSS for the header component.
+*/
+
+.header {
+  background-color: rgb(250, 104, 0);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.header-title {
+  font-size: 30px;
+}
