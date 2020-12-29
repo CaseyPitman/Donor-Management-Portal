@@ -1,4 +1,6 @@
-//This reusable component renders buttons throughout the app.
+// This reusable component renders buttons throughout the app.
+// Button style and size are passed via props from parent.
+// onClick function passed via props from parent.
 
 import React from "react";
 
