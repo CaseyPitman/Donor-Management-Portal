@@ -21,7 +21,8 @@ const Header = () => {
       <div className='header-content'>
         <h1 className='header-title'>
           <i className='fas fa-book-reader logo'></i>
-          Krakoa Literacy Council Donor Management Portal
+          Krakoa Literacy Council
+          <br></br>Donor Management Portal
         </h1>
         <Button
           btnColor='blue-button'

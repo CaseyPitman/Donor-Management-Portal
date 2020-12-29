@@ -4,7 +4,7 @@ This file contains custom CSS for the header component.
 
 .header {
   background-color: rgb(250, 104, 0);
-  height: 60px;
+  /* height: 60px; */
   padding-top: 9px;
   padding-bottom: 9px;
   width: 100%;
@@ -33,6 +33,6 @@ This file contains custom CSS for the header component.
   color: white;
   /* font-size: 30px; */
   /* font-size:2vw; */
-  font-size:calc(12px + 1vw);
+  /* font-size:calc(12px + 1vw); */
   font-weight: normal;
 }
