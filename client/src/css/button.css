@@ -7,7 +7,7 @@ This file contains styles for the Button component
   border: 1px solid transparent;
   border-radius: 5px;
   font-family: "Helvetica", sans-serif;
-  height: 30px;
+ 
 }
 
 .button:hover {
@@ -24,7 +24,8 @@ This file contains styles for the Button component
 .medium-button {
 }
 
-.small-button {
+.small-button { 
+  height: 30px;
   width: 60px;
 }
 

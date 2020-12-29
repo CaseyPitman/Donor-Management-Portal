@@ -7,6 +7,7 @@ This file contains custom CSS for the header component.
   height: 60px;
   padding-top: 9px;
   padding-bottom: 9px;
+  width: 100%;
 }
 
 .header-content {
@@ -29,4 +30,5 @@ This file contains custom CSS for the header component.
 .header-title {
   color: white;
   font-size: 30px;
+  font-weight: normal;
 }
