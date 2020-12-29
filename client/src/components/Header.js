@@ -23,17 +23,18 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='header-content'>
-      
-        <div className='logo-container'>
-          <img src={logo} className='logo' />
+        <div className='header-branding'>
+          <div className='logo-container'>
+            <img src={logo} className='logo' alt='Child reading in wonder.' />
+          </div>
+
+          <h1 className='header-title'>
+            {/* <i className='fas fa-book-reader logo'></i> */}
+            Krakoa Literacy Council
+            <br></br>Donor Management Portal
+          </h1>
         </div>
 
-        <h1 className='header-title'>
-          {/* <i className='fas fa-book-reader logo'></i> */}
-          Krakoa Literacy Council
-          <br></br>Donor Management Portal
-        </h1>
-        
         <Button
           btnColor='blue-button'
           btnSize='small-button'
