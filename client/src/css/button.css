@@ -4,12 +4,11 @@ This file contains styles for the Button component
 
 /* All buttons */
 .button {
-  border:1px solid transparent;
+  border: 1px solid transparent;
   font-family: "Helvetica", sans-serif;
 }
 
 .button:hover {
-  border: 1px solid white;
   cursor: pointer;
   font-weight: bold;
 }
@@ -20,11 +19,11 @@ This file contains styles for the Button component
 }
 
 .medium-button {
+  height: 40px;
+  width: 80px;
 }
 
 .small-button {
-  height: 40px;
-  width: 80px;
 }
 
 /* Button colors */
@@ -32,6 +31,10 @@ This file contains styles for the Button component
 .blue-button {
   background-color: #03a9f4;
   color: white;
+}
+
+.blue-button:hover {
+  background-color: #0288d1;
 }
 
 .red-button {
@@ -44,4 +47,6 @@ This file contains styles for the Button component
 }
 
 .dark-button {
+  background-color: #2c2c2c;
+  color: white;
 }

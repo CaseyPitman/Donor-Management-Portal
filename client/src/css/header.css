@@ -47,8 +47,6 @@ This file contains custom CSS for the header component.
 
 .header-title {
   color: white;
-  /* font-size: 30px; */
-  /* font-size:2vw; */
   font-size: calc(12px + 1vw);
   font-weight: normal;
 }

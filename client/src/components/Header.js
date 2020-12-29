@@ -38,7 +38,7 @@ const Header = () => {
 
         <Button
           btnColor='blue-button'
-          btnSize='small-button'
+          btnSize='medium-button'
           btnText='Sign In'
           onClick={handleLogin}
         />
