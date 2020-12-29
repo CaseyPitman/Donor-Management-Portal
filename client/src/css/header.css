@@ -16,6 +16,8 @@ This file contains custom CSS for the header component.
   align-items: center;
   max-width: 1200px;
   margin: auto;
+  padding-left:10px;
+  padding-right: 10px;
 }
 
 .logo {
@@ -29,6 +31,8 @@ This file contains custom CSS for the header component.
 
 .header-title {
   color: white;
-  font-size: 30px;
+  /* font-size: 30px; */
+  /* font-size:2vw; */
+  font-size:calc(12px + 1vw);
   font-weight: normal;
 }

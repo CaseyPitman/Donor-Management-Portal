@@ -13,3 +13,7 @@ This file contains global custom CSS for the Donor Managemant Portal
 html {
   font-family: 'Helvetica', sans-serif;
 }
+
+.app {
+  min-height: 100vh;
+}

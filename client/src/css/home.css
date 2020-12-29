@@ -3,9 +3,17 @@ This file contains styles for the introductory home page featuring
 a splash image and quote about reading.
 */
 
-
 .hero-image {
-   display: block;
-   margin: auto;
-   width: 100%;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.home {
+  background-image:url('../images/child-reading.jpg') ;
+  height: 100vh;
+}
+
+.quote-text {
+   color: white;
 }
