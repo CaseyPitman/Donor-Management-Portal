@@ -5,7 +5,6 @@ This file contains styles for the Button component
 /* All buttons */
 .button {
   border:1px solid transparent;
-  border-radius: 5px;
   font-family: "Helvetica", sans-serif;
 }
 

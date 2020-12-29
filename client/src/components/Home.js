@@ -14,8 +14,8 @@ const Home = () => {
     <div className='home'>
       <div className='quote-container'>
         <h1 className = 'quote'>
-          "The more that you read, the more things you will know. The more that
-          you learn, the more places you’ll go."
+          "The more that you read,<br></br> the more things you will know.<br></br>The more that
+          you learn,<br></br>the more places you’ll go."
         </h1>
         <h2 className = 'quote-attribution'>- Dr. Seuss</h2>
       </div>

@@ -8,6 +8,19 @@ a splash image and quote about reading.
   height: 100vh;
 }
 
-.quote-text {
-   color: white;
+.quote-container {
+   line-height: 1.5;
+   width:42%;
+}
+
+.quote {
+  color:white;
+  font-size: calc(12px + 2vw);
+}
+
+.quote-attribution {
+  color:#757575;
+  font-size: calc(12px + 1.75vw);
+  margin-top:20px;
+  text-align:right;
 }
