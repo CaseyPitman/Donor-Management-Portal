@@ -2,10 +2,10 @@
 
 import React from "react";
 
-const Button = () => {
+const Button = ({btnStyle}) => {
   return (
     <div>
-      <button type = 'button' className = 'btn btn-primary'>Button</button>
+      <button type = 'button' className = {`btn btn-${btnStyle}`}>Button</button>
     </div>
   );
 };
