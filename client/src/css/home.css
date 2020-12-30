@@ -55,18 +55,19 @@ a splash image and quote about reading.
   }
 }
 
-
 /* Tablet adjustments for landscape view */
 
-/* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .quote-container {
+    align-self: flex-end;
+    margin: 0 auto 8%;
+  }
+}
 
-    .quote-container {
-      align-self: flex-end;
-      margin: 0 auto 8%;
-    }
+/*  Mobile adjustments for Home view */
+
+@media only screen and (max-width: 767px) {
+  .quote-container {
+    margin: 0 auto 25%;
+  }
 }
