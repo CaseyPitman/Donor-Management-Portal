@@ -11,8 +11,8 @@ import {
   ListDonors,
   CreateDonor,
   DonorDetails,
-  EditDonors,
-  DeleteDonors,
+  EditDonor,
+  DeleteDonor,
 } from "./Donors/index";
 
 //Styles
@@ -32,6 +32,15 @@ const App = props => {
           </Route>
           <Route path='/create-donor' exact>
             <CreateDonor />
+          </Route>
+          <Route path='/donor-details' exact>
+            <DonorDetails />
+          </Route>
+          <Route path='/edit-donor' exact>
+            <EditDonor />
+          </Route>
+          <Route path='/delete-donor' exact>
+            <DeleteDonor />
           </Route>
         </Switch>
       </div>
