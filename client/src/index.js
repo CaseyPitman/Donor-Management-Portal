@@ -12,7 +12,18 @@ soliciation of future donations.
 import React from "react";
 import ReactDOM from "react-dom";
 
+//Auth0
+import { Auth0Provider } from "@auth0/auth0-react";
+
 // Components
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Auth0Provider
+    domain='dev-ffw1py4b.us.auth0.com'
+    clientId='wVUMCl3SliBeWmfltUuJvjBYPx2LB1De'
+    redirectUri={window.location.origin}>
+    <App />
+  </Auth0Provider>,
+  document.getElementById("root")
+);
