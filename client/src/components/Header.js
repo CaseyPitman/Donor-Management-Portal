@@ -4,20 +4,25 @@ The login button will dynamically render based on user login status.
  */
 
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 //Components
-import Button from "./Button";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
 // Assets
-
 import logo from "../images/logo.svg";
 
 // Styles
 import "../css/header.css";
 
 const Header = () => {
-  const handleLogin = () => {
-    console.log("login button has been clicked.");
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  // Determine whether to show sign in or sign out button.
+
+  const renderButton = () => {
+    return isAuthenticated ? <LogoutButton /> : <LoginButton />;
   };
 
   return (
@@ -37,12 +42,7 @@ const Header = () => {
           </h1>
         </div>
 
-        <Button
-          btnColor='blue-button'
-          btnSize='medium-button'
-          btnText='Sign In'
-          onClick={handleLogin}
-        />
+        {renderButton()}
       </div>
     </div>
   );
