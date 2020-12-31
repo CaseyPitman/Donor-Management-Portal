@@ -9,9 +9,11 @@ import Header from "./Header";
 //Styles
 import "../css/app.css";
 
-const App = () => {
+const App = props => {
+
+
   return (
-    <div className = 'app'>
+    <div className='app'>
       <Header />
       <Home />
     </div>

@@ -7,7 +7,7 @@ a splash image and quote about reading.
   background-image: url("../images/child-reading.jpg");
   height: 100vh;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
 }
 

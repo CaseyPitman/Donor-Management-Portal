@@ -6,7 +6,8 @@ a login button, a splash image and a quote about the value of literacy.
 import React from "react";
 
 import LoginButton from "./LoginButton";
-import LogoutButton from './LogoutButton'
+import LogoutButton from "./LogoutButton";
+import UserProfile from "./UserProfile";
 
 //Styles
 import "../css/home.css";
@@ -31,7 +32,8 @@ const Home = () => {
         {/* login button for testing - remove and move later. */}
 
         <LoginButton />
-        <LogoutButton/>
+        <LogoutButton />
+        <UserProfile />
       </div>
 
       {/* <img src={hero} alt='Child reading in wonder.' className='hero-image' /> */}
