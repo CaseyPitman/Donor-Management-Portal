@@ -22,7 +22,7 @@ ReactDOM.render(
   <Auth0Provider
     domain='dev-ffw1py4b.us.auth0.com'
     clientId='wVUMCl3SliBeWmfltUuJvjBYPx2LB1De'
-    redirectUri={window.location.origin}>
+    redirectUri={'http://localhost:3000/donor-list'}>
     <App />
   </Auth0Provider>,
   document.getElementById("root")
