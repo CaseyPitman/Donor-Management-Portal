@@ -4,6 +4,8 @@ a login button, a splash image and a quote about the value of literacy.
 */
 
 import React from "react";
+
+//Hooks
 import { useAuth0 } from "@auth0/auth0-react";
 import { useHistory } from "react-router-dom";
 
@@ -18,8 +20,6 @@ const Home = () => {
   if (isAuthenticated) {
     history.push("/donor-list");
   }
-
-  console.log(isAuthenticated);
 
   return (
     <div className='home'>
