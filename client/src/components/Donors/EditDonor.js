@@ -6,9 +6,20 @@ delete new donations.
 
 import React from "react";
 
+//Hooks
+import { useAuth0 } from "@auth0/auth0-react";
+import { useHistory } from "react-router-dom";
+
+//Components
 import UserProfile from "../Auth/UserProfile";
 
 const EditDonor = () => {
+  const { isAuthenticated, isLoading } = useAuth0();
+  const history = useHistory();
+
+  if (!isAuthenticated && !isLoading) {
+    history.push("/");
+  }
   return (
     <div>
       <UserProfile />
