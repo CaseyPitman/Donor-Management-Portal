@@ -5,7 +5,7 @@ and a record of past donations including amount and type.
 
 import React from "react";
 
-import UserProfile from "../Auth/userProfile";
+import UserProfile from "../Auth/UserProfile";
 
 const DonorDetails = () => {
   return (
