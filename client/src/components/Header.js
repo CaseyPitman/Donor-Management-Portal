@@ -7,8 +7,8 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 //Components
-import LoginButton from "./LoginButton";
-import LogoutButton from "./LogoutButton";
+import LoginButton from "./Auth/LoginButton";
+import LogoutButton from "./Auth/LogoutButton";
 
 // Assets
 import logo from "../images/logo.svg";
@@ -23,7 +23,7 @@ const Header = () => {
   const renderButton = () => {
     //If loading show empty div
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <div></div>;
     }
     //After load show button.
     return isAuthenticated ? <LogoutButton /> : <LoginButton />;

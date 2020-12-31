@@ -4,11 +4,23 @@ a login button, a splash image and a quote about the value of literacy.
 */
 
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useHistory } from "react-router-dom";
 
 //Styles
 import "../css/home.css";
 
 const Home = () => {
+  const { isAuthenticated } = useAuth0();
+  const history = useHistory();
+
+  //If already logged in, redirect to donor-list
+  if (isAuthenticated) {
+    history.push("/donor-list");
+  }
+
+  console.log(isAuthenticated);
+
   return (
     <div className='home'>
       <div className='quote-container'>
