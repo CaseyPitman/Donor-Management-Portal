@@ -20,8 +20,12 @@ const Header = () => {
   const { isAuthenticated, isLoading } = useAuth0();
 
   // Determine whether to show sign in or sign out button.
-
   const renderButton = () => {
+    //If loading show empty div
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    //After load show button.
     return isAuthenticated ? <LogoutButton /> : <LoginButton />;
   };
 
