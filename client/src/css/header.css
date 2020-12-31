@@ -13,7 +13,7 @@ This file contains custom CSS for the header component.
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding-left: 10px;
   padding-right: 10px;
