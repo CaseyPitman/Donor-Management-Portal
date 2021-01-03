@@ -18,6 +18,8 @@ import {
 
 export const fetchDonorsList =() =>{
    //will fetch the current list of donors.
+
+   // endpoint for list will be '/donors'
 }
 
 export const createDonor = () => {
