@@ -1,4 +1,4 @@
-// Creates variables for actions
+// Creates variables for action types.
 
 export const FETCH_DONOR_LIST;
 export const CREATE_DONOR;
