@@ -20,9 +20,11 @@ import DMP from "../axios/DMP";
 
 
 export const fetchDonorsList =() =>{
-   //will fetch the current list of donors.
-
-   // endpoint for list will be '/donors'
+// Retreive list of donors
+export const fetchStreams = () => async dispatch => {
+   const response = await donors.get("/donors");
+   dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
+ };
 }
 
 export const createDonor = () => {
