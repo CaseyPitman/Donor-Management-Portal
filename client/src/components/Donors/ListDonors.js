@@ -5,7 +5,6 @@ contact information, along with action choices for each entry.
 
 import { React, useEffect } from "react";
 
-
 //Hooks
 import { useDispatch, useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -28,19 +27,15 @@ const ListDonors = () => {
   const list = useSelector(state => state.donors);
   const dispatch = useDispatch();
 
-  //MAKE A CALL FOR LIST
+  //MAKE A CALL FOR LIST OF DONORS
   useEffect(() => {
     dispatch(fetchDonorList());
   }, []);
 
 
-  // console.log(list);
-
-  //Grab the list and manipulate it for display.
-  
-    // sort by last name
-    
-
+  // streams: Object.values(state.streams),
+  const newList = Object.values(list);
+  console.log(newList);
 
 
   return (
