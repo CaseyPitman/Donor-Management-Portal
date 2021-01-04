@@ -32,16 +32,23 @@ const ListDonors = () => {
     dispatch(fetchDonorList());
   }, []);
 
-
-  // streams: Object.values(state.streams),
-  const newList = Object.values(list);
-  console.log(newList);
-
+  //Render the list of donors:
+  const renderList = () => {
+    const newList = Object.values(list);
+    return newList.map(donor => {
+      return (
+        <div key={donor.id}>
+          {donor.firstName} {donor.lastName} {donor.email} {donor.phone}
+        </div>
+      );
+    });
+  };
 
   return (
     <div>
       <UserProfile />
       <h1>Donor List</h1>
+      {renderList()}
     </div>
   );
 };
