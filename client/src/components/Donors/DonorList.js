@@ -32,25 +32,41 @@ const DonorList = () => {
     dispatch(fetchDonorList());
   }, [dispatch]);
 
+  const renderActions = () => {
+    return (
+      <div>
+        <button>Details</button>
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>
+    );
+  };
+
   //Render the list of donors:
   const renderList = () => {
     const newList = Object.values(list);
     return newList.map(donor => {
       return (
         <div key={donor.id}>
-          {donor.firstName} {donor.lastName} {donor.email} {donor.phone}
+          {donor.firstName} {donor.lastName} {donor.email} {donor.phone} {renderActions()}
         </div>
       );
     });
   };
 
   return (
-    <div className = "donor-list">
+    <div className='donor-list'>
       <UserProfile />
       <h1>Donor List</h1>
       <button>Add Donor</button>
-      <input placeholder = "Search Donors"/>
-      
+      <input placeholder='Search Donors' />
+      <div className='donor-list-headings'>
+        <h2>Name</h2>
+        <h2>Email</h2>
+        <h2>Phone</h2>
+        <h2>Actions</h2>
+      </div>
+
       {renderList()}
     </div>
   );

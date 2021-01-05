@@ -15,7 +15,6 @@ import {
   DeleteDonor,
 } from "./Donors/index";
 
-
 //Styles
 import "../css/app.css";
 
@@ -29,7 +28,7 @@ const App = props => {
             <Home />
           </Route>
           <Route path='/donor-list' exact>
-            <DonorList/>
+            <DonorList />
           </Route>
           <Route path='/create-donor' exact>
             <CreateDonor />
