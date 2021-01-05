@@ -1,9 +1,7 @@
 /* Styles for the component displaying the user's name and image */
 
 .user-info {
-  background-color: #B3E5FC;
-  border-top: 1px solid #2c2c2c;
-  border-bottom: 1px solid #2c2c2c;
+  background-color: #2c2c2c;
   height: 40px;
   width: 100%;
 }
@@ -21,7 +19,7 @@
 }
 
 .user-name {
-  color: #2c2c2c;
+  color:white;
   display: inline;
   font-size: 16px;
   font-weight:400;

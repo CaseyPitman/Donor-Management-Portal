@@ -3,15 +3,21 @@ This file contains the styles for the donor-list view.
  */
 
 .donor-list-container {
-  margin: auto;
+  margin: 50px auto;
   max-width: 1400px;
   padding: 5px;
+}
+
+.donor-list-title {
+   margin-bottom: 25px;
 }
 
 .donor-list-global-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin: 10px auto;
 }
 
 .donor-search {
@@ -45,7 +51,16 @@ This file contains the styles for the donor-list view.
 .donor-list-name,
 .donor-list-email,
 .donor-list-phone {
+  font-size:20px;
   text-align: center;
+}
+
+.donor-list-email {
+   color: #009688;
+}
+.donor-list-email:hover {
+   color: #FF9800;
+   cursor: pointer;
 }
 
 .donor-list-action-buttons {
