@@ -20,7 +20,7 @@ import Button from "../Button";
 
 // Styles
 import "../../css/donor-list.css";
-import "../../css/button.css";
+// import "../../css/button.css";
 
 const DonorList = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -42,24 +42,30 @@ const DonorList = () => {
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <Button
-          btnColor='teal-button'
-          btnSize='small-button'
-          btnText='Details'
-          id={id}
-        />
-        <Button
-          btnColor='yellow-button'
-          btnSize='small-button'
-          btnText='Edit'
-          id={id}
-        />
-        <Button
-          btnColor='red-button'
-          btnSize='small-button'
-          btnText='Delete'
-          id={id}
-        />
+        <Link to='/donor-details'>
+          <Button
+            btnColor='teal-button'
+            btnSize='small-button'
+            btnText='Details'
+            id={id}
+          />
+        </Link>
+        <Link to='/edit-donor'>
+          <Button
+            btnColor='yellow-button'
+            btnSize='small-button'
+            btnText='Edit'
+            id={id}
+          />
+        </Link>
+        <Link to='/delete-donor'>
+          <Button
+            btnColor='red-button'
+            btnSize='small-button'
+            btnText='Delete'
+            id={id}
+          />
+        </Link>
       </div>
     );
   };
@@ -89,9 +95,11 @@ const DonorList = () => {
       <div className='donor-list-content'>
         <h1>Donor List</h1>
         <Link to='/create-donor'>
-          <button className='create-donor-link button blue-button large-button'>
-            + Add a donor
-          </button>
+          <Button
+            btnColor='blue-button'
+            btnSize='large-button'
+            btnText='+ New Donor'
+          />
         </Link>
         <input placeholder='Search Donors' />
         <div className='donor-list-headings'>

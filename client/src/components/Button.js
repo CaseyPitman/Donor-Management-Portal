@@ -8,8 +8,17 @@ import React from "react";
 import "../css/button.css";
 
 const Button = ({btnColor, btnSize, onClick, btnText }) => {
+
+  const handleClick = () => {
+    if (!onClick){
+      return 
+    } else {
+      onClick()
+    }
+  }
+
   return (
-    <button type='button' className={`button ${btnSize} ${btnColor}`} onClick={() => onClick()}>
+    <button type='button' className={`button ${btnSize} ${btnColor}`} onClick={() => handleClick()}>
       {btnText}
     </button>
   );
