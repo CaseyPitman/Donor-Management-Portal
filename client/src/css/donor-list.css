@@ -3,7 +3,7 @@ This file contains the styles for the donor-list view.
  */
 
 .donor-list-container {
-  margin: 50px auto;
+  margin: 25px auto;
   max-width: 1400px;
   padding: 5px;
 }
@@ -65,7 +65,7 @@ This file contains the styles for the donor-list view.
 
 .donor-list-name,
 .donor-list-phone {
-   color: #2c2c2c;
+  color: #2c2c2c;
 }
 
 .donor-list-email,
@@ -92,4 +92,22 @@ This file contains the styles for the donor-list view.
 
 .grey {
   background-color: rgb(43, 43, 43, 0.2);
+}
+
+/* Tablet Adjustments */
+
+@media only screen and (max-width: 1024px) {
+  .donor-list-container {
+    margin: auto;
+    width: 95%;
+  }
+}
+
+/* Mobile adjustments */
+@media only screen and (max-width: 768px) {
+  .donor-list-email,
+  .donor-list-phone,
+  .donor-list-name {
+    font-size: 14px;
+  }
 }

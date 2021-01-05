@@ -21,7 +21,7 @@ This file contains styles for the Button component
 
 .large-button {
   height: 25px;
-  width: 100px;
+  width: 70px;
 }
 
 .medium-button {
@@ -81,11 +81,19 @@ This file contains styles for the Button component
   background-color: #616161;
 }
 
+
+
+
+
 /* Size adjustments for mobile */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .medium-button {
     height: 30px;
     width: 60px;
+  }
+
+  .large-button {
+    width: 50px;
   }
 }
