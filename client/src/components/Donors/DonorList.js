@@ -45,7 +45,7 @@ const DonorList = () => {
         <Link to='/donor-details'>
           <Button
             btnColor='teal-button'
-            btnSize='small-button'
+            btnSize='large-button'
             btnText='Details'
             id={id}
           />
@@ -53,7 +53,7 @@ const DonorList = () => {
         <Link to='/edit-donor'>
           <Button
             btnColor='yellow-button'
-            btnSize='small-button'
+            btnSize='large-button'
             btnText='Edit'
             id={id}
           />
@@ -61,7 +61,7 @@ const DonorList = () => {
         <Link to='/delete-donor'>
           <Button
             btnColor='red-button'
-            btnSize='small-button'
+            btnSize='large-button'
             btnText='Delete'
             id={id}
           />
@@ -92,24 +92,25 @@ const DonorList = () => {
   return (
     <div className='donor-list'>
       <UserProfile />
-      <div className='donor-list-content'>
-        <h1>Donor List</h1>
-        <Link to='/create-donor'>
-          <Button
-            btnColor='blue-button'
-            btnSize='large-button'
-            btnText='+ New Donor'
-          />
-        </Link>
-        <input placeholder='Search Donors' />
-        <div className='donor-list-headings'>
+      <div className='donor-list-container'>
+        <h1 className='donor-list-title'>Donor List</h1>
+        <div className='donor-list-global-actions'>
+          <Link to='/create-donor' className = "create-donor-button">
+            <Button
+              btnColor='blue-button'
+              btnSize='large-button'
+              btnText='+ New Donor'
+            />
+          </Link>
+          <input className = "donor-search" placeholder='Search Donors' />
+        </div>
+        {/* <div className='donor-list-headings'>
           <h2>Name</h2>
           <h2>Email</h2>
           <h2>Phone</h2>
           <h2>Actions</h2>
-        </div>
-
-        {renderList()}
+        </div> */}
+        <div className='donor-list-content'>{renderList()}</div>
       </div>
     </div>
   );

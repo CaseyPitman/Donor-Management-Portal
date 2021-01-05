@@ -15,7 +15,7 @@ This file contains styles for the Button component
 /* Button sizes */
 
 .large-button {
-  height:25px;
+  height: 25px;
   width: 100px;
 }
 
@@ -59,12 +59,12 @@ This file contains styles for the Button component
 }
 
 .yellow-button {
-  background-color: #ffeb3b;
-  color: #2c2c2c;
+  background-color: #FFBC26;
+  color: white;
 }
 
 .yellow-button:hover {
-  background-color: #fbc02d;
+  background-color: #DBA221;
 }
 
 .dark-button {

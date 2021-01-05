@@ -2,8 +2,55 @@
 This file contains the styles for the donor-list view.
  */
 
+.donor-list-container {
+  margin: auto;
+  max-width: 1400px;
+  padding: 5px;
+}
 
+.donor-list-global-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- .create-donor-link{
-    text-decoration: none;
- }
+.donor-search {
+  border: 1px solid #2c2c2c;
+  border-radius: 0px;
+  height: 25px;
+  text-align: center;
+  width: 200px;
+}
+
+.donor-list-content {
+  border: 1px solid #2c2c2c;
+  padding-bottom: 15px;
+}
+
+.donor-list-item {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.donor-list-name,
+.donor-list-email,
+.donor-list-phone,
+.donor-list-actions {
+  width: 25%;
+}
+
+.donor-list-name,
+.donor-list-email,
+.donor-list-phone {
+  text-align: center;
+}
+
+.donor-list-action-buttons {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-flow: row nowrap;
+}
