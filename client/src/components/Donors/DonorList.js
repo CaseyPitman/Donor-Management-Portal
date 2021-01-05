@@ -36,7 +36,7 @@ const DonorList = () => {
   //Renders action buttons. (These will be <Link/> to actions).
   const renderActions = id => {
     return (
-      <div>
+      <div className='donor-list-action-buttons'>
         <Button
           btnColor='teal-button'
           btnSize='small-button'
@@ -59,14 +59,20 @@ const DonorList = () => {
     );
   };
 
-  //Render the list of donors:
+  //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
     return newList.map(donor => {
       return (
-        <div key={donor.id}>
-          {donor.firstName} {donor.lastName} {donor.email} {donor.phone}
-          {renderActions(donor.id)}
+        // Add logic here that adds alternating colors for the rows. Perhaps use even/odd status of the id.
+
+        <div key={donor.id} className='donor-list-item'>
+          <div className='donor-list-name'>
+            {donor.firstName} {donor.lastName}
+          </div>
+          <div className='donor-list-email'>{donor.email} </div>
+          <div className='donor-list-phone'>{donor.phone}</div>
+          <div className='donor-list-actions'>{renderActions(donor.id)}</div>
         </div>
       );
     });
@@ -76,7 +82,11 @@ const DonorList = () => {
     <div className='donor-list'>
       <UserProfile />
       <h1>Donor List</h1>
-      <button>Add Donor</button>
+      <Button
+        btnColor='blue-button'
+        btnSize='large-button'
+        btnText='+ Add a donor'
+      />
       <input placeholder='Search Donors' />
       <div className='donor-list-headings'>
         <h2>Name</h2>
