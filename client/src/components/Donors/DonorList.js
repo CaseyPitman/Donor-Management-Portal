@@ -98,7 +98,7 @@ const DonorList = () => {
           <Link to='/create-donor' className = "create-donor-button">
             <Button
               btnColor='blue-button'
-              btnSize='large-button'
+              btnSize='xl-button'
               btnText='+ New Donor'
             />
           </Link>
