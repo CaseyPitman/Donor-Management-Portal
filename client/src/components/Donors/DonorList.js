@@ -16,7 +16,7 @@ import { fetchDonorList } from "../../actions";
 //Components
 import UserProfile from "../Auth/UserProfile";
 
-const ListDonors = () => {
+const DonorList = () => {
   const { isAuthenticated, isLoading } = useAuth0();
   const history = useHistory();
 
@@ -30,7 +30,7 @@ const ListDonors = () => {
   //MAKE A CALL FOR LIST OF DONORS
   useEffect(() => {
     dispatch(fetchDonorList());
-  }, []);
+  }, [dispatch]);
 
   //Render the list of donors:
   const renderList = () => {
@@ -45,12 +45,15 @@ const ListDonors = () => {
   };
 
   return (
-    <div>
+    <div className = "donor-list">
       <UserProfile />
       <h1>Donor List</h1>
+      <button>Add Donor</button>
+      <input placeholder = "Search Donors"/>
+      
       {renderList()}
     </div>
   );
 };
 
-export default ListDonors;
+export default DonorList;

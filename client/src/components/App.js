@@ -8,12 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
 import {
-  ListDonors,
+  DonorList,
   CreateDonor,
   DonorDetails,
   EditDonor,
   DeleteDonor,
 } from "./Donors/index";
+
 
 //Styles
 import "../css/app.css";
@@ -28,7 +29,7 @@ const App = props => {
             <Home />
           </Route>
           <Route path='/donor-list' exact>
-            <ListDonors />
+            <DonorList/>
           </Route>
           <Route path='/create-donor' exact>
             <CreateDonor />
