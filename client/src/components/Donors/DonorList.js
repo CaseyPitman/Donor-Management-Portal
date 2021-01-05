@@ -15,6 +15,7 @@ import { fetchDonorList } from "../../actions";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
+import Button from "../Button";
 
 const DonorList = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -32,12 +33,28 @@ const DonorList = () => {
     dispatch(fetchDonorList());
   }, [dispatch]);
 
-  const renderActions = () => {
+  //Renders action buttons. (These will be <Link/> to actions).
+  const renderActions = id => {
     return (
       <div>
-        <button>Details</button>
-        <button>Edit</button>
-        <button>Delete</button>
+        <Button
+          btnColor='teal-button'
+          btnSize='small-button'
+          btnText='Details'
+          id={id}
+        />
+        <Button
+          btnColor='yellow-button'
+          btnSize='small-button'
+          btnText='Edit'
+          id={id}
+        />
+        <Button
+          btnColor='red-button'
+          btnSize='small-button'
+          btnText='Delete'
+          id={id}
+        />
       </div>
     );
   };
@@ -48,7 +65,8 @@ const DonorList = () => {
     return newList.map(donor => {
       return (
         <div key={donor.id}>
-          {donor.firstName} {donor.lastName} {donor.email} {donor.phone} {renderActions()}
+          {donor.firstName} {donor.lastName} {donor.email} {donor.phone}
+          {renderActions(donor.id)}
         </div>
       );
     });

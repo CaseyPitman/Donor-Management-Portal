@@ -10,7 +10,6 @@ This file contains styles for the Button component
 
 .button:hover {
   cursor: pointer;
-  font-weight: bold;
 }
 
 /* Button sizes */
@@ -24,6 +23,8 @@ This file contains styles for the Button component
 }
 
 .small-button {
+  height: 25px;
+  width: 50px;
 }
 
 /* Button colors */
@@ -38,21 +39,39 @@ This file contains styles for the Button component
 }
 
 .red-button {
-}
-
-.green-button {
-}
-
-.yellow-button {
-}
-
-.dark-button {
-  background-color: #616161;
+  background-color: #f44336;
   color: white;
 }
 
-.dark-button:hover{
+.red-button:hover {
+  background-color: #d32f2f;
+}
+
+.teal-button {
+  background-color: #009688;
+  color: white;
+}
+
+.teal-button:hover {
+  background-color: #00796b;
+}
+
+.yellow-button {
+  background-color: #ffeb3b;
+  color: #2c2c2c;
+}
+
+.yellow-button:hover {
+  background-color: #fbc02d;
+}
+
+.dark-button {
   background-color: #757575;
+  color: white;
+}
+
+.dark-button:hover {
+  background-color: #616161;
 }
 
 /* Size adjustments for mobile */
