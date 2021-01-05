@@ -4,6 +4,7 @@ contact information, along with action choices for each entry.
 */
 
 import { React, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 //Hooks
 import { useDispatch, useSelector } from "react-redux";
@@ -16,6 +17,10 @@ import { fetchDonorList } from "../../actions";
 //Components
 import UserProfile from "../Auth/UserProfile";
 import Button from "../Button";
+
+// Styles
+import "../../css/donor-list.css";
+import "../../css/button.css";
 
 const DonorList = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -81,21 +86,23 @@ const DonorList = () => {
   return (
     <div className='donor-list'>
       <UserProfile />
-      <h1>Donor List</h1>
-      <Button
-        btnColor='blue-button'
-        btnSize='large-button'
-        btnText='+ Add a donor'
-      />
-      <input placeholder='Search Donors' />
-      <div className='donor-list-headings'>
-        <h2>Name</h2>
-        <h2>Email</h2>
-        <h2>Phone</h2>
-        <h2>Actions</h2>
-      </div>
+      <div className='donor-list-content'>
+        <h1>Donor List</h1>
+        <Link to='/create-donor'>
+          <button className='create-donor-link button blue-button large-button'>
+            + Add a donor
+          </button>
+        </Link>
+        <input placeholder='Search Donors' />
+        <div className='donor-list-headings'>
+          <h2>Name</h2>
+          <h2>Email</h2>
+          <h2>Phone</h2>
+          <h2>Actions</h2>
+        </div>
 
-      {renderList()}
+        {renderList()}
+      </div>
     </div>
   );
 };
