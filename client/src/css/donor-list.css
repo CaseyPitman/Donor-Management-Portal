@@ -9,7 +9,8 @@ This file contains the styles for the donor-list view.
 }
 
 .donor-list-title {
-   margin-bottom: 25px;
+  color: #2c2c2c;
+  margin-bottom: 25px;
 }
 
 .donor-list-global-actions {
@@ -17,7 +18,7 @@ This file contains the styles for the donor-list view.
   justify-content: space-between;
   align-items: center;
 
-  margin: 10px auto;
+  margin: 10px auto 15px;
 }
 
 .donor-search {
@@ -30,11 +31,25 @@ This file contains the styles for the donor-list view.
 
 .donor-list-content {
   border: 1px solid #2c2c2c;
-  padding-bottom: 15px;
+}
+
+.donor-list-headings {
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.donor-list-heading-item {
+  color: white;
+  text-align: center;
+  width: 25%;
 }
 
 .donor-list-item {
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,27 +63,33 @@ This file contains the styles for the donor-list view.
   width: 25%;
 }
 
-.donor-list-name{
-   font-size: 20px;
-   padding-left:5px;
-}
-.donor-list-email,
+.donor-list-name,
 .donor-list-phone {
-  font-size:20px;
+   color: #2c2c2c;
+}
+
+.donor-list-email,
+.donor-list-phone,
+.donor-list-name {
+  font-size: 20px;
   text-align: center;
 }
 
 .donor-list-email {
-   color: #009688;
+  color: #009688;
 }
 .donor-list-email:hover {
-   color: #FF9800;
-   cursor: pointer;
+  color: #ff9800;
+  cursor: pointer;
 }
 
 .donor-list-action-buttons {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   flex-flow: row nowrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.grey {
+  background-color: rgb(43, 43, 43, 0.2);
 }

@@ -73,11 +73,13 @@ const DonorList = () => {
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
-    return newList.map(donor => {
+    return newList.map((donor, idx )=> {
+      console.log(idx)
+      let background = (idx % 2 === 0) ? 'grey' : 'white';
+
       return (
         // Add logic here that adds alternating colors for the rows. Perhaps use even/odd status of the id.
-
-        <div key={donor.id} className='donor-list-item'>
+        <div key={donor.id} className={`donor-list-item ${background}`}>
           <div className='donor-list-name'>
             {donor.firstName} {donor.lastName}
           </div>
@@ -104,12 +106,12 @@ const DonorList = () => {
           </Link>
           <input className = "donor-search" placeholder='Search Donors' />
         </div>
-        {/* <div className='donor-list-headings'>
-          <h2>Name</h2>
-          <h2>Email</h2>
-          <h2>Phone</h2>
-          <h2>Actions</h2>
-        </div> */}
+        <div className='donor-list-headings'>
+          <h2 className = "donor-list-heading-item">Name</h2>
+          <h2 className = "donor-list-heading-item">Email</h2>
+          <h2 className = "donor-list-heading-item">Phone</h2>
+          <h2 className = "donor-list-heading-item">Actions</h2>
+        </div>
         <div className='donor-list-content'>{renderList()}</div>
       </div>
     </div>
