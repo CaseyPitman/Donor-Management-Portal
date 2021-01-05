@@ -23,7 +23,7 @@ This file contains the styles for the donor-list view.
 .donor-search {
   border: 1px solid #2c2c2c;
   border-radius: 0px;
-  height: 25px;
+  height: 30px;
   text-align: center;
   width: 200px;
 }
@@ -48,7 +48,10 @@ This file contains the styles for the donor-list view.
   width: 25%;
 }
 
-.donor-list-name,
+.donor-list-name{
+   font-size: 20px;
+   padding-left:5px;
+}
 .donor-list-email,
 .donor-list-phone {
   font-size:20px;
