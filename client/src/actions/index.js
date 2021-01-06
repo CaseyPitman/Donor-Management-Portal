@@ -11,34 +11,30 @@ import {
 //Use for axios calls.
 import DMP from "../axios/DMP";
 
-
 // import the useHistory so that I can push users to donor_list after edit or delete.
 
-
-// Thought - make sign in and sign out action that will set state as isSignedIn. This may smooth out the rendering process on each CRUD view to avoid having to make a call for authorization on each render. 
-
-
-
+// Thought - make sign in and sign out action that will set state as isSignedIn. This may smooth out the rendering process on each CRUD view to avoid having to make a call for authorization on each render.
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
-   const response = await DMP.get("/donors/");
-   dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
- };
-
+  const response = await DMP.get("/donors/");
+  dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
+};
 
 export const createDonor = () => {
-   //will create a new donor record
-}
+  //will create a new donor record
+};
 
-export const fetchDonorDetails = () =>{
-   //will fetch record of a specific donor
-}
+// Retrieve record for single donor
+export const fetchDonorDetails = id => async dispatch => {
+  const response = await DMP.get(`/donors/${id}`);
+  dispatch({ type: FETCH_DONOR_DETAILS, payload: response.data });
+};
 
 export const editDonor = () => {
-   //will edit a specific donor record.
-}
+  //will edit a specific donor record.
+};
 
-export const deleteDonor =()=>{
-   //will delete a specific donor.
-}
+export const deleteDonor = () => {
+  //will delete a specific donor.
+};
