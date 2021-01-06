@@ -45,8 +45,7 @@ const Header = () => {
             </span>
           </h1>
         </div>
-
-        {renderButton()}
+        <div className='auth-button-container'>{renderButton()}</div>
       </div>
     </div>
   );

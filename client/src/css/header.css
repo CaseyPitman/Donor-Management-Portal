@@ -13,6 +13,7 @@ This file contains custom CSS for the header component.
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: row wrap;
   max-width: 1400px;
   margin: auto;
   padding-left: 10px;
@@ -23,7 +24,7 @@ This file contains custom CSS for the header component.
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
 }
 
 .logo-container {
@@ -57,4 +58,18 @@ This file contains custom CSS for the header component.
 .header-title-secondary {
   color:#2c2c2c;
   font-weight:300;
+}
+
+
+/* Mobile adjustments for super skinny viewport - Galaxy Fold */
+@media only screen and (max-width:280px){
+
+  .header-branding{
+    width: 100%;
+  }
+
+  .auth-button-container {
+    text-align: right;
+    width: 100%;
+  }
 }
