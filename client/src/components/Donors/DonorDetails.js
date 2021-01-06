@@ -3,22 +3,39 @@ This component renders a detailed view of a donor, including contact information
 and a record of past donations including amount and type. 
 */
 
-import React from "react";
+import React, { useEffect } from "react";
 
 //Hooks
 import { useAuth0 } from "@auth0/auth0-react";
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
+//Actions
+import {fetchDonorDetails} from "../../actions/index.js"
 
 //Components
 import UserProfile from "../Auth/UserProfile";
 
-const DonorDetails = () => {
+
+const DonorDetails = (props) => {
   const { isAuthenticated, isLoading } = useAuth0();
   const history = useHistory();
-
+  //If not authenticated, push to home.
   if (!isAuthenticated && !isLoading) {
     history.push("/");
   }
+
+  
+  const dispatch = useDispatch();
+
+  //If authenticated, call for donor details.
+
+console.log(props);
+
+  useEffect(() => {
+    dispatch(fetchDonorDetails(0))
+  }, [])
+
   return (
     <div>
       <UserProfile />

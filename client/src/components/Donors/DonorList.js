@@ -42,7 +42,7 @@ const DonorList = () => {
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <Link to={`/donor-details/${id}`}>
+        <Link to={`/donor-details/${id}`} id = {id}>
           <Button
             btnColor='teal-button'
             btnSize='large-button'
