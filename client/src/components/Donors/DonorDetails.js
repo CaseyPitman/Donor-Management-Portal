@@ -25,15 +25,16 @@ const DonorDetails = (props) => {
     history.push("/");
   }
 
-  
+  console.log(props);
+  const id = useSelector(state => state.donors)
   const dispatch = useDispatch();
 
   //If authenticated, call for donor details.
+ 
 
-console.log(props);
 
   useEffect(() => {
-    dispatch(fetchDonorDetails(0))
+    dispatch(fetchDonorDetails(4))
   }, [])
 
   return (
