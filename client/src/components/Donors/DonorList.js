@@ -50,7 +50,7 @@ const DonorList = () => {
             id={id}
           />
         </Link>
-        <Link to='/edit-donor'>
+        <Link to={`/edit-donor/${id}`}>
           <Button
             btnColor='yellow-button'
             btnSize='large-button'
@@ -58,7 +58,7 @@ const DonorList = () => {
             id={id}
           />
         </Link>
-        <Link to='/delete-donor'>
+        <Link to={`/delete-donor/${id}`}>
           <Button
             btnColor='red-button'
             btnSize='large-button'
