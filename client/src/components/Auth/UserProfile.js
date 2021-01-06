@@ -17,7 +17,7 @@ const UserProfile = () => {
     isAuthenticated && (
       <div className='user-info'>
         <div className='user-info-content'>
-          <h2 className='user-name'>Welcome {user.name}.</h2>
+          <h2 className='user-name'>Welcome {user.name}</h2>
           <img src={user.picture} alt={user.name} className='user-image' />
         </div>
       </div>

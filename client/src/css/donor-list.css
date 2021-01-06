@@ -95,14 +95,14 @@ This file contains the styles for the donor-list view.
 }
 
 .grey {
-  background-color: rgb(43, 43, 43, 0.2);
+  background-color: rgb(43, 43, 43, 0.1);
 }
 
 /* Tablet Adjustments */
 
 @media only screen and (max-width: 1024px) {
   .donor-list-container {
-    margin: auto;
+    margin: 20px auto;
     width: 95%;
   }
 }
@@ -114,14 +114,33 @@ This file contains the styles for the donor-list view.
   .donor-list-name {
     font-size: 14px;
   }
-
 }
 
 /* Mobile adjustments */
 
 @media only screen and (max-width: 767px) {
+  .donor-search {
+    width: 150px;
+  }
 
-   .donor-list-headings {
-     display: none;
-   }
+  .donor-list-headings {
+    display: none;
+  }
+
+  .donor-list-item {
+     padding-top: 15px;
+     padding-bottom:15px;
+  }
+
+  .donor-list-email,
+  .donor-list-phone,
+  .donor-list-name {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .donor-list-actions {
+    margin: auto;
+    width: 66%;
+  }
 }
