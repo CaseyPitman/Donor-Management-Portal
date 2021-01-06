@@ -17,7 +17,7 @@ This file contains the styles for the donor-list view.
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-flow: row wrap;
   margin: 10px auto 15px;
 }
 
@@ -128,8 +128,8 @@ This file contains the styles for the donor-list view.
   }
 
   .donor-list-item {
-     padding-top: 15px;
-     padding-bottom:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .donor-list-email,
@@ -143,4 +143,20 @@ This file contains the styles for the donor-list view.
     margin: auto;
     width: 66%;
   }
+}
+
+@media only screen and (max-width: 280px) {
+  .donor-list-global-actions {
+    justify-content: center;
+  }
+
+  .donor-search {
+     margin-top: 10px;
+  }
+
+  .donor-list-title{
+     margin-bottom: 20px;
+     text-align: center;
+  }
+
 }
