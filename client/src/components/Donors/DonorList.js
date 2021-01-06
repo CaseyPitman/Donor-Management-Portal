@@ -42,7 +42,7 @@ const DonorList = () => {
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <Link to='/donor-details'>
+        <Link to={`/donor-details/${id}`}>
           <Button
             btnColor='teal-button'
             btnSize='large-button'
@@ -73,9 +73,8 @@ const DonorList = () => {
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
-    return newList.map((donor, idx )=> {
-      console.log(idx)
-      let background = (idx % 2 === 0) ? 'grey' : 'white';
+    return newList.map((donor, idx) => {
+      let background = idx % 2 === 0 ? "grey" : "white";
 
       return (
         // Add logic here that adds alternating colors for the rows. Perhaps use even/odd status of the id.
@@ -97,20 +96,20 @@ const DonorList = () => {
       <div className='donor-list-container'>
         <h1 className='donor-list-title'>Donor List</h1>
         <div className='donor-list-global-actions'>
-          <Link to='/create-donor' className = "create-donor-button">
+          <Link to='/create-donor' className='create-donor-button'>
             <Button
               btnColor='blue-button'
               btnSize='xl-button'
               btnText='+ New Donor'
             />
           </Link>
-          <input className = "donor-search" placeholder='Search Donors' />
+          <input className='donor-search' placeholder='Search Donors' />
         </div>
         <div className='donor-list-headings'>
-          <h2 className = "donor-list-heading-item">Name</h2>
-          <h2 className = "donor-list-heading-item">Email</h2>
-          <h2 className = "donor-list-heading-item">Phone</h2>
-          <h2 className = "donor-list-heading-item">Actions</h2>
+          <h2 className='donor-list-heading-item'>Name</h2>
+          <h2 className='donor-list-heading-item'>Email</h2>
+          <h2 className='donor-list-heading-item'>Phone</h2>
+          <h2 className='donor-list-heading-item'>Actions</h2>
         </div>
         <div className='donor-list-content'>{renderList()}</div>
       </div>

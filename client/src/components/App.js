@@ -33,13 +33,13 @@ const App = props => {
           <Route path='/create-donor' exact>
             <CreateDonor />
           </Route>
-          <Route path='/donor-details' exact>
+          <Route path='/donor-details/:id' exact>
             <DonorDetails />
           </Route>
-          <Route path='/edit-donor' exact>
+          <Route path='/edit-donor/:id' exact>
             <EditDonor />
           </Route>
-          <Route path='/delete-donor' exact>
+          <Route path='/delete-donor/:id' exact>
             <DeleteDonor />
           </Route>
         </Switch>
