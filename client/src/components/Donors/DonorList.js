@@ -23,12 +23,12 @@ import "../../css/donor-list.css";
 // import "../../css/button.css";
 
 const DonorList = () => {
-  const { isAuthenticated, isLoading } = useAuth0();
-  const history = useHistory();
+  // const { isAuthenticated, isLoading } = useAuth0();
+  // const history = useHistory();
 
-  if (!isAuthenticated && !isLoading) {
-    history.push("/");
-  }
+  // if (!isAuthenticated && !isLoading) {
+  //   history.push("/");
+  // }
 
   const list = useSelector(state => state.donors);
   const dispatch = useDispatch();

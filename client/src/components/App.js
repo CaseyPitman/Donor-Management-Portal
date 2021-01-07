@@ -2,7 +2,9 @@
 
 import React from "react";
 
+//Routing
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ProtectedRoute from "./Auth/ProtectedRoute";
 
 //Components
 import Header from "./Header";
@@ -17,6 +19,7 @@ import {
 
 //Styles
 import "../css/app.css";
+import { deleteDonor } from "../actions";
 
 const App = props => {
   return (
@@ -24,24 +27,12 @@ const App = props => {
       <div className='app'>
         <Header />
         <Switch>
-          <Route path='/' exact>
-            <Home />
-          </Route>
-          <Route path='/donor-list' exact>
-            <DonorList />
-          </Route>
-          <Route path='/create-donor' exact>
-            <CreateDonor />
-          </Route>
-          <Route path='/donor-details/:id' exact>
-            <DonorDetails />
-          </Route>
-          <Route path='/edit-donor/:id' exact>
-            <EditDonor />
-          </Route>
-          <Route path='/delete-donor/:id' exact>
-            <DeleteDonor />
-          </Route>
+          <Route path='/' exact component={Home} />
+          <ProtectedRoute path='/donor-list' component={DonorList} />
+          <ProtectedRoute path='/create-donor' component={CreateDonor} />
+          <ProtectedRoute path='/donor-details/:id' component={DonorDetails} />
+          <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
+          <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
         </Switch>
       </div>
     </Router>
