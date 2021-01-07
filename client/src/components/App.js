@@ -19,7 +19,7 @@ import {
 
 //Styles
 import "../css/app.css";
-import { deleteDonor } from "../actions";
+
 
 const App = props => {
   return (

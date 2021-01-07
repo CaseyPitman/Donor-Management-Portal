@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 
 //Hooks
 import { useDispatch, useSelector } from "react-redux";
-import { useAuth0 } from "@auth0/auth0-react";
-import { useHistory } from "react-router-dom";
 
 //Actions
 import { fetchDonorList } from "../../actions";
@@ -20,16 +18,8 @@ import Button from "../Button";
 
 // Styles
 import "../../css/donor-list.css";
-// import "../../css/button.css";
 
 const DonorList = () => {
-  // const { isAuthenticated, isLoading } = useAuth0();
-  // const history = useHistory();
-
-  // if (!isAuthenticated && !isLoading) {
-  //   history.push("/");
-  // }
-
   const list = useSelector(state => state.donors);
   const dispatch = useDispatch();
 
@@ -42,7 +32,7 @@ const DonorList = () => {
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <Link to={`/donor-details/${id}`} id = {id}>
+        <Link to={`/donor-details/${id}`} id={id}>
           <Button
             btnColor='teal-button'
             btnSize='large-button'
@@ -69,8 +59,6 @@ const DonorList = () => {
       </div>
     );
   };
-  
-
 
   //Render the list of donors.
   const renderList = () => {
