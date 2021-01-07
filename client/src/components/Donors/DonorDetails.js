@@ -7,7 +7,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 //Actions
-import { fetchDonorDetails } from "../../actions/index.js";
+import {fetchDonorDetails} from "../../actions/index.js";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
@@ -16,16 +16,26 @@ import Button from "../Button";
 class DonorDetails extends React.Component {
   constructor(props) {
     super(props);
-    const id = this.props.match.params;
   }
 
+
+  
   componentDidMount() {
+   
     // const { id } = this.props.match.params;
-    this.props.fetchDonorDetails(this.id);
+    this.props.fetchDonorDetails(this.props.match.params.id); 
+
   }
 
-  // USE INPUTS AND MAKE THEM READ ONLY SO THAT I CAN MATCH FORMS AND HAVE UNITY OF DESIGN.
+  // USE INPUTS AND MAKE THEM READ ONLY SO THAT I CAN MATCH FORMS AND HAVE UNITY OF DESIGN?
   //See: https://www.w3schools.com/tags/att_input_readonly.asp
+
+
+  donationHistory = () => {
+    //renders the donation history
+  }
+
+
 
   render() {
 
