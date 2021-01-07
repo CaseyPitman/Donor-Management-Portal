@@ -11,6 +11,7 @@ import { fetchDonorDetails } from "../../actions/index.js";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
+import Button from "../Button";
 
 class DonorDetails extends React.Component {
   constructor(props) {
@@ -27,6 +28,17 @@ class DonorDetails extends React.Component {
       <div>
         <UserProfile />
         <h1>DonorDetails</h1>
+        <Button btnColor='blue-button' btnSize='medium-button' btnText='Back' />
+        <Button
+          btnColor='yellow-button'
+          btnSize='medium-button'
+          btnText='Edit'
+        />
+        <Button
+          btnColor='red-button'
+          btnSize='medium-button'
+          btnText='Delete'
+        />
       </div>
     );
   }
