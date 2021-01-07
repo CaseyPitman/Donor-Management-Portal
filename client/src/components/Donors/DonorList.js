@@ -37,7 +37,6 @@ const DonorList = () => {
             btnColor='teal-button'
             btnSize='large-button'
             btnText='Details'
-            id={id}
           />
         </Link>
         <Link to={`/edit-donor/${id}`}>
@@ -45,7 +44,6 @@ const DonorList = () => {
             btnColor='yellow-button'
             btnSize='large-button'
             btnText='Edit'
-            id={id}
           />
         </Link>
         <Link to={`/delete-donor/${id}`}>
@@ -53,7 +51,6 @@ const DonorList = () => {
             btnColor='red-button'
             btnSize='large-button'
             btnText='Delete'
-            id={id}
           />
         </Link>
       </div>
