@@ -81,6 +81,7 @@ This file contains the styles for the donor-list view.
 
 .donor-list-email {
   color: #009688;
+  text-decoration: none;
 }
 .donor-list-email:hover {
   color: #ff9800;

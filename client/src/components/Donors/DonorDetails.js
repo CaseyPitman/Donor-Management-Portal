@@ -28,6 +28,7 @@ class DonorDetails extends React.Component {
   //See: https://www.w3schools.com/tags/att_input_readonly.asp
 
   render() {
+
     return (
       <div className='donor-details'>
         <UserProfile />
@@ -75,7 +76,7 @@ class DonorDetails extends React.Component {
           </div>
 
           <div className='donor-detail-donations'>
-            
+
           </div>
         </div>
       </div>
