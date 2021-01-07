@@ -11,13 +11,13 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 //Actions
-import {fetchDonorDetails} from "../../actions/index.js"
+import { fetchDonorDetails } from "../../actions/index.js";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
+import LoadingAnimation from "../LoadingAnimation";
 
-
-const DonorDetails = (props) => {
+const DonorDetails = props => {
   const { isAuthenticated, isLoading } = useAuth0();
   const history = useHistory();
   //If not authenticated, push to home.
@@ -25,22 +25,16 @@ const DonorDetails = (props) => {
     history.push("/");
   }
 
-  console.log(props);
-  const id = useSelector(state => state.donors)
-  const dispatch = useDispatch();
 
   //If authenticated, call for donor details.
- 
 
 
-  useEffect(() => {
-    dispatch(fetchDonorDetails(4))
-  }, [])
 
   return (
     <div>
       <UserProfile />
       <h1>DonorDetails</h1>
+      <LoadingAnimation/>
     </div>
   );
 };
