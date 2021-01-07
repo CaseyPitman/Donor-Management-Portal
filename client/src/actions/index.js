@@ -13,8 +13,6 @@ import DMP from "../axios/DMP";
 
 // import the useHistory so that I can push users to donor_list after edit or delete.
 
-// Thought - make sign in and sign out action that will set state as isSignedIn. This may smooth out the rendering process on each CRUD view to avoid having to make a call for authorization on each render.
-
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
   const response = await DMP.get("/donors/");
