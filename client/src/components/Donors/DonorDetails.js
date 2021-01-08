@@ -29,18 +29,22 @@ class DonorDetails extends React.Component {
   //Formats dollar amounts with commas, cents, and dollar signs.
   formatAmounts = () => {
     //Logic to format dollar amounts
-  }
+  };
 
+  //Determines total amount a donor has given.
   renderTotalDonations = () => {
     const donations = this.props.donor.donations.map(
       donation => donation.amount
     );
+
+    //Call to format donation amounts
 
     return donations.reduce((a, b) => a + b);
   };
 
   donationHistory = () => {
     return this.props.donor.donations.map((donation, idx) => {
+      //Don't forget to format donation amounts.
       return (
         <div key={idx}>
           <p>{donation.date}</p>
