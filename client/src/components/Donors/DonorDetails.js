@@ -26,8 +26,29 @@ class DonorDetails extends React.Component {
   // USE INPUTS AND MAKE THEM READ ONLY SO THAT I CAN MATCH FORMS AND HAVE UNITY OF DESIGN?
   //See: https://www.w3schools.com/tags/att_input_readonly.asp
 
+  //Formats dollar amounts with commas, cents, and dollar signs.
+  formatAmounts = () => {
+    //Logic to format dollar amounts
+  }
+
+  renderTotalDonations = () => {
+    const donations = this.props.donor.donations.map(
+      donation => donation.amount
+    );
+
+    return donations.reduce((a, b) => a + b);
+  };
+
   donationHistory = () => {
-    //renders the donation history
+    return this.props.donor.donations.map((donation, idx) => {
+      return (
+        <div key={idx}>
+          <p>{donation.date}</p>
+          <p>{donation.amount}</p>
+          <p>{donation.date}</p>
+        </div>
+      );
+    });
   };
 
   render() {
@@ -39,7 +60,7 @@ class DonorDetails extends React.Component {
         </div>
       );
     }
-    
+
     return (
       <div className='donor-details'>
         <UserProfile />
@@ -86,7 +107,12 @@ class DonorDetails extends React.Component {
             <p>{`${this.props.donor.address.state} ${this.props.donor.address.zip}`}</p>
           </div>
 
-          <div className='donor-detail-donations'></div>
+          <div className='donor-detail-donations'>
+            <h3>Donations</h3>
+            <h3>Total Donations {this.renderTotalDonations()}</h3>
+
+            {this.donationHistory()}
+          </div>
         </div>
       </div>
     );
