@@ -5,6 +5,7 @@ and a record of past donations including amount and type.
 
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 //Actions
 import { fetchDonorDetails } from "../../actions/index.js";
@@ -29,7 +30,6 @@ class DonorDetails extends React.Component {
   // USE INPUTS AND MAKE THEM READ ONLY SO THAT I CAN MATCH FORMS AND HAVE UNITY OF DESIGN?
   //See: https://www.w3schools.com/tags/att_input_readonly.asp
 
-  
   //Determines total amount a donor has given.
   renderTotalDonations = () => {
     const donations = this.props.donor.donations.map(
@@ -66,11 +66,14 @@ class DonorDetails extends React.Component {
         <UserProfile />
         <h1>DonorDetails</h1>
         <div className='donor-details-action-buttons'>
-          <Button
-            btnColor='blue-button'
-            btnSize='medium-button'
-            btnText='Back'
-          />
+          <Link to='/donor-list'>
+            <Button
+              btnColor='blue-button'
+              btnSize='medium-button'
+              btnText='Back'
+            />
+          </Link>
+
           <Button
             btnColor='yellow-button'
             btnSize='medium-button'
