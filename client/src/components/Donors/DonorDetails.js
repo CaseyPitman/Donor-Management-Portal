@@ -14,6 +14,9 @@ import UserProfile from "../Auth/UserProfile";
 import Button from "../Button";
 import LoadingAnimation from "../LoadingAnimation";
 
+//Helper functions
+import formatAmount from "../../helper-funcs/formatAmount";
+
 class DonorDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -26,20 +29,13 @@ class DonorDetails extends React.Component {
   // USE INPUTS AND MAKE THEM READ ONLY SO THAT I CAN MATCH FORMS AND HAVE UNITY OF DESIGN?
   //See: https://www.w3schools.com/tags/att_input_readonly.asp
 
-  //Formats dollar amounts with commas, cents, and dollar signs.
-  formatAmounts = () => {
-    //Logic to format dollar amounts
-  };
-
+  
   //Determines total amount a donor has given.
   renderTotalDonations = () => {
     const donations = this.props.donor.donations.map(
       donation => donation.amount
     );
-
-    //Call to format donation amounts
-
-    return donations.reduce((a, b) => a + b);
+    return formatAmount(donations.reduce((a, b) => a + b));
   };
 
   donationHistory = () => {
@@ -48,8 +44,8 @@ class DonorDetails extends React.Component {
       return (
         <div key={idx}>
           <p>{donation.date}</p>
-          <p>{donation.amount}</p>
-          <p>{donation.date}</p>
+          <p>{formatAmount(donation.amount)}</p>
+          <p>{donation.type}</p>
         </div>
       );
     });
