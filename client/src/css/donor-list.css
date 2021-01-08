@@ -61,7 +61,7 @@ This file contains the styles for the donor-list view.
 }
 
 .donor-list-name,
-.donor-list-email,
+.donor-list-email-container,
 .donor-list-phone,
 .donor-list-actions {
   width: 25%;
@@ -72,7 +72,7 @@ This file contains the styles for the donor-list view.
   color: #2c2c2c;
 }
 
-.donor-list-email,
+.donor-list-email-container,
 .donor-list-phone,
 .donor-list-name {
   font-size: 20px;

@@ -31,6 +31,7 @@ class DonorDetails extends React.Component {
   };
 
   render() {
+    //Avoids error on refreshing page.
     if (!this.props.donor) {
       return (
         <div>
@@ -38,7 +39,7 @@ class DonorDetails extends React.Component {
         </div>
       );
     }
-
+    
     return (
       <div className='donor-details'>
         <UserProfile />
