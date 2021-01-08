@@ -3,6 +3,7 @@
 
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import FormDatePicker from "../FormDatePicker";
 
 class DonorForm extends React.Component {
   renderError({ error, touched }) {
@@ -28,7 +29,9 @@ class DonorForm extends React.Component {
     );
   };
 
-  renderDatePicker = () => {};
+    renderDatePicker = () => {
+      return <h2>datepicker</h2>
+    };
 
   renderSelector = selectorType => {
     if (selectorType === "state") {
@@ -75,10 +78,14 @@ class DonorForm extends React.Component {
           <h3>Address</h3>
           <Field name='street' component={this.renderInput} label='Street' />
           <Field name='city' component={this.renderInput} label='City' />
-          <Field name='state' component={() => this.renderSelector("state")} label='State' />
+          <Field
+            name='state'
+            component={() => this.renderSelector("state")}
+            label='State'
+          />
           <Field name='zip' component={this.renderInput} label='Zip Code' />
           <h2>Donation Information</h2>
-          <Field name='date' component={this.renderInput} label='Date' />
+          <Field name='date' component={this.renderDatePicker} />
           <Field name='amount' component={this.renderInput} label='Amount' />
           <Field
             name='type'
