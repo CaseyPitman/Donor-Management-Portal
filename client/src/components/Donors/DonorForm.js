@@ -3,7 +3,10 @@
 
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import FormDatePicker from "../FormDatePicker";
+
+
+//Styles
+import 'react-widgets/dist/css/react-widgets.css';
 
 class DonorForm extends React.Component {
   renderError({ error, touched }) {
