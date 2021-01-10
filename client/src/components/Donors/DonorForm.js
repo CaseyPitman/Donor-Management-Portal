@@ -5,24 +5,29 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 
-
-
 class DonorForm extends React.Component {
-   renderError({ error, touched }) {
-      if (touched && error) {
-         return (
-            <div>
-          <div>{error}</div>
+
+  //for testing
+
+  onSubmit = () => {
+    console.log("form submitted")
+  }
+
+
+
+  renderError({ error, touched }) {
+    if (touched && error) {
+      return (
+        <div className='ui error message'>
+          <div className='header'>{error}</div>
         </div>
       );
-   }
-}
-
+    }
+  }
 
   renderInput = ({ input, label, meta }) => {
     const className = `field ${meta.error && meta.touched ? "error" : ""}`;
 
-    //  STYLE INPUT & LABEL FROM HERE.
     return (
       <div className={className}>
         <label>{label}</label>
@@ -32,23 +37,17 @@ class DonorForm extends React.Component {
     );
   };
 
-
-
-  renderSelector = selectorType => {
-    if (selectorType === "state") {
-      return (
-        <select>
-          <option>State</option>
-        </select>
-      );
-    } else if (selectorType === "type") {
-      return (
-        <select>
-          <option>type</option>
-        </select>
-      );
-    }
+  renderSelectField = () => {
+    return (
+      <select>
+        <option value='blah'>Blah</option>
+      </select>
+    );
   };
+
+  renderTextField = () => {
+    return (<input></input>)
+  }
 
   handleSubmit = formValues => {
     this.props.onSubmit(formValues);
@@ -56,54 +55,40 @@ class DonorForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <h2>Contact</h2>
-          <Field
-            name='firstName'
-            component={this.renderInput}
-            label='First Name'
-          />
-          <Field
-            name='lastName'
-            component={this.renderInput}
-            label='Last Name'
-          />
-          <Field
-            name='organization'
-            component={this.renderInput}
-            label='Organization'
-          />
-          <Field name='email' component={this.renderInput} label='Email' />
-          <Field name='phone' component={this.renderInput} label='Phone' />
-          <h3>Address</h3>
-          <Field name='street' component={this.renderInput} label='Street' />
-          <Field name='city' component={this.renderInput} label='City' />
-          <Field
-            name='state'
-            component={() => this.renderSelector("state")}
-            label='State'
-          />
-          <Field name='zip' component={this.renderInput} label='Zip Code' />
-          <h2>Donation Information</h2>
-          <Field
-          name="donation"
-          label = "Donation Date"
+      <form
+        className='ui form error'
+        onSubmit={this.props.handleSubmit(this.onSubmit)}>
+        <Field name='firstName' component={this.renderInput} label='First Name' />
+        <Field
+          name='lastName'
           component={this.renderInput}
+          label='Last Name'
         />
-          <Field name='amount' component={this.renderInput} label='Amount' />
-          <Field
-            name='type'
-            component={() => this.renderSelector("type")}
-            label='Type'
-          />
-        </form>
-      </div>
+        <Field
+          name='state'
+          component={this.renderSelectField}
+          label='State'
+        />
+        <button className='ui button primary'>Submit</button>
+      </form>
     );
   }
 }
 
+const validate = formValues => {
+  const errors = {};
+  if (!formValues.firstName) {
+    //only run if user did not enter a title
+    errors.title = "You must enter a title.";
+  }
+  if (!formValues.LastName) {
+    //only run if user did enter a description
+    errors.description = "You must enter a description.";
+  }
+  return errors;
+};
+
 export default reduxForm({
   form: "donorForm",
-  //   validate: validate,
+  validate: validate,
 })(DonorForm);
