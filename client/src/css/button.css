@@ -5,7 +5,8 @@ This file contains styles for the Button component
 /* All buttons */
 .button {
   border: 1px solid transparent;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .button:hover {

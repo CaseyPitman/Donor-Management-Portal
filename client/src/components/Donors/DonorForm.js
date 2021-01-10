@@ -5,18 +5,7 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 
-import DateTimePicker from 'react-widgets/lib/DateTimePicker'
-import moment from 'moment'
-import momentLocalizer from "react-widgets-moment";
 
-
-
-// //Styles
-import "react-widgets/dist/css/react-widgets.css";
-
-const dateFormat = moment().format('ll');
-
-momentLocalizer(moment);
 
 class DonorForm extends React.Component {
    renderError({ error, touched }) {
@@ -43,14 +32,7 @@ class DonorForm extends React.Component {
     );
   };
 
-  renderDatePicker = ({ input: { onChange, value }}) => (
-    <DateTimePicker
-      onChange={onChange}
-      format={dateFormat}
-      // time={showTime}
-      value={!value ? null : new Date(value)}
-    />
-  );
+
 
   renderSelector = selectorType => {
     if (selectorType === "state") {
@@ -105,9 +87,9 @@ class DonorForm extends React.Component {
           <Field name='zip' component={this.renderInput} label='Zip Code' />
           <h2>Donation Information</h2>
           <Field
-          name="dob"
-          // showTime={false}
-          component={this.renderDatePicker}
+          name="donation"
+          label = "Donation Date"
+          component={this.renderInput}
         />
           <Field name='amount' component={this.renderInput} label='Amount' />
           <Field
