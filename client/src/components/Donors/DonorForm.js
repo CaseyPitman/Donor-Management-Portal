@@ -51,7 +51,7 @@ class DonorForm extends React.Component {
         items: {
           type: "object",
           properties: {
-            date: { type: "string", title: "Date" },
+            date: { type: "string", format: "date", title: "Date" },
             amount: { type: "number", title: "Amount" },
             type: {
               type: "string",
