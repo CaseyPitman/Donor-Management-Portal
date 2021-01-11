@@ -7,7 +7,7 @@ import Form from "@rjsf/core";
 
 const schema = {
   type: "object",
-  required: ["firstName"],
+  required: ["firstName", "lastName", "email", "phone"],
   properties: {
     firstName: {
       type: "string",
@@ -17,6 +17,30 @@ const schema = {
       type: "string",
       title: "Last Name",
     },
+    organization: {
+      type: "string",
+      title: "Organization",
+    },
+    email: {
+      type: "string",
+      title: "Email",
+    },
+    phone: {
+      type: "string",
+      title: "Phone",
+    },
+    street: {
+      type: "string",
+      title: "Street",
+    },
+    city: {
+      type: "string",
+      title: "City",
+    },
+    state: {
+      type: 'string',
+      title: 'State'
+    }
   },
 };
 
