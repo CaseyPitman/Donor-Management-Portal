@@ -105,9 +105,9 @@ class DonorDetails extends React.Component {
 
           <div className='donor-detail-address'>
             <h3>Address</h3>
-            <p>{`${this.props.donor.address.street}`}</p>
-            <p>{`${this.props.donor.address.city}`}</p>
-            <p>{`${this.props.donor.address.state} ${this.props.donor.address.zip}`}</p>
+            <p>{`${this.props.donor.street}`}</p>
+            <p>{`${this.props.donor.city}`}</p>
+            <p>{`${this.props.donor.state}, ${this.props.donor.zip}`}</p>
           </div>
 
           <div className='donor-detail-donations'>
