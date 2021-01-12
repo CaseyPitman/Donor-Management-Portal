@@ -31,7 +31,7 @@ const EditDonor = () => {
       <Link to='../../donor-list'>
         <button>Cancel</button>
       </Link>
-      <DonorForm onSubmitCreateForm={onSubmitForm} action='edit' />
+      <DonorForm onSubmitForm={onSubmitForm} action='edit' />
     </div>
   );
 };

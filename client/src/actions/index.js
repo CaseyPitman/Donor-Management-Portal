@@ -37,4 +37,5 @@ export const editDonor = () => {
 
 export const deleteDonor = () => {
   //will delete a specific donor.
+  //push to list
 };

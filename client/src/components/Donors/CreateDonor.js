@@ -29,7 +29,7 @@ class CreateDonor extends React.Component {
         <Link to='./donor-list'>
           <button>Cancel</button>
         </Link>
-        <DonorForm onSubmitCreateForm={this.onSubmitForm} action='create' />
+        <DonorForm onSubmitForm={this.onSubmitForm} action='create' />
       </div>
     );
   }

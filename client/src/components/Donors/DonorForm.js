@@ -85,11 +85,12 @@ class DonorForm extends React.Component {
   onSubmitForm = ({ formData }) => {
     //conditional statement to either update or create - pass prop of create or edit from parent
     // console.log(formData);
-    if (this.props.action === "create") {
-      this.props.onSubmitCreateForm(formData);
-    } else if (this.props.action === "edit") {
-      this.props.onSubmitCreateForm(formData);
-    }
+    // if (this.props.action === "create") {
+    //   this.props.onSubmitCreateForm(formData);
+    // } else if (this.props.action === "edit") {
+    //   this.props.onSubmitEditForm(formData);
+    // }
+    this.props.onSubmitForm(formData);
   };
 
   render() {
