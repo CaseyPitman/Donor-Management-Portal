@@ -79,11 +79,15 @@ class DonorForm extends React.Component {
   };
 
   formData = {
-    state: "LA"
+    state: "LA",
   };
 
-  onSubmit = ({ formData }) => {
-    console.log(formData);
+  onSubmitForm = ({ formData }) => {
+    //conditional statement to either update or create - pass prop of create or edit from parent
+    // console.log(formData);
+    if (this.props.action === "create") {
+      this.props.onSubmitCreateForm(formData);
+    }
   };
 
   render() {
@@ -91,7 +95,7 @@ class DonorForm extends React.Component {
       <Form
         schema={this.schema}
         uiSchema={this.uiSchema}
-        onSubmit={this.onSubmit}
+        onSubmit={this.onSubmitForm}
         formData={this.formData}></Form>
     );
   }
