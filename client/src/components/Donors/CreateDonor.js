@@ -14,15 +14,11 @@ import DonorForm from "./DonorForm";
 import UserProfile from "../Auth/UserProfile";
 
 class CreateDonor extends React.Component {
-  onClickBack = () => {
-    console.log("click back button");
-  };
+  onSubmitForm = formData => {
+    //Dispatch the action from here.
 
-  onSubmitForm = (formData) => {
-
-   
     console.log(formData);
-    console.log('form submitted')
+    console.log(" create form submitted");
   };
 
   render() {
@@ -31,9 +27,9 @@ class CreateDonor extends React.Component {
         <UserProfile />
         <h1>Create Donor</h1>
         <Link to='./donor-list'>
-          <button onClick={this.onClickBack}>Back</button>
+          <button>Cancel</button>
         </Link>
-        <DonorForm onSubmitCreateForm={this.onSubmitForm} action = "create"/>
+        <DonorForm onSubmitCreateForm={this.onSubmitForm} action='create' />
       </div>
     );
   }

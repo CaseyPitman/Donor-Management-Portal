@@ -5,25 +5,33 @@ delete new donations.
  */
 
 import React from "react";
-
+import { Link } from "react-router-dom";
 //Hooks
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 import { useHistory } from "react-router-dom";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
+import DonorForm from "./DonorForm";
 
 const EditDonor = () => {
-  const { isAuthenticated, isLoading } = useAuth0();
   const history = useHistory();
 
-  if (!isAuthenticated && !isLoading) {
-    history.push("/");
-  }
+  const onSubmitForm = formData => {
+    //Dispatch the action from here.
+
+    console.log(formData);
+    console.log("edit form sumbitted.");
+  };
+
   return (
     <div>
       <UserProfile />
       <h1>Edit Donor</h1>
+      <Link to='../../donor-list'>
+        <button>Cancel</button>
+      </Link>
+      <DonorForm onSubmitCreateForm={onSubmitForm} action='edit' />
     </div>
   );
 };

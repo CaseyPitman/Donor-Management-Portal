@@ -71,7 +71,7 @@ const DonorList = () => {
             {donor.firstName} {donor.lastName}
           </div>
           <div className='donor-list-email-container'>
-            <a href={`mailto:${donor.email}`} target = 'blank' className = 'donor-list-email'>{donor.email}</a>{" "}
+            <a href={`mailto:${donor.email}`} target = 'blank' className = 'donor-list-email'>{donor.email}</a>
           </div>
           <div className='donor-list-phone'>{donor.phone}</div>
           <div className='donor-list-actions'>{renderActions(donor.id)}</div>

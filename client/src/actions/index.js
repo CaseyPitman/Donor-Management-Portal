@@ -21,7 +21,7 @@ export const fetchDonorList = () => async dispatch => {
 
 export const createDonor = () => {
   //will create a new donor record
-
+  //push to list when complete
 };
 
 // Retrieve record for single donor
@@ -32,6 +32,7 @@ export const fetchDonorDetails = id => async dispatch => {
 
 export const editDonor = () => {
   //will edit a specific donor record.
+  //push to list when complete
 };
 
 export const deleteDonor = () => {

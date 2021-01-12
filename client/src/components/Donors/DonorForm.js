@@ -87,6 +87,8 @@ class DonorForm extends React.Component {
     // console.log(formData);
     if (this.props.action === "create") {
       this.props.onSubmitCreateForm(formData);
+    } else if (this.props.action === "edit") {
+      this.props.onSubmitCreateForm(formData);
     }
   };
 
