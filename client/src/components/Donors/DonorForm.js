@@ -45,11 +45,17 @@ class DonorForm extends React.Component {
         enum: ["a", "b", "c"],
         enumNames: ["aligator", "bear", "cat"],
       },
+      zip: {
+        type: "string",
+        title: "Zip Code",
+      },
       donations: {
         type: "array",
+        minItems: 1,
         title: "Donation History",
         items: {
           type: "object",
+          required: ["date", "amount", "type"],
           properties: {
             date: { type: "string", format: "date", title: "Date" },
             amount: { type: "number", title: "Amount" },
@@ -65,12 +71,8 @@ class DonorForm extends React.Component {
     },
   };
 
-  uiSchema = {
-    properties: {
-      state: {
-        "ui:widget": "select",
-      },
-    },
+  formData = {
+ 
   };
 
   //for testing
@@ -84,7 +86,8 @@ class DonorForm extends React.Component {
       <Form
         schema={this.schema}
         uiSchema={this.uiSchema}
-        onSubmit={this.onSubmit}></Form>
+        onSubmit={this.onSubmit}
+        formData={this.formData}></Form>
     );
   }
 }
