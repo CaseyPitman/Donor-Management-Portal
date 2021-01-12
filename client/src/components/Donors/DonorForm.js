@@ -6,10 +6,16 @@ import React from "react";
 // import Form from "@rjsf/core";
 import Form from "@rjsf/material-ui";
 
+import stateAbb from "../../data/stateAbb";
+import stateNames from "../../data/stateNames";
+
+import "../../css/donorForm.css";
+
 class DonorForm extends React.Component {
   schema = {
     type: "object",
     required: ["firstName", "lastName", "email", "phone"],
+    title: "Contact Info",
     properties: {
       firstName: {
         type: "string",
@@ -42,8 +48,9 @@ class DonorForm extends React.Component {
       state: {
         type: "string",
         title: "State",
-        enum: ["a", "b", "c"],
-        enumNames: ["aligator", "bear", "cat"],
+        description: "Select a state",
+        enum: stateAbb,
+        enumNames: stateNames,
       },
       zip: {
         type: "string",
@@ -72,10 +79,8 @@ class DonorForm extends React.Component {
   };
 
   formData = {
- 
+    state: "LA"
   };
-
-  //for testing
 
   onSubmit = ({ formData }) => {
     console.log(formData);

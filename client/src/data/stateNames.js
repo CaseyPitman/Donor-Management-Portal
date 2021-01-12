@@ -53,3 +53,5 @@ const stateNames = [
   "Wisconsin",
   "Wyoming",
 ];
+
+export default stateNames;

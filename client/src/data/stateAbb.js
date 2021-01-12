@@ -53,3 +53,5 @@ const stateAbb = [
   "WI",
   "WY",
 ];
+
+export default stateAbb;
