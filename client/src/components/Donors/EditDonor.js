@@ -6,16 +6,14 @@ delete new donations.
 
 import React from "react";
 import { Link } from "react-router-dom";
-//Hooks
-// import { useAuth0 } from "@auth0/auth0-react";
-import { useHistory } from "react-router-dom";
+
 
 //Components
 import UserProfile from "../Auth/UserProfile";
 import DonorForm from "./DonorForm";
 
 const EditDonor = () => {
-  const history = useHistory();
+
 
   const onSubmitForm = formData => {
     //Dispatch the action from here.

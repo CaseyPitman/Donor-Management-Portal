@@ -5,43 +5,28 @@ information on a new donor.
 
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
-import { createDonor } from "../../actions";
+
+//3rd Party modules
 import dayjs from "dayjs";
 
+//Actions
+import { createDonor } from "../../actions";
 
-import {withRouter} from "react-router-dom";
-
-
+//Components
 import DonorForm from "./DonorForm";
-
 import UserProfile from "../Auth/UserProfile";
 
 const CreateDonor = (props) => {
  
   const dispatch = useDispatch();
-  // const history = useHistory();
 
-
-  const redirectToList = () => {
-    const {history} = props;
-    if(history) history.push('/donor-list');
-
-  }
-
-  const onSubmitForm = async formData => {
-    //Dispatch the action from here.
-
+  //Dispatch CREATE_DONOR action and then redirect to DonorList
+  const onSubmitForm = formData => {
     //Creates id for newly created record
     formData.id = `${formData.firstName}-${formData.lastName}`;
+    dispatch(createDonor(formData, props));
 
-    console.log(formData);
-    console.log(" create form submitted");
-    
-    await dispatch(createDonor(formData));
-    redirectToList();
   
   };
 

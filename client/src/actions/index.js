@@ -8,10 +8,12 @@ import {
   DELETE_DONOR,
 } from "./types";
 
-// import history from "../history";
 
 //Use for axios calls.
 import DMP from "../axios/DMP";
+
+import redirectToList from "../helper-funcs/redirect"
+
 
 
 // Retreive list of donors
@@ -21,12 +23,11 @@ export const fetchDonorList = () => async dispatch => {
 };
 
 //Create new donor record
-export const createDonor = formData => {
-  console.log('bing')
+export const createDonor = (formData, props) => {
   return async dispatch => {
     const response = await DMP.post("/donors", formData );
     dispatch({ type: CREATE_DONOR, payload: response.data });
-
+    redirectToList(props);
   };
 };
 
