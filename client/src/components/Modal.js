@@ -8,12 +8,13 @@ const Modal = props => {
     <div className='delete-modal' onClick={props.onDismiss}>
       <div onClick={e => e.stopPropagation()}>
         <div className='modal-header'>
-          Are you sure you want to delete (donor name here){" "}
+          {props.title}
         </div>
-        <div className='modal-content'>Confirm Deletion</div>
-        <div className='modal-actions'> delete and cancel buttons</div>
+        <div className='modal-content'>{props.content}</div>
+        <div className='modal-actions'> {props.actions}</div>
       </div>
-    </div>
+    </div>,
+    document.getElementById("modal")
   );
 };
 

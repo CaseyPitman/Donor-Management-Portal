@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
 //Actions
 import { fetchDonorDetails, deleteDonor } from "../../actions";
 
+//Helper funcs
+import redirectToList from "../../helper-funcs/redirect";
+
 //Components
 import Modal from "../Modal";
 
@@ -19,19 +22,36 @@ class DeleteDonor extends React.Component {
     this.props.fetchDonorDetails(this.id);
   }
 
+  renderContent = () => {
+    if (!this.props.donor) {
+      return "Are you sure you want to delete this donor?";
+    }
+    return `Are you sure you want to delete donor: ${this.props.donor.firstName} ${this.props.donor.lastName}`;
+  };
+
   renderActions = () => {
-    
-  }
-
-  renderContent = () => {}
-
-  
+    return (
+      <React.Fragment>
+        <button
+          className='confirm-delete'
+          onClick={() => this.props.deleteDonor(this.id)}>
+          Delete
+        </button>
+        <Link to='/donor-list' className='cancel-delete'>
+          <button className='cancel-delete-button'>Cancel</button>
+        </Link>
+      </React.Fragment>
+    );
+  };
 
   render() {
     return (
-      <div>
-        <h1>Delete Donor</h1>
-      </div>
+      <Modal
+        title='Delete Donor'
+        content={this.renderContent()}
+        actions={this.renderActions()}
+        onDismiss={() => redirectToList()}
+      />
     );
   }
 }
