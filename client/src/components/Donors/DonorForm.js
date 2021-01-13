@@ -36,6 +36,7 @@ class DonorForm extends React.Component {
       phone: {
         type: "string",
         title: "Phone",
+        format: "phoneNumberFormat",
       },
       street: {
         type: "string",
@@ -65,7 +66,7 @@ class DonorForm extends React.Component {
           required: ["date", "amount", "type"],
           properties: {
             date: { type: "string", format: "date", title: "Date" },
-            amount: { type: "number", title: "Amount"},
+            amount: { type: "number", title: "Amount" },
             type: {
               type: "string",
               title: "Type",
@@ -76,6 +77,12 @@ class DonorForm extends React.Component {
         },
       },
     },
+  };
+
+  uiSchema = {
+    firstName: {
+      "ui:autofocus": true,
+    }
   };
 
   formData = {

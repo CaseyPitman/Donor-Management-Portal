@@ -8,11 +8,11 @@ import {
   DELETE_DONOR,
 } from "./types";
 
-import history from "../history";
+// import history from "../history";
 
 //Use for axios calls.
 import DMP from "../axios/DMP";
-import { ViewStreamSharp } from "@material-ui/icons";
+
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
@@ -22,10 +22,11 @@ export const fetchDonorList = () => async dispatch => {
 
 //Create new donor record
 export const createDonor = formData => {
+  console.log('bing')
   return async dispatch => {
-    const response = await DMP.post("/donors", { ...formData });
+    const response = await DMP.post("/donors", formData );
     dispatch({ type: CREATE_DONOR, payload: response.data });
-    history.push("/donor-list");
+    // history.push("/donor-list");
   };
 };
 

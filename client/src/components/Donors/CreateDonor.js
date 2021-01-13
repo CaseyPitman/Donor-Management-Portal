@@ -7,16 +7,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { useHistory } from "react-router-dom";
-// import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { createDonor } from "../../actions";
 import dayjs from "dayjs";
+
+
 
 import DonorForm from "./DonorForm";
 
 import UserProfile from "../Auth/UserProfile";
 
 const CreateDonor = () => {
-  const onSubmitForm = formData => {
+ 
+  const dispatch = useDispatch();
+  const history = useHistory()
+
+  const onSubmitForm = async formData => {
     //Dispatch the action from here.
 
     //Creates id for newly created record
@@ -24,6 +30,8 @@ const CreateDonor = () => {
 
     console.log(formData);
     console.log(" create form submitted");
+    await dispatch(createDonor(formData));
+    history.push('/donor-list')
   };
 
   return (
@@ -38,6 +46,6 @@ const CreateDonor = () => {
   );
 };
 
-export default CreateDonor;
+// export default CreateDonor;
 
-//export default connect(null, { createStream })(StreamCreate);
+export default connect(null, { createDonor })(CreateDonor);
