@@ -19,9 +19,9 @@ import LoadingAnimation from "../LoadingAnimation";
 import formatAmount from "../../helper-funcs/formatAmount";
 
 class DonorDetails extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
     this.props.fetchDonorDetails(this.props.match.params.id);

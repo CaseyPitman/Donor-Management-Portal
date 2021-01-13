@@ -6,43 +6,37 @@ information on a new donor.
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { useHistory } from "react-router-dom";
 // import { connect } from "react-redux";
-// import { createDonor } from "../../actions";
+import { createDonor } from "../../actions";
 import dayjs from "dayjs";
 
 import DonorForm from "./DonorForm";
 
 import UserProfile from "../Auth/UserProfile";
 
-class CreateDonor extends React.Component {
-  onSubmitForm = formData => {
+const CreateDonor = () => {
+  const onSubmitForm = formData => {
     //Dispatch the action from here.
 
+    //Creates id for newly created record
+    formData.id = `${formData.firstName}-${formData.lastName}`;
 
-    //MAKE SURE TO PUT IN THE ID FIELD BEFORE SENDING IT OFF. 
-    formData.id = 'insert id here'
-
-    const thisDate = formData.donations[0].date;
-   
-
-    const testDate = dayjs(thisDate).format('MM/DD/YYYY')
-    console.log(testDate);
+    console.log(formData);
     console.log(" create form submitted");
   };
 
-  render() {
-    return (
-      <div>
-        <UserProfile />
-        <h1>Create Donor</h1>
-        <Link to='./donor-list'>
-          <button>Cancel</button>
-        </Link>
-        <DonorForm onSubmitForm={this.onSubmitForm} action='create' />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <UserProfile />
+      <h1>Create Donor</h1>
+      <Link to='./donor-list'>
+        <button>Cancel</button>
+      </Link>
+      <DonorForm onSubmitForm={onSubmitForm} action='create' />
+    </div>
+  );
+};
 
 export default CreateDonor;
 

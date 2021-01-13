@@ -8,10 +8,11 @@ import {
   DELETE_DONOR,
 } from "./types";
 
+import history from "../history";
+
 //Use for axios calls.
 import DMP from "../axios/DMP";
-
-// import the useHistory so that I can push users to donor_list after edit or delete.
+import { ViewStreamSharp } from "@material-ui/icons";
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
@@ -19,9 +20,13 @@ export const fetchDonorList = () => async dispatch => {
   dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
 };
 
-export const createDonor = () => {
-  //will create a new donor record
-  //push to list when complete
+//Create new donor record
+export const createDonor = formData => {
+  return async dispatch => {
+    const response = await DMP.post("/donors", { ...formData });
+    dispatch({ type: CREATE_DONOR, payload: response.data });
+    history.push("/donor-list");
+  };
 };
 
 // Retrieve record for single donor
