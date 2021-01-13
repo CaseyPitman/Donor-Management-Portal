@@ -12,15 +12,24 @@ import { createDonor } from "../../actions";
 import dayjs from "dayjs";
 
 
+import {withRouter} from "react-router-dom";
+
 
 import DonorForm from "./DonorForm";
 
 import UserProfile from "../Auth/UserProfile";
 
-const CreateDonor = () => {
+const CreateDonor = (props) => {
  
   const dispatch = useDispatch();
-  const history = useHistory()
+  // const history = useHistory();
+
+
+  const redirectToList = () => {
+    const {history} = props;
+    if(history) history.push('/donor-list');
+
+  }
 
   const onSubmitForm = async formData => {
     //Dispatch the action from here.
@@ -30,8 +39,10 @@ const CreateDonor = () => {
 
     console.log(formData);
     console.log(" create form submitted");
+    
     await dispatch(createDonor(formData));
-    history.push('/donor-list')
+    redirectToList();
+  
   };
 
   return (

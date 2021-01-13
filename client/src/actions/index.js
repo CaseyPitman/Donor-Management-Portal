@@ -26,7 +26,7 @@ export const createDonor = formData => {
   return async dispatch => {
     const response = await DMP.post("/donors", formData );
     dispatch({ type: CREATE_DONOR, payload: response.data });
-    // history.push("/donor-list");
+
   };
 };
 
@@ -41,7 +41,11 @@ export const editDonor = () => {
   //push to list when complete
 };
 
-export const deleteDonor = () => {
-  //will delete a specific donor.
-  //push to list
+//Delete a donor record
+export const deleteDonor = (id) =>  async dispatch => {
+  await DMP.delete(`/donors/${id}`);
+  dispatch ({type: DELETE_DONOR, payload: id})
+
 };
+
+
