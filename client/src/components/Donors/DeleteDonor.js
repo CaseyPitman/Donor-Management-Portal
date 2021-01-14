@@ -29,6 +29,9 @@ class DeleteDonor extends React.Component {
     return `Are you sure you want to delete donor: ${this.props.donor.firstName} ${this.props.donor.lastName}`;
   };
 
+  //onclick for confirm delete
+
+
   renderActions = () => {
     return (
       <React.Fragment>
