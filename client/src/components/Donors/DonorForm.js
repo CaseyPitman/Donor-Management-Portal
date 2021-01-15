@@ -91,7 +91,7 @@ class DonorForm extends React.Component {
   createFormData = formData => {
     //Editing a record with prexisting form data.
     if (this.props.action === "edit") {
-      console.log(this.props.donorInfo);
+      // console.log(this.props.donorInfo);
       return (formData = this.props.donorInfo);
     }
   };

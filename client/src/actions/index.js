@@ -8,13 +8,10 @@ import {
   DELETE_DONOR,
 } from "./types";
 
-
 //Use for axios calls.
 import DMP from "../axios/DMP";
 
-import redirectToList from "../helper-funcs/redirect"
-
-
+import redirectToList from "../helper-funcs/redirect";
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
@@ -25,7 +22,7 @@ export const fetchDonorList = () => async dispatch => {
 //Create new donor record
 export const createDonor = (formData, props) => {
   return async dispatch => {
-    const response = await DMP.post("/donors", formData );
+    const response = await DMP.post("/donors", formData);
     dispatch({ type: CREATE_DONOR, payload: response.data });
     redirectToList(props);
   };
@@ -38,15 +35,13 @@ export const fetchDonorDetails = id => async dispatch => {
 };
 
 //Edit a recored for a specified donor
-export const editDonor = () => {
-
-
+export const editDonor = (id, formData) => async dispatch => {
+  const response = await DMP.patch(`donors/${id}`, formData);
+  dispatch({ type: EDIT_DONOR, payload: response.data });
 };
 
 //Delete a donor record
-export const deleteDonor = (id) =>  async dispatch => {
+export const deleteDonor = id => async dispatch => {
   await DMP.delete(`/donors/${id}`);
-  dispatch ({type: DELETE_DONOR, payload: id})
+  dispatch({ type: DELETE_DONOR, payload: id });
 };
-
-

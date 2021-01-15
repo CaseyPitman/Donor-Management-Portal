@@ -11,23 +11,37 @@ import { connect } from "react-redux";
 //Actions
 import { fetchDonorDetails, editDonor } from "../../actions";
 
+//Helper
+import redirectToList from "../../helper-funcs/redirect";
+
 //Components
 import UserProfile from "../Auth/UserProfile";
 import DonorForm from "./DonorForm";
 
 class EditDonor extends React.Component {
-  //GET DONOR DETAILS - PASS TO FORM?
+  //MOVE TO FORM?
+  state = { formData: {} };
+
   id = this.props.match.params.id;
 
-  componentDidMount() {
-    this.props.fetchDonorDetails(this.id);
+  // WAIT...SHOULD I DO ALL OF THIS IN THE ACTUAL FORM? (ALL EXCEPT FETCH DATA) - I THINK SO. 
+  async componentDidMount() {
+    //Fetch prexisting donor details
+    await this.props.fetchDonorDetails(this.id);
+    console.log(this.props.donor);
+    //Set the prexisting donor details in state as formData
+    this.setState({ formData: this.props.donor });
+    console.log(this.state);
   }
+
+
 
   onSubmitForm = formData => {
     //Dispatch the action from here.
-
     console.log(formData);
-    console.log("edit form sumbitted.");
+    formData.id = `${formData.firstName}-${formData.lastName}`;
+    this.props.editDonor(this.id, this.formData);
+    redirectToList(this.props);
   };
 
   render() {
@@ -38,7 +52,11 @@ class EditDonor extends React.Component {
         <Link to='../../donor-list'>
           <button>Cancel</button>
         </Link>
-        <DonorForm onSubmitForm={this.onSubmitForm} action='edit' donorInfo = {this.props.donor}/>
+        <DonorForm
+          onSubmitForm={this.onSubmitForm}
+          action='edit'
+          donorInfo={this.props.donor}
+        />
       </div>
     );
   }
