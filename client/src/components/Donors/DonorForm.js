@@ -3,15 +3,18 @@
 
 import React from "react";
 
-// import Form from "@rjsf/core";
+//Components
 import Form from "@rjsf/material-ui";
 
+//Data
 import stateAbb from "../../data/stateAbb";
 import stateNames from "../../data/stateNames";
 
+//Styles
 import "../../css/donorForm.css";
 
 class DonorForm extends React.Component {
+
   schema = {
     type: "object",
     required: ["firstName", "lastName", "email", "phone"],
@@ -82,21 +85,29 @@ class DonorForm extends React.Component {
   uiSchema = {
     firstName: {
       "ui:autofocus": true,
+    },
+  };
+
+  //Setting form data
+  createFormData = formData => {
+    if (this.props.action === "create") {
+      //This is a new record with no prexisting form data.
+      return (formData = {
+        state: "LA",
+      });
+    }
+    //Editing a record with prexisting form data.
+    // PASS DATA IN FROM EDIT DONOR -  HOW DO DEAL WITH MULTIPLE DONATIONS?
+
+    else if (this.props.action === "edit") {
+      return (formData = {
+        state: "WY",
+      });
     }
   };
 
-  formData = {
-    state: "LA",
-  };
-
+  //User submits form.
   onSubmitForm = ({ formData }) => {
-    //conditional statement to either update or create - pass prop of create or edit from parent
-    // console.log(formData);
-    // if (this.props.action === "create") {
-    //   this.props.onSubmitCreateForm(formData);
-    // } else if (this.props.action === "edit") {
-    //   this.props.onSubmitEditForm(formData);
-    // }
     this.props.onSubmitForm(formData);
   };
 
@@ -106,7 +117,7 @@ class DonorForm extends React.Component {
         schema={this.schema}
         uiSchema={this.uiSchema}
         onSubmit={this.onSubmitForm}
-        formData={this.formData}></Form>
+        formData={this.createFormData()}></Form>
     );
   }
 }
