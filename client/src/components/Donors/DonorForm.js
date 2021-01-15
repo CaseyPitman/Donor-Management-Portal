@@ -70,8 +70,8 @@ class DonorForm extends React.Component {
             type: {
               type: "string",
               title: "Type",
-              enum: ["gift", "endowment", "scholarship"],
-              enumNames: ["Gift", "Endowment", "Scholarship"],
+              enum: ["cash", "endowment", "property", "sponsorship"],
+              enumNames: ["Cash", "Endowment", "Property", "Sponsorship"],
             },
           },
         },
