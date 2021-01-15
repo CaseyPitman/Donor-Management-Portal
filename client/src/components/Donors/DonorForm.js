@@ -89,15 +89,8 @@ class DonorForm extends React.Component {
 
   //Setting form data
   createFormData = formData => {
-    if (this.props.action === "create") {
-      //This is a new record with no prexisting form data.
-      return (formData = {
-        state: "LA",
-      });
-    }
     //Editing a record with prexisting form data.
-    // PASS DATA IN FROM EDIT DONOR -  HOW DO DEAL WITH MULTIPLE DONATIONS?
-    else if (this.props.action === "edit") {
+    if (this.props.action === "edit") {
       console.log(this.props.donorInfo);
       return (formData = this.props.donorInfo);
     }
