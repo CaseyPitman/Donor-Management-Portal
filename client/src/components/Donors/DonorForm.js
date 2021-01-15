@@ -14,7 +14,6 @@ import stateNames from "../../data/stateNames";
 import "../../css/donorForm.css";
 
 class DonorForm extends React.Component {
-
   schema = {
     type: "object",
     required: ["firstName", "lastName", "email", "phone"],
@@ -98,11 +97,9 @@ class DonorForm extends React.Component {
     }
     //Editing a record with prexisting form data.
     // PASS DATA IN FROM EDIT DONOR -  HOW DO DEAL WITH MULTIPLE DONATIONS?
-
     else if (this.props.action === "edit") {
-      return (formData = {
-        state: "WY",
-      });
+      console.log(this.props.donorInfo);
+      return (formData = this.props.donorInfo);
     }
   };
 
