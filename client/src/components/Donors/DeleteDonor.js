@@ -30,14 +30,15 @@ class DeleteDonor extends React.Component {
   };
 
   //onclick for confirm delete
-
+  onConfirmDelete = () => {
+    this.props.deleteDonor(this.id, this.props);
+    redirectToList(this.props);
+  };
 
   renderActions = () => {
     return (
       <React.Fragment>
-        <button
-          className='confirm-delete'
-          onClick={() => this.props.deleteDonor(this.id)}>
+        <button className='confirm-delete' onClick={this.onConfirmDelete}>
           Delete
         </button>
         <Link to='/donor-list' className='cancel-delete'>

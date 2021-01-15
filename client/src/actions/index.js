@@ -47,7 +47,6 @@ export const editDonor = () => {
 export const deleteDonor = (id) =>  async dispatch => {
   await DMP.delete(`/donors/${id}`);
   dispatch ({type: DELETE_DONOR, payload: id})
-  // redirectToList(props);
 };
 
 
