@@ -25,6 +25,8 @@ const CreateDonor = (props) => {
   const onSubmitForm = formData => {
     //Creates id for newly created record
     formData.id = `${formData.firstName}-${formData.lastName}`;
+
+    
     dispatch(createDonor(formData, props));
 
   
