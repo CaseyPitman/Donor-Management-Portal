@@ -13,8 +13,8 @@ import stateNames from "../../data/stateNames";
 //Styles
 import "../../css/donorForm.css";
 
-class DonorForm extends React.Component {
-  schema = {
+const DonorForm = props => {
+  const schema = {
     type: "object",
     required: ["firstName", "lastName", "email", "phone"],
     title: "Contact Info",
@@ -81,35 +81,33 @@ class DonorForm extends React.Component {
     },
   };
 
-  uiSchema = {
+  const uiSchema = {
     firstName: {
       "ui:autofocus": true,
     },
   };
 
   //Setting form data
-  createFormData = formData => {
+  const createFormData = formData => {
     //Editing a record with prexisting form data.
-    if (this.props.action === "edit") {
+    if (props.action === "edit") {
       // console.log(this.props.donorInfo);
-      return (formData = this.props.donorInfo);
+      return (formData = props.donorInfo);
     }
   };
 
   //User submits form.
-  onSubmitForm = ({ formData }) => {
-    this.props.onSubmitForm(formData);
+  const onSubmitForm = ({ formData }) => {
+    props.onSubmitForm(formData);
   };
 
-  render() {
-    return (
-      <Form
-        schema={this.schema}
-        uiSchema={this.uiSchema}
-        onSubmit={this.onSubmitForm}
-        formData={this.createFormData()}></Form>
-    );
-  }
-}
+  return (
+    <Form
+      schema={schema}
+      uiSchema={uiSchema}
+      onSubmit={onSubmitForm}
+      formData={createFormData()}></Form>
+  );
+};
 
 export default DonorForm;
