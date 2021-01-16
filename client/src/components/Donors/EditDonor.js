@@ -24,7 +24,7 @@ class EditDonor extends React.Component {
 
   id = this.props.match.params.id;
 
-  // WAIT...SHOULD I DO ALL OF THIS IN THE ACTUAL FORM? (ALL EXCEPT FETCH DATA) - I THINK SO. 
+  // WAIT...SHOULD I DO ALL OF THIS IN THE ACTUAL FORM? (ALL EXCEPT FETCH DATA) - I THINK SO.
   async componentDidMount() {
     //Fetch prexisting donor details
     await this.props.fetchDonorDetails(this.id);
@@ -34,13 +34,11 @@ class EditDonor extends React.Component {
     console.log(this.state);
   }
 
-
-
-  onSubmitForm = formData => {
+  onSubmitForm = updatedFormData => {
     //Dispatch the action from here.
-    console.log(formData);
-    formData.id = `${formData.firstName}-${formData.lastName}`;
-    this.props.editDonor(this.id, this.formData);
+    console.log(updatedFormData);
+    updatedFormData.id = `${updatedFormData.firstName}-${updatedFormData.lastName}`;
+    this.props.editDonor(this.id, updatedFormData);
     redirectToList(this.props);
   };
 
