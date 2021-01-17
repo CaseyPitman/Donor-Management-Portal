@@ -68,7 +68,7 @@ const DonorForm = props => {
           required: ["date", "amount", "type"],
           properties: {
             date: { type: "string", format: "date", title: "Date" },
-            amount: { type: "number", title: "Amount" },
+            amount: { type: "number", title: "Amount", minimum: 0 },
             type: {
               type: "string",
               title: "Type",
