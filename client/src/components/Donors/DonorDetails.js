@@ -17,6 +17,7 @@ import LoadingAnimation from "../LoadingAnimation";
 
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
+import formatDate from "../../helper-funcs/formatDate";
 
 class DonorDetails extends React.Component {
   // constructor(props) {
@@ -43,7 +44,7 @@ class DonorDetails extends React.Component {
       //Don't forget to format donation amounts.
       return (
         <div key={idx}>
-          <p>{donation.date}</p>
+          <p>{formatDate(donation.date)}</p>
           <p>{formatAmount(donation.amount)}</p>
           <p>{donation.type}</p>
         </div>
