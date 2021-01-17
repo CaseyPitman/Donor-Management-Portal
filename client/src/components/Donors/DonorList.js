@@ -60,6 +60,7 @@ const DonorList = () => {
 
   //Render the list of donors.
   const renderList = () => {
+
     const newList = Object.values(list);
     return newList.map((donor, idx) => {
       let background = idx % 2 === 0 ? "grey" : "white";
