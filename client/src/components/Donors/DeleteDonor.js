@@ -13,7 +13,7 @@ import { fetchDonorDetails, deleteDonor } from "../../actions";
 import redirectToList from "../../helper-funcs/redirect";
 
 //Components
-import Modal from "../Modal";
+// import Modal from "../Modal";
 
 class DeleteDonor extends React.Component {
   id = this.props.match.params.id;
@@ -36,25 +36,23 @@ class DeleteDonor extends React.Component {
 
   renderActions = () => {
     return (
-      <React.Fragment>
+      <div>
         <button className='confirm-delete' onClick={this.onConfirmDelete}>
           Delete
         </button>
         <Link to='/donor-list' className='cancel-delete'>
           <button className='cancel-delete-button'>Cancel</button>
         </Link>
-      </React.Fragment>
+      </div>
     );
   };
 
   render() {
     return (
-      <Modal
-        title='Delete Donor'
-        content={this.renderContent()}
-        actions={this.renderActions()}
-        onDismiss={() => redirectToList()}
-      />
+      <div>
+        {this.renderContent()}
+        {this.renderActions()}
+      </div>
     );
   }
 }
