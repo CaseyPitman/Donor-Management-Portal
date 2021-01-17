@@ -13,7 +13,7 @@ import { fetchDonorDetails, deleteDonor } from "../../actions";
 import redirectToList from "../../helper-funcs/redirect";
 
 //Components
-// import Modal from "../Modal";
+import Button from "../Button";
 
 class DeleteDonor extends React.Component {
   id = this.props.match.params.id;
@@ -37,11 +37,19 @@ class DeleteDonor extends React.Component {
   renderActions = () => {
     return (
       <div>
-        <button className='confirm-delete' onClick={this.onConfirmDelete}>
-          Delete
-        </button>
+        <Button
+          btnColor='red-button'
+          btnSize='large-button'
+          btnText='Delete'
+          onClick={this.onConfirmDelete}
+        />
+
         <Link to='/donor-list' className='cancel-delete'>
-          <button className='cancel-delete-button'>Cancel</button>
+          <Button
+            btnColor='blue-button'
+            btnSize='large-button'
+            btnText='Cancel'
+          />
         </Link>
       </div>
     );
