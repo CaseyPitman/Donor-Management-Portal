@@ -35,9 +35,10 @@ export const fetchDonorDetails = id => async dispatch => {
 };
 
 //Edit a recored for a specified donor
-export const editDonor = (id, formData) => async dispatch => {
+export const editDonor = (id, formData, props) => async dispatch => {
   const response = await DMP.patch(`donors/${id}`, formData);
   dispatch({ type: EDIT_DONOR, payload: response.data });
+  redirectToList(props);
 };
 
 //Delete a donor record

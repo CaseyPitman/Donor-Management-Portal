@@ -25,7 +25,6 @@ const CreateDonor = props => {
   //Dispatch CREATE_DONOR action and then redirect to DonorList
   const onSubmitForm = formData => {
     //Creates id for newly created record
-    // formData.id = `${formData.firstName}-${formData.lastName}`;
 
     formData.id = nanoid(19);
 
