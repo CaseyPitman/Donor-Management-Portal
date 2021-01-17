@@ -7,6 +7,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 
+import { nanoid } from "nanoid";
+
 //3rd Party modules
 import dayjs from "dayjs";
 
@@ -17,19 +19,17 @@ import { createDonor } from "../../actions";
 import DonorForm from "./DonorForm";
 import UserProfile from "../Auth/UserProfile";
 
-const CreateDonor = (props) => {
- 
+const CreateDonor = props => {
   const dispatch = useDispatch();
 
   //Dispatch CREATE_DONOR action and then redirect to DonorList
   const onSubmitForm = formData => {
     //Creates id for newly created record
-    formData.id = `${formData.firstName}-${formData.lastName}`;
+    // formData.id = `${formData.firstName}-${formData.lastName}`;
 
-    
+    formData.id = nanoid(19);
+
     dispatch(createDonor(formData, props));
-
-  
   };
 
   return (
