@@ -5,6 +5,7 @@ import React from "react";
 
 //Components
 import Form from "@rjsf/material-ui";
+// import Form from "@rjsf/core"
 
 //Data
 import stateAbb from "../../data/stateAbb";
@@ -84,6 +85,7 @@ const DonorForm = props => {
   const uiSchema = {
     firstName: {
       "ui:autofocus": true,
+      classNames: "TEST",
     },
   };
 
@@ -103,6 +105,7 @@ const DonorForm = props => {
 
   return (
     <Form
+      className='form'
       schema={schema}
       uiSchema={uiSchema}
       onSubmit={onSubmitForm}

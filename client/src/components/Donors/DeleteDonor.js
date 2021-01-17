@@ -26,7 +26,7 @@ class DeleteDonor extends React.Component {
     if (!this.props.donor) {
       return "Are you sure you want to delete this donor?";
     }
-    return `Are you sure you want to delete donor: ${this.props.donor.firstName} ${this.props.donor.lastName}`;
+    return `Are you sure you want to delete donor ${this.props.donor.firstName} ${this.props.donor.lastName}?`;
   };
 
   //onclick for confirm delete
@@ -36,14 +36,7 @@ class DeleteDonor extends React.Component {
 
   renderActions = () => {
     return (
-      <div>
-        <Button
-          btnColor='red-button'
-          btnSize='large-button'
-          btnText='Delete'
-          onClick={this.onConfirmDelete}
-        />
-
+      <div className='delete-button-container'>
         <Link to='/donor-list' className='cancel-delete'>
           <Button
             btnColor='blue-button'
@@ -51,14 +44,20 @@ class DeleteDonor extends React.Component {
             btnText='Cancel'
           />
         </Link>
+        <Button
+          btnColor='red-button'
+          btnSize='large-button'
+          btnText='Delete'
+          onClick={this.onConfirmDelete}
+        />
       </div>
     );
   };
 
   render() {
     return (
-      <div>
-        {this.renderContent()}
+      <div className='delete-donor'>
+        <h1>{this.renderContent()}</h1>
         {this.renderActions()}
       </div>
     );

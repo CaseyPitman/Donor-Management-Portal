@@ -1,6 +1,12 @@
 
 
-.firstName{
-   width:25%;
+.form{
+   margin: auto;
+   width: 50%;
 }
+
+.MuiButton-containedPrimary {
+   background-color: orange!important;
+}
+
 

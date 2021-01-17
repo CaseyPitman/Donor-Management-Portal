@@ -17,6 +17,7 @@ import redirectToList from "../../helper-funcs/redirect";
 //Components
 import UserProfile from "../Auth/UserProfile";
 import DonorForm from "./DonorForm";
+import Button from "../Button";
 
 class EditDonor extends React.Component {
   //MOVE TO FORM?
@@ -24,11 +25,9 @@ class EditDonor extends React.Component {
 
   id = this.props.match.params.id;
 
-
   async componentDidMount() {
     //Fetch prexisting donor details
     await this.props.fetchDonorDetails(this.id);
-
   }
 
   onSubmitForm = updatedFormData => {
@@ -41,7 +40,18 @@ class EditDonor extends React.Component {
         <UserProfile />
         <h1>Edit Donor</h1>
         <Link to='../../donor-list'>
-          <button>Cancel</button>
+          <Button
+            btnColor='blue-button'
+            btnSize='large-button'
+            btnText='Cancel'
+          />
+        </Link>
+        <Link to={`../../delete-donor/${this.props.match.params.id}`}>
+          <Button
+            btnColor='red-button'
+            btnSize='large-button'
+            btnText='Delete'
+          />
         </Link>
         <DonorForm
           onSubmitForm={this.onSubmitForm}
