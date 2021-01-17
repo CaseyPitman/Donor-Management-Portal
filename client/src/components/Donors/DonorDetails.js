@@ -75,16 +75,20 @@ class DonorDetails extends React.Component {
             />
           </Link>
 
-          <Button
-            btnColor='yellow-button'
-            btnSize='medium-button'
-            btnText='Edit'
-          />
-          <Button
-            btnColor='red-button'
-            btnSize='medium-button'
-            btnText='Delete'
-          />
+          <Link to={`/edit-donor/${this.props.match.params.id}`}>
+            <Button
+              btnColor='yellow-button'
+              btnSize='medium-button'
+              btnText='Edit'
+            />
+          </Link>
+          <Link to={`/delete-donor/${this.props.match.params.id}`}>
+            <Button
+              btnColor='red-button'
+              btnSize='medium-button'
+              btnText='Delete'
+            />
+          </Link>
         </div>
         <div className='donor-details-container'>
           <div className='donor-detail-name'>

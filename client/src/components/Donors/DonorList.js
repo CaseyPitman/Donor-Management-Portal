@@ -28,16 +28,15 @@ const DonorList = () => {
     dispatch(fetchDonorList());
   }, [dispatch]);
 
-  //Renders action buttons. (These will be <Link/> to actions).
+  //Renders action buttons. 
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <Link to={`/donor-details/${id}`} >
+        <Link to={`/donor-details/${id}`}>
           <Button
             btnColor='teal-button'
             btnSize='large-button'
             btnText='Details'
-       
           />
         </Link>
         <Link to={`/edit-donor/${id}`}>
