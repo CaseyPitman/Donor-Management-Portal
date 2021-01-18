@@ -4,8 +4,9 @@
 import React from "react";
 
 //Components
-import Form from "@rjsf/material-ui";
+// import Form from "@rjsf/material-ui";
 // import Form from "@rjsf/core"
+import Form from '@rjsf/bootstrap-4';
 
 //Data
 import stateAbb from "../../data/stateAbb";
@@ -52,7 +53,7 @@ const DonorForm = props => {
       state: {
         type: "string",
         title: "State",
-        description: "Select a state",
+        // description: "Select a state",
         enum: stateAbb,
         enumNames: stateNames,
       },
