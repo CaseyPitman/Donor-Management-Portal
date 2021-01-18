@@ -115,6 +115,11 @@ class DonorDetails extends React.Component {
             <p>{`${this.props.donor.state}, ${this.props.donor.zip}`}</p>
           </div>
 
+          <div className='donor-detail-notes'>
+            <h3>Notes</h3>
+            <p>{`${this.props.donor.notes}`}</p>
+          </div>
+
           <div className='donor-detail-donations'>
             <h3>Donations</h3>
             <h3>Total Donations {this.renderTotalDonations()}</h3>

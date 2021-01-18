@@ -60,6 +60,10 @@ const DonorForm = props => {
         type: "string",
         title: "Zip Code",
       },
+      notes: {
+        type: "string",
+        title: "Notes"
+      },
       donations: {
         type: "array",
         minItems: 1,
@@ -85,7 +89,12 @@ const DonorForm = props => {
   const uiSchema = {
     firstName: {
       "ui:autofocus": true,
-      classNames: "TEST",
+    },
+    notes: {
+      "ui:widget": "textarea",
+      "ui:options": {
+        rows: 5,
+      },
     },
   };
 
