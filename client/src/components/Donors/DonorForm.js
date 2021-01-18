@@ -2,11 +2,14 @@
 // updating an existing record.
 
 import React from "react";
+import "bootswatch/dist/yeti/bootstrap.min.css";
 
 //Components
 // import Form from "@rjsf/material-ui";
 // import Form from "@rjsf/core"
 import Form from '@rjsf/bootstrap-4';
+
+import Button from "../Button"
 
 //Data
 import stateAbb from "../../data/stateAbb";
@@ -119,7 +122,11 @@ const DonorForm = props => {
       schema={schema}
       uiSchema={uiSchema}
       onSubmit={onSubmitForm}
-      formData={createFormData()}></Form>
+      formData={createFormData()}>
+
+        {/* <button type = "button">add stuff</button> add the submit button i want */}
+      </Form>
+      
   );
 };
 
