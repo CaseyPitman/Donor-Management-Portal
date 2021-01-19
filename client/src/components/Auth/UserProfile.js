@@ -13,6 +13,7 @@ const UserProfile = () => {
     return <div className='user-info'></div>;
   }
 
+  console.log(user);
   return (
     isAuthenticated && (
       <div className='user-info'>

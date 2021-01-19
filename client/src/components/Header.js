@@ -41,7 +41,7 @@ const Header = () => {
           <h1 className='header-title light'>
             The Literacy Council
             <br></br>
-            <small class='text-muted'>Donor Management Portal</small>
+            <small className='text-muted'>Donor Management Portal</small>
           </h1>
         </div>
         <div className='auth-button-container'>{renderButton()}</div>
