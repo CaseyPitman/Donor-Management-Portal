@@ -2,11 +2,10 @@
 // updating an existing record.
 
 import React, { useState, useEffect } from "react";
-import "bootswatch/dist/yeti/bootstrap.min.css";
+
 
 //Components
-// import Form from "@rjsf/material-ui";
-// import Form from "@rjsf/core"
+
 import Form from "@rjsf/bootstrap-4";
 
 import Button from "../Button";

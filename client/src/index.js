@@ -22,6 +22,10 @@ import { Auth0Provider } from "@auth0/auth0-react";
 // Components
 import App from "./components/App";
 
+//Theme
+import "bootswatch/dist/lux/bootstrap.min.css";
+
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
