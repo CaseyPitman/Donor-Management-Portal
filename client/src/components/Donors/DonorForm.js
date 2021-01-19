@@ -1,15 +1,15 @@
 // This component renders the form used both for creating a new donor record and
 // updating an existing record.
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "bootswatch/dist/yeti/bootstrap.min.css";
 
 //Components
 // import Form from "@rjsf/material-ui";
 // import Form from "@rjsf/core"
-import Form from '@rjsf/bootstrap-4';
+import Form from "@rjsf/bootstrap-4";
 
-import Button from "../Button"
+import Button from "../Button";
 
 //Data
 import stateAbb from "../../data/stateAbb";
@@ -19,6 +19,14 @@ import stateNames from "../../data/stateNames";
 import "../../css/donorForm.css";
 
 const DonorForm = props => {
+  const [formData, setFormData] = useState(null);
+
+  useEffect(() => {
+    if (props.donorInfo) {
+      setFormData(props.donorInfo);
+    }
+  }, [props.donorInfo]);
+
   const schema = {
     type: "object",
     required: ["firstName", "lastName", "email", "phone"],
@@ -66,7 +74,7 @@ const DonorForm = props => {
       },
       notes: {
         type: "string",
-        title: "Notes"
+        title: "Notes",
       },
       donations: {
         type: "array",
@@ -102,15 +110,6 @@ const DonorForm = props => {
     },
   };
 
-  //Setting form data
-  const createFormData = formData => {
-    //Editing a record with prexisting form data.
-    if (props.action === "edit") {
-      // console.log(this.props.donorInfo);
-      return (formData = props.donorInfo);
-    }
-  };
-
   //User submits form.
   const onSubmitForm = ({ formData }) => {
     props.onSubmitForm(formData);
@@ -122,11 +121,12 @@ const DonorForm = props => {
       schema={schema}
       uiSchema={uiSchema}
       onSubmit={onSubmitForm}
-      formData={createFormData()}>
-
-        {/* <button type = "button">add stuff</button> add the submit button i want */}
-      </Form>
-      
+      formData={formData}
+      onChange={e => {
+        setFormData(e.formData);
+      }}>
+      {/* <button type = "button">add stuff</button> add the submit button i want */}
+    </Form>
   );
 };
 
