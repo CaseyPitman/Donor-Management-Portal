@@ -10,6 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./Auth/LoginButton";
 import LogoutButton from "./Auth/LogoutButton";
 import Navbar from "react-bootstrap/Navbar";
+import Spinner from "react-bootstrap/Spinner";
 
 // Assets
 import logo from "../images/logo.svg";
@@ -25,7 +26,11 @@ const Header = () => {
   const renderButton = () => {
     //If loading show empty div
     if (isLoading) {
-      return <div> BUTTON W/ SPINNER</div>;
+      return (
+        <Spinner animation='border' variant='light' role='login status'>
+          <span className='sr-only'>Loading Login Status</span>
+        </Spinner>
+      );
     }
     //After load show button.
     return isAuthenticated ? <LogoutButton /> : <LoginButton />;
