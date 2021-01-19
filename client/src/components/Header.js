@@ -13,6 +13,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 // Assets
 import logo from "../images/logo.svg";
+import UserProfile from "../components/Auth/UserProfile";
 
 // Styles
 import "../css/header.css";
@@ -30,8 +31,12 @@ const Header = () => {
     return isAuthenticated ? <LogoutButton /> : <LoginButton />;
   };
 
+  const renderUserImage = () => {
+    return isAuthenticated ? <UserProfile /> : <div></div>;
+  };
+
   return (
-    <nav className='navbar navbar-dark bg-dark header' expand='sm'>
+    <Navbar className='navbar navbar-dark bg-dark header' expand='lg'>
       <div className='header-content'>
         <div className='header-branding'>
           <div className='logo-container'>
@@ -44,36 +49,13 @@ const Header = () => {
             <small className='text-muted'>Donor Management Portal</small>
           </h1>
         </div>
-        <div className='auth-button-container'>{renderButton()}</div>
+        <div className='auth-container'>
+          {renderUserImage()}
+          {renderButton()}
+        </div>
       </div>
-    </nav>
-
-    // <nav class='navbar navbar-dark bg-dark'>
-    //   <Navbar.Brand>
-    //     <img
-    //       alt='Literacy Council Logo'
-    //       src={logo}
-    //       fluid='true'
-    //       width='50'
-    //       height='50'
-    //       className='d-inline-block align-top'
-    //     />
-    //     <div className='d-inline-block'>
-    //       <span className='header-title'>The Literacy Council</span>
-    //       <br></br>
-    //       <small class='text-muted'>Donor Management Portal</small>
-    //     </div>
-    //   </Navbar.Brand>
-    //   {renderButton()}
-    // </nav>
+    </Navbar>
   );
 };
-
-{
-  /* <h3>
-  Heading
-  <small class="text-muted">with muted text</small>
-</h3> */
-}
 
 export default Header;

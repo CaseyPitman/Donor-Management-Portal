@@ -64,7 +64,6 @@ class DonorDetails extends React.Component {
 
     return (
       <div className='donor-details'>
-        <UserProfile />
         <h1>DonorDetails</h1>
         <div className='donor-details-action-buttons'>
           <Link to='/donor-list'>

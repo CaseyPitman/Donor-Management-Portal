@@ -88,7 +88,6 @@ const DonorList = () => {
 
   return (
     <div className='donor-list'>
-      <UserProfile />
       <div className='donor-list-container'>
         <h1 className='donor-list-title'>Donor List</h1>
         <div className='donor-list-global-actions'>

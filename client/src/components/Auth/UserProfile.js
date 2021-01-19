@@ -10,17 +10,13 @@ const UserProfile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div className='user-info'></div>;
+    return <div className='user-image-container'></div>;
   }
 
-  console.log(user);
   return (
     isAuthenticated && (
-      <div className='user-info'>
-        <div className='user-info-content'>
-          <h2 className='user-name'>Welcome {user.name}</h2>
-          <img src={user.picture} alt={user.name} className='user-image' />
-        </div>
+      <div className='user-image-container'>
+        <img src={user.picture} alt={user.name} className='user-image' />
       </div>
     )
   );

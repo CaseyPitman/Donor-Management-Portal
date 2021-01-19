@@ -37,7 +37,6 @@ class EditDonor extends React.Component {
   render() {
     return (
       <div>
-        <UserProfile />
         <h1>Edit Donor</h1>
         <Link to='../../donor-list'>
           <Button

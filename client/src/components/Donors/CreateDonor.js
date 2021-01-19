@@ -32,7 +32,7 @@ const CreateDonor = props => {
 
   return (
     <div>
-      <UserProfile />
+  
       <h1>Create Donor</h1>
       <Link to='./donor-list'>
         <Button variant = "info" >Cancel</Button>
