@@ -6,6 +6,7 @@ a splash image and quote about reading.
 .home {
   background-image: url("../images/child-reading.jpg");
   height: 100vh;
+
   display: flex;
   justify-content: flex-start;
   align-content: center;
@@ -16,24 +17,24 @@ a splash image and quote about reading.
   line-height: 1.5;
   margin-left: 5%;
   width: auto;
+  
 }
 
 .quote {
   color: white;
-  font-size: calc(12px + 2vw);
-  font-weight: 300;
+  font-size: clamp(14px, 1.75vw, 40px);
+  font-weight: 100;
 }
 
 .quotation-mark {
-  color: #03a9f4;
+  color: #1a1a1a;
 }
 
 .quote-attribution {
-  color: white;
-  font-size: calc(12px + 1.75vw);
-  font-weight: 400;
+  /* font-size: calc(12px + 1.75vw);*/
+  font-size: clamp(10px, 1.5vw, 40px);
   margin-top: 20px;
-  text-align: right;
+  /* text-align: right; */
 }
 
 /* Tablet adjustments for Home view */
@@ -68,6 +69,6 @@ a splash image and quote about reading.
 
 @media only screen and (max-width: 767px) {
   .quote-container {
-    margin: 0 auto 30%;
+    margin: 0 auto 50%;
   }
 }
