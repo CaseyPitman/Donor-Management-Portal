@@ -3,7 +3,6 @@ This file contains custom CSS for the header component.
 */
 
 .header {
-  background-color: #FF9800;
   padding-top: 9px;
   padding-bottom: 9px;
   width: 100%;
@@ -18,6 +17,7 @@ This file contains custom CSS for the header component.
   margin: auto;
   padding-left: 10px;
   padding-right: 10px;
+  width: 95%;
 }
 
 .header-branding {
@@ -28,10 +28,6 @@ This file contains custom CSS for the header component.
 }
 
 .logo-container {
-  background-color: white;
-  border: 1px solid rgb(44, 44, 44);
-  border-radius: 50%;
-
   margin-right: 20px;
 
   height: 50px;
@@ -43,29 +39,31 @@ This file contains custom CSS for the header component.
 }
 
 .logo {
-  height: 35px;
+  height: 40px;
+  width: 40px;
+
 }
 
 .header-title {
-
+  color: white;
   font-size: clamp(16px, 2vw, 50px);
 }
 
-.header-title-secondary {
-  color:#2c2c2c;
-  font-weight:300;
-}
-
-
 /* Mobile adjustments for super skinny viewport - Galaxy Fold */
-@media only screen and (max-width:280px){
-
-  .header-branding{
+@media only screen and (max-width: 767px) {
+  .header-branding {
     width: 100%;
   }
 
+  .header-title {
+    margin-top:8px;
+    text-align: center;
+    width: 100%;
+    
+  }
+
   .auth-button-container {
-    text-align: right;
+    text-align: center;
     width: 100%;
   }
 }
