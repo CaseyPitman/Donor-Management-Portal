@@ -9,6 +9,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 //Components
 import LoginButton from "./Auth/LoginButton";
 import LogoutButton from "./Auth/LogoutButton";
+import Navbar from "react-bootstrap/Navbar";
 
 // Assets
 import logo from "../images/logo.svg";
@@ -18,6 +19,7 @@ import "../css/header.css";
 
 const Header = () => {
   const { isAuthenticated, isLoading } = useAuth0();
+  
 
   // Determine whether to show sign in or sign out button.
   const renderButton = () => {
