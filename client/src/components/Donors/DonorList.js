@@ -16,6 +16,8 @@ import { fetchDonorList } from "../../actions";
 import UserProfile from "../Auth/UserProfile";
 import Button from "../Button";
 
+//Helper functions
+
 // Styles
 import "../../css/donor-list.css";
 
@@ -28,7 +30,7 @@ const DonorList = () => {
     dispatch(fetchDonorList());
   }, [dispatch]);
 
-  //Renders action buttons. 
+  //Renders action buttons.
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
@@ -59,7 +61,6 @@ const DonorList = () => {
 
   //Render the list of donors.
   const renderList = () => {
-
     const newList = Object.values(list);
     return newList.map((donor, idx) => {
       let background = idx % 2 === 0 ? "grey" : "white";
@@ -71,7 +72,12 @@ const DonorList = () => {
             {donor.firstName} {donor.lastName}
           </div>
           <div className='donor-list-email-container'>
-            <a href={`mailto:${donor.email}`} target = 'blank' className = 'donor-list-email'>{donor.email}</a>
+            <a
+              href={`mailto:${donor.email}`}
+              target='blank'
+              className='donor-list-email'>
+              {donor.email}
+            </a>
           </div>
           <div className='donor-list-phone'>{donor.phone}</div>
           <div className='donor-list-actions'>{renderActions(donor.id)}</div>
