@@ -5,7 +5,10 @@ a splash image and quote about reading.
 
 .home {
   /* background-image: url("../images/bookshelf1.jpg"); */
-  /* height: 100vh; */
+  
+
+
+  
 
   display: flex;
   justify-content: flex-start;

@@ -21,4 +21,8 @@ html, body {
   background-image: url("../images/bookshelf1.jpg");
   min-height: 100vh;
 
+  height: 100%;
+
+
+
 }

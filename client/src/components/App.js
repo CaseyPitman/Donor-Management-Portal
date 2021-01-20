@@ -26,6 +26,7 @@ const App = props => {
     <Router>
       <div className='app'>
         <Header />
+        {/* App viewport here? */}
         <Switch>
           <Route path='/' exact component={Home} />
           <ProtectedRoute path='/donor-list' component={DonorList} />
