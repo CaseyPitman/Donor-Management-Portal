@@ -4,8 +4,8 @@ a splash image and quote about reading.
 */
 
 .home {
-  background-image: url("../images/child-reading.jpg");
-  height: 100vh;
+  /* background-image: url("../images/bookshelf1.jpg"); */
+  /* height: 100vh; */
 
   display: flex;
   justify-content: flex-start;
@@ -17,7 +17,6 @@ a splash image and quote about reading.
   line-height: 1.5;
   margin-left: 5%;
   width: auto;
-  
 }
 
 .quote {
@@ -31,14 +30,11 @@ a splash image and quote about reading.
 }
 
 .quote-attribution {
-  /* font-size: calc(12px + 1.75vw);*/
   font-size: clamp(10px, 1.5vw, 40px);
   margin-top: 20px;
-  /* text-align: right; */
 }
 
 /* Tablet adjustments for Home view */
-
 @media only screen and (max-width: 1024px) {
   .home {
     background-position: center;
@@ -57,7 +53,6 @@ a splash image and quote about reading.
 }
 
 /* Tablet adjustments for landscape view */
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .quote-container {
     align-self: flex-end;
@@ -66,7 +61,6 @@ a splash image and quote about reading.
 }
 
 /*  Mobile adjustments for Home view */
-
 @media only screen and (max-width: 767px) {
   .quote-container {
     margin: 0 auto 50%;
