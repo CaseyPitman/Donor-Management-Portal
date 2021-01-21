@@ -101,10 +101,10 @@ const DonorList = () => {
           <input className='donor-search' placeholder='Search Donors' />
         </div>
         <div className='donor-list-headings'>
-          <h2 className='donor-list-heading-item'>Name</h2>
+          {/* <h2 className='donor-list-heading-item'>Name</h2>
           <h2 className='donor-list-heading-item'>Email</h2>
           <h2 className='donor-list-heading-item'>Phone</h2>
-          <h2 className='donor-list-heading-item'>Actions</h2>
+          <h2 className='donor-list-heading-item'>Actions</h2> */}
         </div>
         <div className='donor-list-content'>{renderList()}</div>
       </div>

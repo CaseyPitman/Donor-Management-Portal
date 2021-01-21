@@ -2,20 +2,27 @@
 This file contains the styles for the donor-list view.
  */
 
+
+ /* use for top of each vieow */
 .donor-list {
   background-color:rgb(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  height:100vh;
 
-  /* height: 100vh; */
 
-
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  width:100%;
 }
 
 .donor-list-container {
 
   /* background-color: white;  */
   /* transparent */
+  width: 90%;
 
 
 }

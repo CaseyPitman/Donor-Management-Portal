@@ -17,10 +17,15 @@ body {
   width: 100%;
 }
 
-.app {
+body {
   background-image: url("../images/bookshelf1.jpg");
   background-size: cover;
-  height: 100vh;
+}
+
+.app {
+  /* background-image: url("../images/bookshelf1.jpg"); */
+  /* background-size: cover; */
+  max-height: 100vh;
 
 
   /* height: 100%; */
