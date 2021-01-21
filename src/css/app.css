@@ -15,12 +15,10 @@ body {
   font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
+  max-height:100vh;
+  overflow: hidden;
 }
 
-body {
-  background-image: url("../images/bookshelf1.jpg");
-  background-size: cover;
-}
 
 .app {
   /* background-image: url("../images/bookshelf1.jpg"); */
@@ -31,11 +29,11 @@ body {
   /* height: 100%; */
 }
 
-.app-viewport {
+/* .app-viewport {
 
   display: flex;
   justify-content: center;
   align-items: center;
 
 
-} 
+}  */
