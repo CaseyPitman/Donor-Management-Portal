@@ -10,19 +10,27 @@ This file contains global custom CSS for the Donor Managemant Portal
   padding: 0px;
 }
 
-html, body {
-  font-family: 'Roboto', sans-serif;
-  height:100%;
-  width:100%;
-
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 .app {
   background-image: url("../images/bookshelf1.jpg");
-  min-height: 100vh;
-
-  height: 100%;
-
+  background-size: cover;
+  height: 100vh;
 
 
+  /* height: 100%; */
 }
+
+.app-viewport {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+} 

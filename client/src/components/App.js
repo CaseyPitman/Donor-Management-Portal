@@ -20,21 +20,25 @@ import {
 //Styles
 import "../css/app.css";
 
-
 const App = props => {
   return (
     <Router>
       <div className='app'>
         <Header />
         {/* App viewport here? */}
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <ProtectedRoute path='/donor-list' component={DonorList} />
-          <ProtectedRoute path='/create-donor' component={CreateDonor} />
-          <ProtectedRoute path='/donor-details/:id' component={DonorDetails} />
-          <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
-          <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
-        </Switch>
+        <div className='app-viewport'>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <ProtectedRoute path='/donor-list' component={DonorList} />
+            <ProtectedRoute path='/create-donor' component={CreateDonor} />
+            <ProtectedRoute
+              path='/donor-details/:id'
+              component={DonorDetails}
+            />
+            <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
+            <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
+          </Switch>
+        </div>
       </div>
     </Router>
   );
