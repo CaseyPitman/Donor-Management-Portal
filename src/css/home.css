@@ -15,8 +15,8 @@ a splash image and quote about reading.
 
 .quote-container {
   background-color: rgba(255,255,255, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
   border: 1px solid rgb(255, 255, 255, 0.2) ;
   box-shadow: 5px 8px 32px 5px rgba( 44,44,44, 0.9 );
   /* align-self: center; */
