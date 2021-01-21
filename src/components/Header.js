@@ -45,13 +45,15 @@ const Header = () => {
       <div className='header-content'>
         <div className='header-branding'>
           <div className='logo-container'>
-            <img src={logo} className='logo' alt='Literacy Council Logo' />
+            {/* <img src={logo} className='logo' alt='Literacy Council Logo' /> */}
+            <i class="fas fa-book-reader text-light logo"></i>
+
           </div>
 
           <h1 className='header-title text-light'>
             The Literacy Council
             <br></br>
-            <small className='text-secondary'>Donor Management Portal</small>
+            <small className='text-dark'>Donor Management Portal</small>
           </h1>
         </div>
         <div className='auth-container'>

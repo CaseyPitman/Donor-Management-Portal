@@ -23,8 +23,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import App from "./components/App";
 
 //Theme
-import "bootswatch/dist/sandstone/bootstrap.min.css";
-
+import "bootswatch/dist/minty/bootstrap.min.css";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

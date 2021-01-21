@@ -11,7 +11,7 @@ const LogoutButton = () => {
 
   return (
     <Button
-      variant='secondary'
+      variant='dark'
       size='sm'
       className='auth-button'
       onClick={() => logout({ returnTo: window.location.origin })}>

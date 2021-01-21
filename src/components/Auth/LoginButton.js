@@ -9,7 +9,7 @@ const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   return (
     <Button
-      variant='secondary'
+      variant='dark'
       size='sm'
       onClick={() => loginWithRedirect()}
       className='auth-button'>
