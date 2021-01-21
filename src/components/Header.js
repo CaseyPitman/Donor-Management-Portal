@@ -41,17 +41,17 @@ const Header = () => {
   };
 
   return (
-    <Navbar className='navbar navbar-dark bg-dark header' expand='lg'>
+    <Navbar className='navbar bg-primary navbar-dark header' expand='lg'>
       <div className='header-content'>
         <div className='header-branding'>
           <div className='logo-container'>
             <img src={logo} className='logo' alt='Literacy Council Logo' />
           </div>
 
-          <h1 className='header-title light'>
+          <h1 className='header-title text-light'>
             The Literacy Council
             <br></br>
-            <small className='text-muted'>Donor Management Portal</small>
+            <small className='text-secondary'>Donor Management Portal</small>
           </h1>
         </div>
         <div className='auth-container'>

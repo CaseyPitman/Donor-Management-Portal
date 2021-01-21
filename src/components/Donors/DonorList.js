@@ -14,7 +14,9 @@ import { fetchDonorList } from "../../actions";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
-import Button from "../Button";
+// import Button from "../Button";
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 //Helper functions
 
@@ -34,27 +36,17 @@ const DonorList = () => {
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <Link to={`/donor-details/${id}`}>
-          <Button
-            btnColor='teal-button'
-            btnSize='large-button'
-            btnText='Details'
-          />
-        </Link>
-        <Link to={`/edit-donor/${id}`}>
-          <Button
-            btnColor='yellow-button'
-            btnSize='large-button'
-            btnText='Edit'
-          />
-        </Link>
-        <Link to={`/delete-donor/${id}`}>
-          <Button
-            btnColor='red-button'
-            btnSize='large-button'
-            btnText='Delete'
-          />
-        </Link>
+        <ButtonGroup size='lg'>
+          <Link to={`/donor-details/${id}`}>
+            <Button variant='info'>Details</Button>
+          </Link>
+          <Link to={`/edit-donor/${id}`}>
+            <Button variant='warning'>Edit</Button>
+          </Link>
+          <Link to={`/delete-donor/${id}`}>
+            <Button variant='danger'>Delete</Button>
+          </Link>
+        </ButtonGroup>
       </div>
     );
   };
@@ -88,25 +80,27 @@ const DonorList = () => {
 
   return (
     <div className='donor-list'>
-      <div className='donor-list-container'>
-        <h1 className='donor-list-title'>Donor List</h1>
-        <div className='donor-list-global-actions'>
-          <Link to='/create-donor' className='create-donor-button'>
-            <Button
-              btnColor='blue-button'
-              btnSize='xl-button'
-              btnText='+ New Donor'
-            />
-          </Link>
-          <input className='donor-search' placeholder='Search Donors' />
-        </div>
-        <div className='donor-list-headings'>
-          {/* <h2 className='donor-list-heading-item'>Name</h2>
+      <div className='donor-list-wrapper'>
+        <div className='donor-list-container'>
+          <h1 className='donor-list-title'>Donor List</h1>
+          <div className='donor-list-global-actions'>
+            <Link to='/create-donor' className='create-donor-button'>
+              <Button variant='primary'>
+                + Add New Donor
+              </Button>
+            </Link>
+            <input className='donor-search' placeholder='Search Donors' />
+          </div>
+          <div className='donor-list-table'>
+            <div className='donor-list-headings'>
+              {/*               <h2 className='donor-list-heading-item'>Name</h2>
           <h2 className='donor-list-heading-item'>Email</h2>
           <h2 className='donor-list-heading-item'>Phone</h2>
           <h2 className='donor-list-heading-item'>Actions</h2> */}
+            </div>
+            <div className='donor-list-content'>{renderList()}</div>
+          </div>
         </div>
-        <div className='donor-list-content'>{renderList()}</div>
       </div>
     </div>
   );

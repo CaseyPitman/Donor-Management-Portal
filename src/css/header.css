@@ -42,7 +42,7 @@ This file contains custom CSS for the header component.
 }
 
 .header-title {
-  color: white;
+  /* color: white; */
   font-size: clamp(16px, 2vw, 50px);
   margin: 0px;
 }

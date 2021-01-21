@@ -6,29 +6,37 @@ This file contains the styles for the donor-list view.
  /* use for top of each vieow */
 .donor-list {
   background-color:rgb(255, 255, 255, 0.75);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-image: url("../images/bookshelf1.jpg");
+  background-size: cover;
+
   height:100vh;
 
 
   display: flex;
   justify-content: center;
   align-content: center;
-  position: relative;
+
   width:100%;
 }
 
-.donor-list-container {
+.donor-list-wrapper {
+  background-color: rgba(255,255,255, 0.6);
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+ 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-  /* background-color: white;  */
-  /* transparent */
-  width: 90%;
-
-
+.donor-list-container{
+  margin:  50px auto;
+  width:90%;
 }
 
 .donor-list-title {
-
+  
 }
 
 .donor-list-global-actions {
@@ -40,7 +48,13 @@ This file contains the styles for the donor-list view.
 }
 
 .donor-list-content {
-  border: 1px solid #2c2c2c;
+  /* border: 1px solid #2c2c2c; */
+}
+
+.donor-list-table {
+  background-color:rgb(255, 255, 255,0.6);
+   border: 1px solid rgb(255, 255, 255, 0.2) ;
+  box-shadow: 3px 8px 32px 3px rgba( 44,44,44, 0.9 );
 }
 
 .donor-list-headings {
