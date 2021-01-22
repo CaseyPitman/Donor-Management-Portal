@@ -44,7 +44,7 @@ const DonorList = () => {
               Details
             </Button>
           </Link>
-          <Link to={`/edit-donor/${id}`}className='mx-2'>
+          <Link to={`/edit-donor/${id}`} className='mx-2'>
             <Button variant='warning' size='sm'>
               Edit
             </Button>
@@ -87,7 +87,7 @@ const DonorList = () => {
     <div className='donor-list'>
       <div className='donor-list-wrapper'>
         <div className='donor-list-container'>
-          <h1 className='donor-list-title'>Donor List</h1>
+          <h1 className='display-5 donor-list-title'>Donor History</h1>
           <div className='donor-list-global-actions'>
             <Link to='/create-donor'>
               <Button variant='dark' size='sm' className='add-donor-button'>
@@ -103,7 +103,10 @@ const DonorList = () => {
                 className='donor-search-field'
               />
               <InputGroup.Append>
-                <Button variant='dark' size='sm' className = 'search-donor-button'>
+                <Button
+                  variant='dark'
+                  size='sm'
+                  className='search-donor-button'>
                   Search
                 </Button>
               </InputGroup.Append>
@@ -111,9 +114,9 @@ const DonorList = () => {
           </div>
 
           <div className='donor-list-table'>
-            <Table striped responsive text='center'>
+            <Table striped responsive bordered text='center'>
               <thead className=''>
-                <tr className='table-info'>
+                <tr className='table-primary'>
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone</th>
@@ -123,16 +126,6 @@ const DonorList = () => {
               <tbody>{renderList()}</tbody>
             </Table>
           </div>
-
-          {/* <div className='donor-list-table'> */}
-          {/* <div className='donor-list-headings'> */}
-          {/*               <h2 className='donor-list-heading-item'>Name</h2>
-          <h2 className='donor-list-heading-item'>Email</h2>
-          <h2 className='donor-list-heading-item'>Phone</h2>
-          <h2 className='donor-list-heading-item'>Actions</h2> */}
-          {/* </div> */}
-          {/* <div className='donor-list-content'>{renderList()}</div> */}
-          {/* </div> */}
         </div>
       </div>
     </div>
