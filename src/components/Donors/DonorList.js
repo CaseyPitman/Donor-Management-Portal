@@ -17,6 +17,8 @@ import UserProfile from "../Auth/UserProfile";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/Form";
 
 //Helper functions
 
@@ -36,7 +38,7 @@ const DonorList = () => {
   const renderActions = id => {
     return (
       <div className='donor-list-action-buttons'>
-        <ButtonGroup size='lg'>
+        <ButtonGroup size='sm'>
           <Link to={`/donor-details/${id}`}>
             <Button variant='info'>Details</Button>
           </Link>
@@ -55,25 +57,22 @@ const DonorList = () => {
   const renderList = () => {
     const newList = Object.values(list);
     return newList.map((donor, idx) => {
-      let background = idx % 2 === 0 ? "grey" : "white";
-
       return (
-    
-        <div key={donor.id} className={`donor-list-item ${background}`}>
-          <div className='donor-list-name'>
+        <tr key={donor.id}>
+          <td className='text-dark'>
             {donor.firstName} {donor.lastName}
-          </div>
-          <div className='donor-list-email-container'>
+          </td>
+          <td>
             <a
               href={`mailto:${donor.email}`}
               target='blank'
-              className='donor-list-email'>
+              className='text-dark'>
               {donor.email}
             </a>
-          </div>
-          <div className='donor-list-phone'>{donor.phone}</div>
-          <div className='donor-list-actions'>{renderActions(donor.id)}</div>
-        </div>
+          </td>
+          <td className='text-dark'>{donor.phone}</td>
+          <td>{renderActions(donor.id)}</td>
+        </tr>
       );
     });
   };
@@ -85,35 +84,36 @@ const DonorList = () => {
           <h1 className='donor-list-title'>Donor List</h1>
           <div className='donor-list-global-actions'>
             <Link to='/create-donor' className='create-donor-button'>
-              <Button variant='primary'>+ Add New Donor</Button>
+              <Button variant='info' size='sm'>
+                + Add New Donor
+              </Button>
             </Link>
-            <input className='donor-search' placeholder='Search Donors' />
           </div>
 
-          <Table striped responsive className = "donor-list-table">
-            <thead className = ''>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                {/* <th>Phone</th> */}
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mark Jenkins</td>
-                <td>Mark.jenkins@gmail.com</td>
-                {/* <td>907-888-9989</td> */}
-                <td>Details Edit Delete</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                {/* <td>Thornton</td> */}
-                <td>@fat</td>
-              </tr>
-            </tbody>
-          </Table>
+          <form class='form-inline my-2 my-lg-0'>
+            <input
+              class='form-control'
+              type='text'
+              placeholder='Search Donors'
+            />
+            <button class='btn btn-info' type='submit'>
+              Search
+            </button>
+          </form>
+
+          <div className='donor-list-table'>
+            <Table striped responsive text='center'>
+              <thead className=''>
+                <tr className='table-info'>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>{renderList()}</tbody>
+            </Table>
+          </div>
 
           {/* <div className='donor-list-table'> */}
           {/* <div className='donor-list-headings'> */}
