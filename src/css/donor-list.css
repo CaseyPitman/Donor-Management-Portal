@@ -8,8 +8,7 @@ This file contains the styles for the donor-list view.
   background-image: url("../images/bookshelf1.jpg");
   background-size: cover;
 
-
-  min-height: 100vh; 
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -38,9 +37,15 @@ This file contains the styles for the donor-list view.
 }
 
 .donor-list-global-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 10px auto;
 }
 
-.donor-search {
+.search-form {
+  width: 20% !important;
 }
 
 .donor-list-content {
@@ -50,52 +55,9 @@ This file contains the styles for the donor-list view.
 .donor-list-table {
   background-color: rgb(255, 255, 255, 0.6);
   border: 1px solid rgb(255, 255, 255, 0.2);
-  box-shadow: 0px 8px 32px 0px rgba(44, 44, 44, 0.9);
+  box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
 }
 
-.donor-list-headings {
-  background-color: #2c2c2c;
-}
-
-.donor-list-heading-item {
-  color: white;
-  /* font-size:24px; */
-}
-
-.donor-list-item {
-}
-
-.donor-list-name,
-.donor-list-email-container,
-.donor-list-phone,
-.donor-list-actions {
-}
-
-.donor-list-name,
-.donor-list-phone {
-  color: #2c2c2c;
-}
-
-.donor-list-email-container,
-.donor-list-phone,
-.donor-list-name {
-}
-
-.donor-list-email {
-  color: #009688;
-  text-decoration: none;
-}
-.donor-list-email:hover {
-  color: #ff9800;
-  cursor: pointer;
-}
-
-.donor-list-action-buttons {
-}
-
-.grey {
-  background-color: rgb(43, 43, 43, 0.1);
-}
 
 /* Tablet Adjustments */
 
@@ -103,12 +65,11 @@ This file contains the styles for the donor-list view.
 }
 
 /* Small tablet adjustments */
-@media only screen and (max-width: 768px) {
-}
-
-/* Mobile adjustments */
-
 @media only screen and (max-width: 767px) {
+  .search-form {
+    margin-top: 10px;
+    width: 100% !important;
+  }
 }
 
 @media only screen and (max-width: 280px) {

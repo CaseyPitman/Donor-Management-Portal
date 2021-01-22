@@ -18,7 +18,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import InputGroup from "react-bootstrap/InputGroup";
-import FormControl from "react-bootstrap/Form";
+import Form from "react-bootstrap/Form";
 
 //Helper functions
 
@@ -40,13 +40,19 @@ const DonorList = () => {
       <div className='donor-list-action-buttons'>
         <ButtonGroup size='sm'>
           <Link to={`/donor-details/${id}`}>
-            <Button variant='info'>Details</Button>
+            <Button variant='info' size='sm'>
+              Details
+            </Button>
           </Link>
-          <Link to={`/edit-donor/${id}`}>
-            <Button variant='warning'>Edit</Button>
+          <Link to={`/edit-donor/${id}`}className='mx-2'>
+            <Button variant='warning' size='sm'>
+              Edit
+            </Button>
           </Link>
           <Link to={`/delete-donor/${id}`}>
-            <Button variant='danger'>Delete</Button>
+            <Button variant='danger' size='sm'>
+              Delete
+            </Button>
           </Link>
         </ButtonGroup>
       </div>
@@ -83,23 +89,26 @@ const DonorList = () => {
         <div className='donor-list-container'>
           <h1 className='donor-list-title'>Donor List</h1>
           <div className='donor-list-global-actions'>
-            <Link to='/create-donor' className='create-donor-button'>
-              <Button variant='info' size='sm'>
+            <Link to='/create-donor'>
+              <Button variant='dark' size='sm' className='add-donor-button'>
                 + Add New Donor
               </Button>
             </Link>
+            <InputGroup className='search-form'>
+              <Form.Control
+                placeholder='Search Coming Soon'
+                aria-label='Search Donor'
+                aria-describedby='basic-addon2'
+                size='sm'
+                className='donor-search-field'
+              />
+              <InputGroup.Append>
+                <Button variant='dark' size='sm' className = 'search-donor-button'>
+                  Search
+                </Button>
+              </InputGroup.Append>
+            </InputGroup>
           </div>
-
-          <form class='form-inline my-2 my-lg-0'>
-            <input
-              class='form-control'
-              type='text'
-              placeholder='Search Donors'
-            />
-            <button class='btn btn-info' type='submit'>
-              Search
-            </button>
-          </form>
 
           <div className='donor-list-table'>
             <Table striped responsive text='center'>
