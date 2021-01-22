@@ -14,7 +14,7 @@ import { fetchDonorList } from "../../actions";
 
 //Components
 import UserProfile from "../Auth/UserProfile";
-// import Button from "../Button";
+import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
@@ -58,7 +58,7 @@ const DonorList = () => {
       let background = idx % 2 === 0 ? "grey" : "white";
 
       return (
-        // Add logic here that adds alternating colors for the rows. Perhaps use even/odd status of the id.
+    
         <div key={donor.id} className={`donor-list-item ${background}`}>
           <div className='donor-list-name'>
             {donor.firstName} {donor.lastName}
@@ -85,21 +85,45 @@ const DonorList = () => {
           <h1 className='donor-list-title'>Donor List</h1>
           <div className='donor-list-global-actions'>
             <Link to='/create-donor' className='create-donor-button'>
-              <Button variant='primary'>
-                + Add New Donor
-              </Button>
+              <Button variant='primary'>+ Add New Donor</Button>
             </Link>
             <input className='donor-search' placeholder='Search Donors' />
           </div>
-          <div className='donor-list-table'>
-            <div className='donor-list-headings'>
-              {/*               <h2 className='donor-list-heading-item'>Name</h2>
+
+          <Table striped responsive className = "donor-list-table">
+            <thead className = ''>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                {/* <th>Phone</th> */}
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark Jenkins</td>
+                <td>Mark.jenkins@gmail.com</td>
+                {/* <td>907-888-9989</td> */}
+                <td>Details Edit Delete</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                {/* <td>Thornton</td> */}
+                <td>@fat</td>
+              </tr>
+            </tbody>
+          </Table>
+
+          {/* <div className='donor-list-table'> */}
+          {/* <div className='donor-list-headings'> */}
+          {/*               <h2 className='donor-list-heading-item'>Name</h2>
           <h2 className='donor-list-heading-item'>Email</h2>
           <h2 className='donor-list-heading-item'>Phone</h2>
           <h2 className='donor-list-heading-item'>Actions</h2> */}
-            </div>
-            <div className='donor-list-content'>{renderList()}</div>
-          </div>
+          {/* </div> */}
+          {/* <div className='donor-list-content'>{renderList()}</div> */}
+          {/* </div> */}
         </div>
       </div>
     </div>
