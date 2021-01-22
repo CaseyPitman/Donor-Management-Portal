@@ -33,31 +33,25 @@ This file contains the styles for the donor-list view.
   width: 95%;
 }
 
-.donor-list-title {
-}
 
 .donor-list-global-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  margin: 10px auto;
+  margin: 15px auto;
 }
 
 .search-form {
   width: 20% !important;
 }
 
-.donor-list-content {
-  /* border: 1px solid #2c2c2c; */
-}
-
 .donor-list-table {
   background-color: rgb(255, 255, 255, 0.6);
   border: 1px solid rgb(255, 255, 255, 0.2);
   box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
+  text-align: center;
 }
-
 
 /* Tablet Adjustments */
 
