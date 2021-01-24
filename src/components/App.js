@@ -25,7 +25,6 @@ const App = props => {
     <Router>
       <div className='app'>
         <Header />
-        {/* App viewport here? */}
         <div className='app-viewport'>
           <Switch>
             <Route path='/' exact component={Home} />

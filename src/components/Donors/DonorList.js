@@ -13,7 +13,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchDonorList } from "../../actions";
 
 //Components
-import UserProfile from "../Auth/UserProfile";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";

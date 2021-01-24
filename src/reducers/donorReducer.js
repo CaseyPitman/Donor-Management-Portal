@@ -1,4 +1,4 @@
-// This file contains reducers
+// This file contains reducers handling donor data
 
 import _ from "lodash";
 

@@ -46,7 +46,7 @@ const Header = () => {
         <div className='header-branding'>
           <div className='logo-container'>
             {/* <img src={logo} className='logo' alt='Literacy Council Logo' /> */}
-            <i class="fas fa-book-reader text-light logo"></i>
+            <i className="fas fa-book-reader text-light logo"></i>
 
           </div>
 
