@@ -29,8 +29,8 @@
 
 .create-donor-container,
 .edit-donor-container {
-  margin: 50px auto;
-  width: 66%;
+  margin: 50px auto 75px;
+  width: 50%;
 }
 
 .create-donor-heading {
@@ -40,6 +40,13 @@
   flex-flow: row wrap;
   margin: 15px 0;
 }
+
+.form {
+   background-color: rgb(255, 255, 255, 0.6);
+   border: 1px solid rgb(255, 255, 255, 0.2);
+   box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
+   padding: 25px;
+ }
 
 @media only screen and (max-width: 767px) {
   .create-donor-container,

@@ -14,8 +14,6 @@ import Button from "../Button";
 import stateAbb from "../../data/stateAbb";
 import stateNames from "../../data/stateNames";
 
-//Styles
-import "../../css/donorForm.css";
 
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
