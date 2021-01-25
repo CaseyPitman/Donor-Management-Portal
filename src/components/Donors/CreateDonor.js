@@ -38,7 +38,7 @@ const CreateDonor = props => {
           <div className='create-donor-heading'>
             <h1 className = 'create-donor-title'>Add New Donor</h1>
             <Link to='./donor-list'>
-              <Button variant='dark'>Cancel</Button>
+              <Button variant='info'>Cancel</Button>
             </Link>
           </div>
           <DonorForm onSubmitForm={onSubmitForm} action='create' />

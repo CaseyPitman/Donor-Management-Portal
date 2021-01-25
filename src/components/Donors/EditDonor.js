@@ -17,7 +17,7 @@ import redirectToList from "../../helper-funcs/redirect";
 //Components
 import UserProfile from "../Auth/UserProfile";
 import DonorForm from "./DonorForm";
-import Button from "../Button";
+import Button from "react-bootstrap/Button";
 
 class EditDonor extends React.Component {
   //MOVE TO FORM?
@@ -39,21 +39,17 @@ class EditDonor extends React.Component {
       <div className='edit-donor'>
         <div className='edit-donor-wrapper'>
           <div className='edit-donor-container'>
-            <h1>Edit Donor</h1>
-            <Link to='../../donor-list'>
-              <Button
-                btnColor='blue-button'
-                btnSize='large-button'
-                btnText='Cancel'
-              />
-            </Link>
-            <Link to={`../../delete-donor/${this.props.match.params.id}`}>
-              <Button
-                btnColor='red-button'
-                btnSize='large-button'
-                btnText='Delete'
-              />
-            </Link>
+            <div className='edit-donor-heading'>
+              <h1 className='edit-donor-title'>Edit Donor</h1>
+              <div className='edit-donor-actions'>
+                <Link to='../../donor-list'>
+                  <Button variant='info'>Cancel</Button>
+                </Link>
+                <Link to={`../../delete-donor/${this.props.match.params.id}`} className = 'edit-donor-delete-button'>
+                  <Button variant='danger'>Delete</Button>
+                </Link>
+              </div>
+            </div>
             <DonorForm
               onSubmitForm={this.onSubmitForm}
               action='edit'

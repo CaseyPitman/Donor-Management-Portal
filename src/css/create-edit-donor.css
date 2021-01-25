@@ -33,12 +33,16 @@
   width: 50%;
 }
 
-.create-donor-heading {
+.create-donor-heading, .edit-donor-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
   margin: 15px 0;
+}
+
+.edit-donor-delete-button{
+  margin-left:15px;
 }
 
 .form {
@@ -53,7 +57,7 @@
   .edit-donor-container {
     width: 90%;
   }
-  .create-donor-title {
+  .create-donor-title, .edit-donor-title {
     width: 100%;
   }
 }
