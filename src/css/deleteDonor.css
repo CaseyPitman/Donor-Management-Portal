@@ -1,0 +1,46 @@
+/* Styels for DeleteDonor component */
+
+.delete-donor {
+  background-color: rgb(255, 255, 255, 0.75);
+  background-image: url("../images/bookshelf1.jpg");
+  background-size: cover;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
+}
+
+.delete-donor-wrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-donor-container {
+   background-color: rgb(255, 255, 255, 0.6);
+   border: 1px solid rgb(255, 255, 255, 0.2);
+   box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
+   padding:25px;
+   width: 40%;
+}
+
+.delete-donor-text {
+   margin:15px auto;
+   width:80%;
+}
+
+.delete-button-container {
+   display:flex;
+   justify-content: space-around;
+   margin: 15px auto;
+   width:50%;
+}

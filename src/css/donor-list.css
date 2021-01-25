@@ -4,7 +4,7 @@ This file contains the styles for the donor-list view.
 
 /* use for top of each vieow */
 .donor-list {
-  background-color: rgb(255, 255, 255, 0.75);
+  /* background-color: rgb(255, 255, 255, 0.75); */
   background-image: url("../images/bookshelf1.jpg");
   background-size: cover;
 

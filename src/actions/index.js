@@ -11,20 +11,18 @@ import {
 //Use for axios calls.
 import DMP from "../axios/DMP";
 
-import { trackPromise } from 'react-promise-tracker';
+import { trackPromise } from "react-promise-tracker";
 import redirectToList from "../helper-funcs/redirect";
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
-  
   try {
-    const response = await trackPromise (DMP.get("/donors/"));
+    const response = await trackPromise(DMP.get("/donors/"));
     dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
-
-  } catch (error){
-    console.log(error)
+  } catch (error) {
+    //Add error handling
+    console.log(error);
   }
-
 };
 
 //Create new donor record
@@ -38,8 +36,13 @@ export const createDonor = (formData, props) => {
 
 // Retrieve record for single donor
 export const fetchDonorDetails = id => async dispatch => {
-  const response = await DMP.get(`/donors/${id}`);
-  dispatch({ type: FETCH_DONOR_DETAILS, payload: response.data });
+  try {
+    const response = await DMP.get(`/donors/${id}`);
+    dispatch({ type: FETCH_DONOR_DETAILS, payload: response.data });
+  } catch (error) {
+    //Add Error handling
+    console.log(error);
+  }
 };
 
 //Edit a recored for a specified donor

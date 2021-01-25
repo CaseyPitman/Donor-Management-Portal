@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 //Actions
 import { fetchDonorDetails, deleteDonor } from "../../actions";
 
-//Helper funcs
-import redirectToList from "../../helper-funcs/redirect";
-
 //Components
-import Button from "../Button";
+import Button from "react-bootstrap/Button";
+
+//Styles
+import "../../css/deleteDonor.css";
 
 class DeleteDonor extends React.Component {
   id = this.props.match.params.id;
@@ -24,9 +24,11 @@ class DeleteDonor extends React.Component {
 
   renderContent = () => {
     if (!this.props.donor) {
-      return "Are you sure you want to delete this donor?";
+      return <h4 className = 'delete-donor-text'>"Are you sure you want to delete this donor?"</h4>;
     }
-    return `Are you sure you want to delete donor ${this.props.donor.firstName} ${this.props.donor.lastName}?`;
+    return (
+      <h4 className = 'delete-donor-text'>{`Are you sure you want to delete donor ${this.props.donor.firstName} ${this.props.donor.lastName}?`}</h4>
+    );
   };
 
   //onclick for confirm delete
@@ -38,18 +40,9 @@ class DeleteDonor extends React.Component {
     return (
       <div className='delete-button-container'>
         <Link to='/donor-list' className='cancel-delete'>
-          <Button
-            btnColor='blue-button'
-            btnSize='large-button'
-            btnText='Cancel'
-          />
+          <Button variant='info'>Cancel</Button>
         </Link>
-        <Button
-          btnColor='red-button'
-          btnSize='large-button'
-          btnText='Delete'
-          onClick={this.onConfirmDelete}
-        />
+        <Button variant='danger' onClick={this.onConfirmDelete}>Delete</Button>
       </div>
     );
   };
@@ -57,8 +50,12 @@ class DeleteDonor extends React.Component {
   render() {
     return (
       <div className='delete-donor'>
-        <h1>{this.renderContent()}</h1>
-        {this.renderActions()}
+        <div className='delete-donor-wrapper'>
+          <div className='delete-donor-container'>
+            {this.renderContent()}
+            {this.renderActions()}
+          </div>
+        </div>
       </div>
     );
   }
