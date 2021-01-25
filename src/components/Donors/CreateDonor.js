@@ -35,11 +35,13 @@ const CreateDonor = props => {
     <div className='create-donor'>
       <div className='create-donor-wrapper'>
         <div className='create-donor-container'>
-          <h1>Add New Donor</h1>
-          <Link to='./donor-list'>
-            <Button variant='dark'>Cancel</Button>
-          </Link>
-        <DonorForm onSubmitForm={onSubmitForm} action='create' />
+          <div className='create-donor-heading'>
+            <h1 className = 'create-donor-title'>Add New Donor</h1>
+            <Link to='./donor-list'>
+              <Button variant='dark'>Cancel</Button>
+            </Link>
+          </div>
+          <DonorForm onSubmitForm={onSubmitForm} action='create' />
         </div>
       </div>
     </div>

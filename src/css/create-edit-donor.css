@@ -3,8 +3,8 @@
 .create-donor,
 .edit-donor {
   background-image: url("../images/bookshelf1.jpg");
-  background-size: cover;
-
+  background-size: contain;
+  background-repeat: repeat;
   min-height: 100vh;
 
   display: flex;
@@ -27,6 +27,26 @@
   flex-flow: row wrap;
 }
 
-.create-donor-container, .edit-donor-container {
-   width:66%
+.create-donor-container,
+.edit-donor-container {
+  margin: 50px auto;
+  width: 66%;
+}
+
+.create-donor-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 15px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .create-donor-container,
+  .edit-donor-container {
+    width: 90%;
+  }
+  .create-donor-title {
+    width: 100%;
+  }
 }
