@@ -1,0 +1,32 @@
+/* Custom styles for CreateDonor and EditDonor */
+
+.create-donor,
+.edit-donor {
+  background-image: url("../images/bookshelf1.jpg");
+  background-size: cover;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
+}
+
+.create-donor-wrapper,
+.edit-donor-wrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.create-donor-container, .edit-donor-container {
+   width:66%
+}

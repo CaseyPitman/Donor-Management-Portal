@@ -9,14 +9,15 @@ import { connect, useDispatch } from "react-redux";
 
 import { nanoid } from "nanoid";
 
-
 //Actions
 import { createDonor } from "../../actions";
 
 //Components
 import DonorForm from "./DonorForm";
-import UserProfile from "../Auth/UserProfile";
-import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
+
+//Styles
+import "../../css/create-edit-donor.css";
 
 const CreateDonor = props => {
   const dispatch = useDispatch();
@@ -31,13 +32,16 @@ const CreateDonor = props => {
   };
 
   return (
-    <div>
-  
-      <h1>Create Donor</h1>
-      <Link to='./donor-list'>
-        <Button variant = "info" >Cancel</Button>
-      </Link>
-      <DonorForm onSubmitForm={onSubmitForm} action='create' />
+    <div className='create-donor'>
+      <div className='create-donor-wrapper'>
+        <div className='create-donor-container'>
+          <h1>Add New Donor</h1>
+          <Link to='./donor-list'>
+            <Button variant='dark'>Cancel</Button>
+          </Link>
+        <DonorForm onSubmitForm={onSubmitForm} action='create' />
+        </div>
+      </div>
     </div>
   );
 };

@@ -36,27 +36,31 @@ class EditDonor extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Edit Donor</h1>
-        <Link to='../../donor-list'>
-          <Button
-            btnColor='blue-button'
-            btnSize='large-button'
-            btnText='Cancel'
-          />
-        </Link>
-        <Link to={`../../delete-donor/${this.props.match.params.id}`}>
-          <Button
-            btnColor='red-button'
-            btnSize='large-button'
-            btnText='Delete'
-          />
-        </Link>
-        <DonorForm
-          onSubmitForm={this.onSubmitForm}
-          action='edit'
-          donorInfo={this.props.donor}
-        />
+      <div className='edit-donor'>
+        <div className='edit-donor-wrapper'>
+          <div className='edit-donor-container'>
+            <h1>Edit Donor</h1>
+            <Link to='../../donor-list'>
+              <Button
+                btnColor='blue-button'
+                btnSize='large-button'
+                btnText='Cancel'
+              />
+            </Link>
+            <Link to={`../../delete-donor/${this.props.match.params.id}`}>
+              <Button
+                btnColor='red-button'
+                btnSize='large-button'
+                btnText='Delete'
+              />
+            </Link>
+            <DonorForm
+              onSubmitForm={this.onSubmitForm}
+              action='edit'
+              donorInfo={this.props.donor}
+            />
+          </div>
+        </div>
       </div>
     );
   }
