@@ -11,12 +11,20 @@ import {
 //Use for axios calls.
 import DMP from "../axios/DMP";
 
+import { trackPromise } from 'react-promise-tracker';
 import redirectToList from "../helper-funcs/redirect";
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
-  const response = await DMP.get("/donors/");
-  dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
+  
+  try {
+    const response = await trackPromise (DMP.get("/donors/"));
+    dispatch({ type: FETCH_DONOR_LIST, payload: response.data });
+
+  } catch (error){
+    console.log(error)
+  }
+
 };
 
 //Create new donor record

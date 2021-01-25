@@ -17,6 +17,8 @@ import {
   DeleteDonor,
 } from "./Donors/index";
 
+import Loader from "react-promise-loader";
+import { usePromiseTracker } from "react-promise-tracker";
 //Styles
 import "../css/app.css";
 
@@ -38,6 +40,7 @@ const App = props => {
             <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
           </Switch>
         </div>
+        <Loader promiseTracker={usePromiseTracker} />
       </div>
     </Router>
   );

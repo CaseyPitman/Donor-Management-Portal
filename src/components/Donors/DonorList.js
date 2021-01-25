@@ -18,6 +18,9 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
+// import Loader from 'react-promise-loader';
+// import { usePromiseTracker } from 'react-promise-tracker';
+
 
 //Helper functions
 
@@ -123,6 +126,7 @@ const DonorList = () => {
                 </tr>
               </thead>
               <tbody>{renderList()}</tbody>
+              {/* <Loader promiseTracker={usePromiseTracker}> Loading </Loader> */}
             </Table>
           </div>
         </div>
