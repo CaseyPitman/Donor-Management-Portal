@@ -58,9 +58,9 @@ class DonorDetails extends React.Component {
       //Don't forget to format donation amounts.
       return (
         <tr key={idx}>
-          <td>{formatDate(donation.date)}</td>
-          <td>{formatAmount(donation.amount)}</td>
-          <td>{donation.type}</td>
+          <td className='text-dark'>{formatDate(donation.date)}</td>
+          <td className='text-dark'>{formatAmount(donation.amount)}</td>
+          <td className='text-dark'> {donation.type}</td>
         </tr>
       );
     });
@@ -149,16 +149,18 @@ class DonorDetails extends React.Component {
                   <h5>Total Donations: {this.renderTotalDonations()}</h5>
                 </div>
 
-                <Table striped responsive text='center'>
-                  <thead className=''>
-                    <tr className='table-primary'>
-                      <th>Date</th>
-                      <th>Amount</th>
-                      <th>Type</th>
-                    </tr>
-                  </thead>
-                  <tbody>{this.renderDonationHistory()}</tbody>
-                </Table>
+                <div className='donor-history-table'>
+                  <Table striped responsive bordered text='center'>
+                    <thead>
+                      <tr className='table-primary'>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>{this.renderDonationHistory()}</tbody>
+                  </Table>
+                </div>
               </div>
             </div>
           </div>
