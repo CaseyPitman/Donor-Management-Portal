@@ -13,6 +13,9 @@ import { fetchDonorDetails } from "../../actions/index.js";
 //Components
 import Button from "react-bootstrap/Button";
 
+//Styles
+import "../../css/donor-details.css";
+
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
 import formatDate from "../../helper-funcs/formatDate";
@@ -25,9 +28,6 @@ class DonorDetails extends React.Component {
   componentDidMount() {
     this.props.fetchDonorDetails(this.props.match.params.id);
   }
-
-  // USE INPUTS AND MAKE THEM READ ONLY SO THAT I CAN MATCH FORMS AND HAVE UNITY OF DESIGN?
-  //See: https://www.w3schools.com/tags/att_input_readonly.asp
 
   //Determines total amount a donor has given.
   renderTotalDonations = () => {
@@ -59,21 +59,27 @@ class DonorDetails extends React.Component {
     return (
       <div className='donor-details'>
         <div className='donor-details-wrapper'>
-          <div className='donor-details-wrapper'>
-            <h1>DonorDetails</h1>
-            <div className='donor-details-action-buttons'>
-              <Link to='/donor-list'>
-                <Button variant = 'info'>Back</Button>
-              </Link>
+          <div className='donor-details-container'>
+            <div className='donor-details-heading'>
 
-              <Link to={`/edit-donor/${this.props.match.params.id}`}>
-                <Button variant = 'warning'>Edit</Button>
-              </Link>
-              <Link to={`/delete-donor/${this.props.match.params.id}`}>
-                <Button variant = 'danger'>Delete</Button>
-              </Link>
+
+              <h1 className='donor-details-title'>DonorDetails</h1>
+              <div className='donor-details-action-buttons'>
+                <Link to='/donor-list' className = "donor-details-back-btn">
+                  <Button variant='info'>Back</Button>
+                </Link>
+
+                <Link to={`/edit-donor/${this.props.match.params.id}`} className = "donor-details-edit-btn">
+                  <Button variant='success'>Edit</Button>
+                </Link>
+                <Link to={`/delete-donor/${this.props.match.params.id}`} className = "donor-details-delete-btn">
+                  <Button variant='danger'>Delete</Button>
+                </Link>
+              </div>
+
+
             </div>
-            <div className='donor-details-container'>
+            <div className='donor-details-contents'>
               <div className='donor-detail-name'>
                 <h3>Name</h3>
                 <p>{`${this.props.donor.firstName} ${this.props.donor.lastName}`}</p>

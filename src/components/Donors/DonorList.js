@@ -47,7 +47,7 @@ const DonorList = () => {
             </Button>
           </Link>
           <Link to={`/edit-donor/${id}`} className='mx-2'>
-            <Button variant='warning' size='sm'>
+            <Button variant='success' size='sm'>
               Edit
             </Button>
           </Link>
