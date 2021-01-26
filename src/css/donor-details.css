@@ -43,10 +43,22 @@
 }
 
 .donor-details-contents {
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgb(255, 255, 255, 0.5);
   border: 1px solid rgb(255, 255, 255, 0.2);
   box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
   padding: 25px;
 }
 
+.donor-detail-donation-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+
+.donor-details-contact {
+   display:flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-flow: row wrap;
+}

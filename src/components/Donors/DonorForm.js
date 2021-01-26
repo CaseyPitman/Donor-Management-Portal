@@ -86,7 +86,7 @@ const DonorForm = props => {
             type: {
               type: "string",
               title: "Type",
-              enum: ["cash", "endowment", "property", "sponsorship"],
+              enum: ["Cash", "Endowment", "Property", "Sponsorship"],
               enumNames: ["Cash", "Endowment", "Property", "Sponsorship"],
             },
           },

@@ -35,11 +35,12 @@ class DonorDetails extends React.Component {
       return (
         <div className='donor-detail-notes'>
           <h2 className='donor-details-section-heading'>Notes</h2>
-          <p>{`${this.props.donor.notes}`}</p>
+          <p className='text-dark'>{`${this.props.donor.notes}`}</p>
+          <hr></hr>
         </div>
       );
     } else {
-      return <div></div>
+      return <div></div>;
     }
   };
 
@@ -51,7 +52,7 @@ class DonorDetails extends React.Component {
     return formatAmount(donations.reduce((a, b) => a + b));
   };
 
-  donationHistory = () => {
+  renderDonationHistory = () => {
     return this.props.donor.donations.map((donation, idx) => {
       //Don't forget to format donation amounts.
       return (
@@ -95,41 +96,59 @@ class DonorDetails extends React.Component {
             </div>
             <div className='donor-details-contents'>
               <h2 className='donor-details-section-heading'>Contact Info</h2>
-              <div className='donor-detail-name'>
-                <h4>Name</h4>
-                <p>{`${this.props.donor.firstName} ${this.props.donor.lastName}`}</p>
-              </div>
-              <div className='donor-detail-organization'></div>
-              <h4>Organization</h4>
-              <p>{`${this.props.donor.organization}`}</p>
-              <div className='donor-detail-email'>
-                <h4>Email</h4>
-                <p>{`${this.props.donor.email}`}</p>
-              </div>
+              <hr></hr>
 
-              <div className='donor-detail-phone'>
-                <h4>Phone</h4>
-                <p>{`${this.props.donor.phone}`}</p>
-              </div>
+              <div className='donor-details-contact'>
+                <div className='contact-block-left'>
+                  <div className='donor-detail-name'>
+                    <h4>Name</h4>
+                    <p className='text-dark'>{`${this.props.donor.firstName} ${this.props.donor.lastName}`}</p>
+                  </div>
+                  <div className='donor-detail-organization'>
+                    <h4>Organization</h4>
+                    <p className='text-dark'>{`${this.props.donor.organization}`}</p>
+                  </div>
+                </div>
 
-              <div className='donor-detail-address'>
-                <h4>Address</h4>
-                <p>{`${this.props.donor.street}`}</p>
-                <p>{`${this.props.donor.city}`}</p>
-                <p>{`${this.props.donor.state}, ${this.props.donor.zip}`}</p>
-              </div>
+                <div className='contact-block-center'>
+                  <div className='donor-detail-email'>
+                    <h4>Email</h4>
+                    {/* <a href = 'mailto:' */}
+                    {/* <p className = "text-dark">{`${this.props.donor.email}`}</p> */}
+                    <a href={`mailto:${this.props.donor.email}`} target='blank'>
+                      <p className='text-dark'>{`${this.props.donor.email}`}</p>
+                    </a>
+                  </div>
 
-              {/* <div className='donor-detail-notes'>
-              <h2 className='donor-details-section-heading'>Notes</h2>
-                <p>{`${this.props.donor.notes}`}</p>
-              </div> */}
+                  <div className='donor-detail-phone'>
+                    <h4>Phone</h4>
+                    <p className='text-dark'>{`${this.props.donor.phone}`}</p>
+                  </div>
+                </div>
+
+                <div className='contact-block-right'>
+                  <div className='donor-detail-address'>
+                    <h4>Address</h4>
+                    <p className='text-dark'>
+                      {`${this.props.donor.street}`}
+                      <br></br>
+                      {`${this.props.donor.city}`},{" "}
+                      {`${this.props.donor.state}`} <br></br>
+                      {`${this.props.donor.zip}`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <hr></hr>
               {this.renderNotes()}
 
               <div className='donor-detail-donations'>
-                <h2 className='donor-details-section-heading'>Donations</h2>
-                <h3>Total Donations {this.renderTotalDonations()}</h3>
+                <div className='donor-detail-donation-heading-container'>
+                  <h2 className='donor-details-section-heading'>Donations</h2>
+                  <h4>Total Donations: {this.renderTotalDonations()}</h4>
+                </div>
 
-                {this.donationHistory()}
+                {this.renderDonationHistory()}
               </div>
             </div>
           </div>
