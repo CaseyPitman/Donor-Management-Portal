@@ -52,7 +52,8 @@
 .donor-detail-donation-heading-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  flex-flow: row wrap;
 }
 
 .donor-details-contact {
@@ -60,4 +61,17 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-flow: row wrap;
+}
+
+
+@media only screen and (max-width: 767px){
+   .donor-details-container{
+      width:95%;
+   }
+   .contact-block-left, .contact-block-center, .contact-block-right {
+      width:100%;
+   }
+   .donor-details-section-heading{
+      width:100%;
+   }
 }

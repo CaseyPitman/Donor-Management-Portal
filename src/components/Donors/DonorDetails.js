@@ -145,7 +145,7 @@ class DonorDetails extends React.Component {
               <div className='donor-detail-donations'>
                 <div className='donor-detail-donation-heading-container'>
                   <h2 className='donor-details-section-heading'>Donations</h2>
-                  <h4>Total Donations: {this.renderTotalDonations()}</h4>
+                  <h5>Total Donations: {this.renderTotalDonations()}</h5>
                 </div>
 
                 {this.renderDonationHistory()}
