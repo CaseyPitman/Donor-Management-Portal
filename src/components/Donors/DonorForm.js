@@ -109,6 +109,9 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
+    if (!formData.notes){
+      formData.notes = "none"
+    }
     props.onSubmitForm(formData);
   };
 

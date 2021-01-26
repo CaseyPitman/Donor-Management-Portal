@@ -29,6 +29,20 @@ class DonorDetails extends React.Component {
     this.props.fetchDonorDetails(this.props.match.params.id);
   }
 
+  //Only show notes field if notes exist
+  renderNotes = () => {
+    if (this.props.donor.notes !== "none") {
+      return (
+        <div className='donor-detail-notes'>
+          <h2 className='donor-details-section-heading'>Notes</h2>
+          <p>{`${this.props.donor.notes}`}</p>
+        </div>
+      );
+    } else {
+      return <div></div>
+    }
+  };
+
   //Determines total amount a donor has given.
   renderTotalDonations = () => {
     const donations = this.props.donor.donations.map(
@@ -61,56 +75,58 @@ class DonorDetails extends React.Component {
         <div className='donor-details-wrapper'>
           <div className='donor-details-container'>
             <div className='donor-details-heading'>
-
-
-              <h1 className='donor-details-title'>DonorDetails</h1>
+              <h1 className='donor-details-title'>Donor Details</h1>
               <div className='donor-details-action-buttons'>
-                <Link to='/donor-list' className = "donor-details-back-btn">
+                <Link to='/donor-list' className='donor-details-back-btn'>
                   <Button variant='info'>Back</Button>
                 </Link>
 
-                <Link to={`/edit-donor/${this.props.match.params.id}`} className = "donor-details-edit-btn">
+                <Link
+                  to={`/edit-donor/${this.props.match.params.id}`}
+                  className='donor-details-edit-btn'>
                   <Button variant='success'>Edit</Button>
                 </Link>
-                <Link to={`/delete-donor/${this.props.match.params.id}`} className = "donor-details-delete-btn">
+                <Link
+                  to={`/delete-donor/${this.props.match.params.id}`}
+                  className='donor-details-delete-btn'>
                   <Button variant='danger'>Delete</Button>
                 </Link>
               </div>
-
-
             </div>
             <div className='donor-details-contents'>
+              <h2 className='donor-details-section-heading'>Contact Info</h2>
               <div className='donor-detail-name'>
-                <h3>Name</h3>
+                <h4>Name</h4>
                 <p>{`${this.props.donor.firstName} ${this.props.donor.lastName}`}</p>
               </div>
               <div className='donor-detail-organization'></div>
-              <h3>Organization</h3>
+              <h4>Organization</h4>
               <p>{`${this.props.donor.organization}`}</p>
               <div className='donor-detail-email'>
-                <h3>Email</h3>
+                <h4>Email</h4>
                 <p>{`${this.props.donor.email}`}</p>
               </div>
 
               <div className='donor-detail-phone'>
-                <h3>Phone</h3>
+                <h4>Phone</h4>
                 <p>{`${this.props.donor.phone}`}</p>
               </div>
 
               <div className='donor-detail-address'>
-                <h3>Address</h3>
+                <h4>Address</h4>
                 <p>{`${this.props.donor.street}`}</p>
                 <p>{`${this.props.donor.city}`}</p>
                 <p>{`${this.props.donor.state}, ${this.props.donor.zip}`}</p>
               </div>
 
-              <div className='donor-detail-notes'>
-                <h3>Notes</h3>
+              {/* <div className='donor-detail-notes'>
+              <h2 className='donor-details-section-heading'>Notes</h2>
                 <p>{`${this.props.donor.notes}`}</p>
-              </div>
+              </div> */}
+              {this.renderNotes()}
 
               <div className='donor-detail-donations'>
-                <h3>Donations</h3>
+                <h2 className='donor-details-section-heading'>Donations</h2>
                 <h3>Total Donations {this.renderTotalDonations()}</h3>
 
                 {this.donationHistory()}

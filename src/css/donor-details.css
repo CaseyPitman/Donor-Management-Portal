@@ -42,4 +42,11 @@
   margin: 0 15px;
 }
 
+.donor-details-contents {
+  background-color: rgb(255, 255, 255, 0.6);
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
+  padding: 25px;
+}
+
 
