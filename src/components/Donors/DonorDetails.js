@@ -12,6 +12,7 @@ import { fetchDonorDetails } from "../../actions/index.js";
 
 //Components
 import Button from "react-bootstrap/Button";
+import Table from "react-bootstrap/Table";
 
 //Styles
 import "../../css/donor-details.css";
@@ -56,11 +57,11 @@ class DonorDetails extends React.Component {
     return this.props.donor.donations.map((donation, idx) => {
       //Don't forget to format donation amounts.
       return (
-        <div key={idx}>
-          <p>{formatDate(donation.date)}</p>
-          <p>{formatAmount(donation.amount)}</p>
-          <p>{donation.type}</p>
-        </div>
+        <tr key={idx}>
+          <td>{formatDate(donation.date)}</td>
+          <td>{formatAmount(donation.amount)}</td>
+          <td>{donation.type}</td>
+        </tr>
       );
     });
   };
@@ -148,7 +149,16 @@ class DonorDetails extends React.Component {
                   <h5>Total Donations: {this.renderTotalDonations()}</h5>
                 </div>
 
-                {this.renderDonationHistory()}
+                <Table striped responsive text='center'>
+                  <thead className=''>
+                    <tr className='table-primary'>
+                      <th>Date</th>
+                      <th>Amount</th>
+                      <th>Type</th>
+                    </tr>
+                  </thead>
+                  <tbody>{this.renderDonationHistory()}</tbody>
+                </Table>
               </div>
             </div>
           </div>

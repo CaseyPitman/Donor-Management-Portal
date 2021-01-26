@@ -3,7 +3,7 @@
 .create-donor,
 .edit-donor {
   background-image: url("../images/bookshelf1.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: repeat;
   min-height: 100vh;
 
