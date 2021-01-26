@@ -34,7 +34,6 @@ This file contains the styles for the donor-list view.
   width: 95%;
 }
 
-
 .donor-list-global-actions {
   display: flex;
   justify-content: space-between;

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from "react";
 
-
 //Components
 
 import Form from "@rjsf/bootstrap-4";
@@ -13,7 +12,6 @@ import Button from "../Button";
 //Data
 import stateAbb from "../../data/stateAbb";
 import stateNames from "../../data/stateNames";
-
 
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
@@ -109,8 +107,8 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
-    if (!formData.notes){
-      formData.notes = "none"
+    if (!formData.notes) {
+      formData.notes = "none";
     }
     props.onSubmitForm(formData);
   };

@@ -55,10 +55,9 @@
   align-items: center;
 }
 
-
 .donor-details-contact {
-   display:flex;
-   justify-content: space-between;
-   align-items: flex-start;
-   flex-flow: row wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
 }
