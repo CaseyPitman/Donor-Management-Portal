@@ -63,6 +63,7 @@ const DonorList = () => {
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
+    console.log(newList)
     return newList.map((donor, idx) => {
       return (
         <tr key={donor.id}>

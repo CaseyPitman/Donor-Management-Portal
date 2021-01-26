@@ -107,9 +107,14 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
+    //Blanks out notes if none entered.
     if (!formData.notes) {
       formData.notes = "none";
     }
+
+    //Create key value fullName for sorting later
+    formData.fullName = `${formData.lastName}, ${formData.firstName}`;
+
     props.onSubmitForm(formData);
   };
 
