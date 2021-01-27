@@ -45,14 +45,6 @@ class DonorDetails extends React.Component {
     }
   };
 
-  //Determines total amount a donor has given.
-  // renderTotalDonations = () => {
-  //   const donations = this.props.donor.donations.map(
-  //     donation => donation.amount
-  //   );
-  //   return formatAmount(donations.reduce((a, b) => a + b));
-  // };
-
   renderDonationHistory = () => {
     return this.props.donor.donations.map((donation, idx) => {
       //Don't forget to format donation amounts.
@@ -146,7 +138,10 @@ class DonorDetails extends React.Component {
               <div className='donor-detail-donations'>
                 <div className='donor-detail-donation-heading-container'>
                   <h2 className='donor-details-section-heading'>Donations</h2>
-                  <h5>Total Donations: {this.props.donor.totalDonations}</h5>
+                  <h5>
+                    Total Donations:{" "}
+                    {formatAmount(this.props.donor.totalDonations)}
+                  </h5>
                 </div>
 
                 <div className='donor-history-table'>
@@ -160,6 +155,12 @@ class DonorDetails extends React.Component {
                     </thead>
                     <tbody>{this.renderDonationHistory()}</tbody>
                   </Table>
+                  <Button
+                    variant='secondary'
+                    size='sm'
+                    className='donor-details-add-donation-button'>
+                    + Add Donation
+                  </Button>
                 </div>
               </div>
             </div>
