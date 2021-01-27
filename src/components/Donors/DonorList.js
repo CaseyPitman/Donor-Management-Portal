@@ -18,6 +18,7 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
+import Dropdown from "react-bootstrap/DropdownButton";
 // import Loader from 'react-promise-loader';
 // import { usePromiseTracker } from 'react-promise-tracker';
 
@@ -65,7 +66,7 @@ const DonorList = () => {
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
-    
+
     //Sort list of donors by either alphabetcial or totalDonations descending
     //Default to alphabetcial
     sortDonors(newList);
@@ -103,23 +104,33 @@ const DonorList = () => {
                 + Add New Donor
               </Button>
             </Link>
-            <InputGroup className='search-form'>
-              <Form.Control
-                placeholder='Search Coming Soon'
-                aria-label='Search Donor'
-                aria-describedby='basic-addon2'
-                size='sm'
-                className='donor-search-field'
-              />
-              <InputGroup.Append>
-                <Button
-                  variant='dark'
+
+            <div className='donation-list-sort-search'>
+              <InputGroup className='donation-list-sort'>
+                <Form.Control size='sm' as='select'>
+                  <option>Alphabetized</option>
+                  <option>Total Donations</option>
+                </Form.Control>
+              </InputGroup>
+
+              <InputGroup className = 'donation-list-search'>
+                <Form.Control
+                  placeholder='Search Coming Soon'
+                  aria-label='Search Donor'
+                  aria-describedby='basic-addon2'
                   size='sm'
-                  className='search-donor-button'>
-                  Search
-                </Button>
-              </InputGroup.Append>
-            </InputGroup>
+                  className='donor-search-field'
+                />
+                <InputGroup.Append>
+                  <Button
+                    variant='dark'
+                    size='sm'
+                    className='search-donor-button'>
+                    Search
+                  </Button>
+                </InputGroup.Append>
+              </InputGroup>
+            </div>
           </div>
 
           <div className='donor-list-table'>

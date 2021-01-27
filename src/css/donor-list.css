@@ -42,8 +42,17 @@ This file contains the styles for the donor-list view.
   margin: 15px auto;
 }
 
-.search-form {
+/* .search-form {
   width: 20% !important;
+} */
+
+.donation-list-sort-search {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.donation-list-sort{
+  align-self: center;
 }
 
 .donor-list-table {
