@@ -23,9 +23,11 @@ const sortDonors = (donors, sortBy = "alphabet") => {
     });
   }
   // Sort by total donations
-  else if (sortBy=== 'totalDonations')
-
-
+  else if (sortBy === "totalDonations") {
+    sortedDonors = donors.sort((a, b) => {
+      return b.totalDonations - a.totalDonations;
+    });
+  }
 
   console.log(sortedDonors);
 

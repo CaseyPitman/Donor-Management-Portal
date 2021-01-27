@@ -6,6 +6,6 @@ const totalDonations = (donations) => {
   const donationsArr = donations.map(
     donation => donation.amount
   );
-  return formatAmount(donationsArr.reduce((a, b) => a + b));
+  return donationsArr.reduce((a, b) => a + b);
 };
 export default totalDonations;
