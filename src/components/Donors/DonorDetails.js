@@ -58,6 +58,12 @@ class DonorDetails extends React.Component {
     });
   };
 
+  onAddDonor = () => {
+    console.log('you want to add donor')
+    // will open add Donor modal
+
+  }
+
   render() {
     //Avoids error on refreshing page.
     if (!this.props.donor) {
@@ -158,7 +164,8 @@ class DonorDetails extends React.Component {
                   <Button
                     variant='secondary'
                     size='sm'
-                    className='donor-details-add-donation-button'>
+                    className='donor-details-add-donation-button'
+                    onClick = {this.onAddDonor}>
                     + Add Donation
                   </Button>
                 </div>
