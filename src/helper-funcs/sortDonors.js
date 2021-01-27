@@ -5,8 +5,14 @@ const sortDonors = (donors, sortBy = "alphabet") => {
   console.log(donors);
   let sortedDonors = [];
 
+  // Sort by total donations
+  if (sortBy === "totalDonations") {
+    sortedDonors = donors.sort((a, b) => {
+      return b.totalDonations - a.totalDonations;
+    });
+  }
   //Sort Alphabetically
-  if (sortBy === "alphabet") {
+  else {
     sortedDonors = donors.sort((a, b) => {
       const nameA = a.fullName.toUpperCase();
       const nameB = b.fullName.toUpperCase();
@@ -23,11 +29,11 @@ const sortDonors = (donors, sortBy = "alphabet") => {
     });
   }
   // Sort by total donations
-  else if (sortBy === "totalDonations") {
-    sortedDonors = donors.sort((a, b) => {
-      return b.totalDonations - a.totalDonations;
-    });
-  }
+  // else if (sortBy === "totalDonations") {
+  //   sortedDonors = donors.sort((a, b) => {
+  //     return b.totalDonations - a.totalDonations;
+  //   });
+  // }
 
   console.log(sortedDonors);
 
