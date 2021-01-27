@@ -70,6 +70,7 @@ const DonorList = () => {
           <td className='text-dark'>
             {donor.firstName} {donor.lastName}
           </td>
+          <td>$00000000</td>
           <td>
             <a
               href={`mailto:${donor.email}`}
@@ -120,6 +121,7 @@ const DonorList = () => {
               <thead className=''>
                 <tr className='table-primary'>
                   <th>Name</th>
+                  <th>Total Donations</th>
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Actions</th>
