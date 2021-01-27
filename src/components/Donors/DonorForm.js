@@ -4,14 +4,14 @@
 import React, { useState, useEffect } from "react";
 
 //Components
-
 import Form from "@rjsf/bootstrap-4";
-
-import Button from "../Button";
 
 //Data
 import stateAbb from "../../data/stateAbb";
 import stateNames from "../../data/stateNames";
+
+//Helper Functions
+import totalDonations from "../../helper-funcs/totalDonations";
 
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
@@ -107,14 +107,17 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
-    //Blanks out notes if none entered.
     if (!formData.notes) {
       formData.notes = "none";
     }
 
+    //Create key value totalDonations
+    formData.totalDonations = totalDonations(formData.donations);
+
     //Create key value fullName for sorting later
     formData.fullName = `${formData.lastName}, ${formData.firstName}`;
 
+    console.log(formData);
     props.onSubmitForm(formData);
   };
 

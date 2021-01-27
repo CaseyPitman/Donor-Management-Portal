@@ -22,6 +22,7 @@ import Form from "react-bootstrap/Form";
 // import { usePromiseTracker } from 'react-promise-tracker';
 
 //Helper functions
+// import totalDonations from "../../helper-funcs/totalDonations"
 
 // Styles
 import "../../css/donor-list.css";
@@ -63,14 +64,14 @@ const DonorList = () => {
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
-    console.log(newList)
+    // console.log(newList)
     return newList.map((donor, idx) => {
       return (
         <tr key={donor.id}>
           <td className='text-dark'>
             {donor.firstName} {donor.lastName}
           </td>
-          <td>$00000000</td>
+          <td>{donor.totalDonations}</td>
           <td>
             <a
               href={`mailto:${donor.email}`}

@@ -1,14 +1,11 @@
 //This function totals all donations by all donors.
 
-const totalDonations = donors => {
-   console.log(donors)
+import formatAmount from "./formatAmount";
 
-//   const amounts = donors.map(donor =>
-//     donor.donations.map(donation => donation.amount)
-//   );
-
-//   console.log(amounts);
-  return "here are the total donations";
+const totalDonations = (donations) => {
+  const donationsArr = donations.map(
+    donation => donation.amount
+  );
+  return formatAmount(donationsArr.reduce((a, b) => a + b));
 };
-
 export default totalDonations;
