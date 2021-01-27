@@ -23,6 +23,7 @@ import Form from "react-bootstrap/Form";
 
 //Helper functions
 // import totalDonations from "../../helper-funcs/totalDonations"
+import sortDonors from "../../helper-funcs/sortDonors"
 
 // Styles
 import "../../css/donor-list.css";
@@ -65,6 +66,10 @@ const DonorList = () => {
   const renderList = () => {
     const newList = Object.values(list);
     // console.log(newList)
+
+
+    sortDonors(newList, "totalDonations");
+
     return newList.map((donor, idx) => {
       return (
         <tr key={donor.id}>
