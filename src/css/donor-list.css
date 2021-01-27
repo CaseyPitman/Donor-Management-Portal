@@ -19,9 +19,9 @@ This file contains the styles for the donor-list view.
 }
 
 .donor-list-wrapper {
-  background-color: rgba(255, 255, 255, 0.7);
+  /* background-color: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(11px);
-  backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px); */
 
   width: 100%;
   display: flex;
@@ -57,11 +57,16 @@ This file contains the styles for the donor-list view.
   align-self: center;
   margin-right:15px;
 }
+th{
+  border-top:none!important;
+}
+
 
 .donor-list-table {
-  background-color: rgb(255, 255, 255, 0.6);
+  /* background-color: rgb(255, 255, 255, 0.6);
   border: 1px solid rgb(255, 255, 255, 0.2);
-  box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9);
+  box-shadow: 0px 5px 20px 0px rgba(44, 44, 44, 0.9); */
+  overflow: hidden;
   text-align: center;
 }
 

@@ -84,12 +84,12 @@ const DonorList = () => {
           <td className='text-dark'>
             {donor.firstName} {donor.lastName}
           </td>
-          <td>{formatAmount(donor.totalDonations)}</td>
+          <td className = 'text-dark'>{formatAmount(donor.totalDonations)}</td>
           <td>
             <a
               href={`mailto:${donor.email}`}
               target='blank'
-              className='text-dark'>
+              className = 'text-muted'>
               {donor.email}
             </a>
           </td>
@@ -141,10 +141,10 @@ const DonorList = () => {
             </div>
           </div>
 
-          <div className='donor-list-table'>
-            <Table striped responsive bordered text='center'>
-              <thead className=''>
-                <tr className='table-primary'>
+          <div className='donor-list-table border border-info rounded'>
+            <Table striped responsive text='center' className = 'rounded'>
+              <thead className='rounded'>
+                <tr className='table-primary table-heading'>
                   <th>Name</th>
                   <th>Total Donations</th>
                   <th>Email</th>
