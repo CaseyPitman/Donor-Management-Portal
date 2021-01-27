@@ -59,10 +59,9 @@ class DonorDetails extends React.Component {
   };
 
   onAddDonor = () => {
-    console.log('you want to add donor')
+    console.log("you want to add donor");
     // will open add Donor modal
-
-  }
+  };
 
   render() {
     //Avoids error on refreshing page.
@@ -161,13 +160,15 @@ class DonorDetails extends React.Component {
                     </thead>
                     <tbody>{this.renderDonationHistory()}</tbody>
                   </Table>
-                  <Button
-                    variant='secondary'
-                    size='sm'
-                    className='donor-details-add-donation-button'
-                    onClick = {this.onAddDonor}>
-                    + Add Donation
-                  </Button>
+                  <div className ="donor-details-add-donation-button-container">
+                    <Button
+                      variant='secondary'
+                      size='sm'
+                      className='donor-details-add-donation-button'
+                      onClick={this.onAddDonor}>
+                      + Add Donation
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
