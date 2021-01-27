@@ -22,8 +22,8 @@ import Form from "react-bootstrap/Form";
 // import { usePromiseTracker } from 'react-promise-tracker';
 
 //Helper functions
-// import totalDonations from "../../helper-funcs/totalDonations"
-import sortDonors from "../../helper-funcs/sortDonors"
+import formatAmount from "../../helper-funcs/formatAmount";
+import sortDonors from "../../helper-funcs/sortDonors";
 
 // Styles
 import "../../css/donor-list.css";
@@ -65,10 +65,10 @@ const DonorList = () => {
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
-    // console.log(newList)
-
-
-    sortDonors(newList, "totalDonations");
+    
+    //Sort list of donors by either alphabetcial or totalDonations descending
+    //Default to alphabetcial
+    sortDonors(newList);
 
     return newList.map((donor, idx) => {
       return (
@@ -76,7 +76,7 @@ const DonorList = () => {
           <td className='text-dark'>
             {donor.firstName} {donor.lastName}
           </td>
-          <td>{donor.totalDonations}</td>
+          <td>{formatAmount(donor.totalDonations)}</td>
           <td>
             <a
               href={`mailto:${donor.email}`}

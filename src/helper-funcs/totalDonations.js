@@ -1,6 +1,5 @@
 //This function totals all donations by all donors.
 
-import formatAmount from "./formatAmount";
 
 const totalDonations = (donations) => {
   const donationsArr = donations.map(
