@@ -3,7 +3,7 @@ This component renders the main view of the app - a list of donors and their bas
 contact information, along with action choices for each entry.
 */
 
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 //Hooks
@@ -30,6 +30,8 @@ import sortDonors from "../../helper-funcs/sortDonors";
 import "../../css/donor-list.css";
 
 const DonorList = () => {
+  const [sortType, setSortType] = useState('alphabet');
+
   const list = useSelector(state => state.donors);
   const dispatch = useDispatch();
 
@@ -63,13 +65,18 @@ const DonorList = () => {
     );
   };
 
+  const onSort = e => {
+    setSortType(e.target.value);
+    return;
+  };
+
   //Render the list of donors.
   const renderList = () => {
     const newList = Object.values(list);
 
     //Sort list of donors by either alphabetcial or totalDonations descending
     //Default to alphabetcial
-    sortDonors(newList);
+    sortDonors(newList, sortType);
 
     return newList.map((donor, idx) => {
       return (
@@ -107,13 +114,14 @@ const DonorList = () => {
 
             <div className='donation-list-sort-search'>
               <InputGroup className='donation-list-sort'>
-                <Form.Control size='sm' as='select'>
-                  <option>Alphabetized</option>
-                  <option>Total Donations</option>
+                <Form.Control size='sm' as='select' onChange={onSort}>
+                  <option defaultValue>Sort Donors</option>
+                  <option value='alphabet'>Alphabetized</option>
+                  <option value='totalDonations'>Total Donations</option>
                 </Form.Control>
               </InputGroup>
 
-              <InputGroup className = 'donation-list-search'>
+              <InputGroup className='donation-list-search'>
                 <Form.Control
                   placeholder='Search Coming Soon'
                   aria-label='Search Donor'

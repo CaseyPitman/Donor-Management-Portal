@@ -50,9 +50,12 @@ This file contains the styles for the donor-list view.
   display: flex;
   justify-content:center;
   align-items: center;
+  width: 50%;
 }
+
 .donation-list-sort{
   align-self: center;
+  margin-right:15px;
 }
 
 .donor-list-table {
