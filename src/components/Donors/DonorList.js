@@ -79,7 +79,7 @@ const DonorList = () => {
               {donor.email}
             </a>
           </td>
-          <td className='text-dark'>{donor.phone}</td>
+          <td className='text-dark text-nowrap'>{donor.phone}</td>
           <td>{renderActions(donor.id)}</td>
         </tr>
       );
