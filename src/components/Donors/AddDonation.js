@@ -2,18 +2,24 @@
 donor's record without going through full edit process. */
 
 import React from "react";
+
 import { connect } from "react-redux";
 import Modal from "../Modal";
 
-import { connect } from "react-redux";
 //Actions
-import fetchDonorDetails from "../../actions/index.js";
+import { fetchDonorDetails } from "../../actions/index.js";
 
 class AddDonation extends React.Component {
+  id = this.props.match.params.id;
+
+  componentDidMount() {
+    this.props.fetchDonorDetails(this.id);
+  }
+
   render() {
     return (
       <div>
-        <h1>Add Donation</h1>
+        <Modal/>
       </div>
     );
   }

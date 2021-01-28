@@ -14,7 +14,6 @@ import { fetchDonorDetails } from "../../actions/index.js";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
-
 //Styles
 import "../../css/donor-details.css";
 
@@ -27,12 +26,9 @@ class DonorDetails extends React.Component {
     super(props);
   }
 
-  
-
   componentDidMount() {
     this.props.fetchDonorDetails(this.props.match.params.id);
   }
-
 
   //Only show notes field if notes exist
   renderNotes = () => {
@@ -62,9 +58,9 @@ class DonorDetails extends React.Component {
         </tr>
       );
     });
-  }; 
-  
- 
+  };
+
+  handleAddDonation = () => {};
 
   render() {
     //Avoids error on refreshing page.
@@ -75,7 +71,6 @@ class DonorDetails extends React.Component {
     return (
       <div className='donor-details'>
         <div className='donor-details-wrapper'>
-
           <div className='donor-details-container'>
             <div className='donor-details-heading'>
               <h1 className='donor-details-title'>Donor Details</h1>
@@ -165,20 +160,21 @@ class DonorDetails extends React.Component {
                     <tbody>{this.renderDonationHistory()}</tbody>
                   </Table>
                   <div className='donor-details-add-donation-button-container'>
-                    <Button
-                      variant='secondary'
-                      size='sm'
-                      className='donor-details-add-donation-button'
-                      onClick={this.onAddDonor}>
-                      + Add Donation
-                    </Button>
+                    <Link to={`/add-donation/${this.props.match.params.id}`}>
+                      <Button
+                        variant='secondary'
+                        size='sm'
+                        className='donor-details-add-donation-button'
+                        onClick={this.onAddDonor}>
+                        + Add Donation
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     );
   }
