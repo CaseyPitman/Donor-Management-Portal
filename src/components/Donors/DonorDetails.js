@@ -14,6 +14,7 @@ import { fetchDonorDetails } from "../../actions/index.js";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
+
 //Styles
 import "../../css/donor-details.css";
 
@@ -24,20 +25,14 @@ import formatDate from "../../helper-funcs/formatDate";
 class DonorDetails extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showModal: false };
   }
+
+  
 
   componentDidMount() {
     this.props.fetchDonorDetails(this.props.match.params.id);
   }
 
-  modalOpen = () => {
-    this.setState({ showModal: true });
-  };
-
-  modalClose = () => {
-    this.setState({ showModal: false });
-  };
 
   //Only show notes field if notes exist
   renderNotes = () => {
@@ -67,12 +62,9 @@ class DonorDetails extends React.Component {
         </tr>
       );
     });
-  };
-
-  onAddDonor = () => {
-    console.log("you want to add donor");
-    // will open add Donor modal
-  };
+  }; 
+  
+ 
 
   render() {
     //Avoids error on refreshing page.
@@ -83,6 +75,7 @@ class DonorDetails extends React.Component {
     return (
       <div className='donor-details'>
         <div className='donor-details-wrapper'>
+
           <div className='donor-details-container'>
             <div className='donor-details-heading'>
               <h1 className='donor-details-title'>Donor Details</h1>
@@ -185,6 +178,7 @@ class DonorDetails extends React.Component {
             </div>
           </div>
         </div>
+
       </div>
     );
   }
