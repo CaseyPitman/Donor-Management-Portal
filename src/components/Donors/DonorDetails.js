@@ -22,16 +22,27 @@ import formatAmount from "../../helper-funcs/formatAmount";
 import formatDate from "../../helper-funcs/formatDate";
 
 class DonorDetails extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = { showModal: false };
+  }
 
   componentDidMount() {
     this.props.fetchDonorDetails(this.props.match.params.id);
   }
 
+  modalOpen = () => {
+    this.setState({ showModal: true });
+  };
+
+  modalClose = () => {
+    this.setState({ showModal: false });
+  };
+
   //Only show notes field if notes exist
   renderNotes = () => {
+    console.log(this.props.donor.id);
+
     if (this.props.donor.notes !== "none") {
       return (
         <div className='donor-detail-notes'>
@@ -160,7 +171,7 @@ class DonorDetails extends React.Component {
                     </thead>
                     <tbody>{this.renderDonationHistory()}</tbody>
                   </Table>
-                  <div className ="donor-details-add-donation-button-container">
+                  <div className='donor-details-add-donation-button-container'>
                     <Button
                       variant='secondary'
                       size='sm'
