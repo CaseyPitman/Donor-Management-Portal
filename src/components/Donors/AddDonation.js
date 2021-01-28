@@ -6,8 +6,13 @@ import React from "react";
 import { connect } from "react-redux";
 import Modal from "../Modal";
 
+import redirect from "../../helper-funcs/redirect"
+
 //Actions
 import { fetchDonorDetails } from "../../actions/index.js";
+
+//Styles
+import "../../css/modal.css"
 
 class AddDonation extends React.Component {
   id = this.props.match.params.id;
@@ -16,10 +21,14 @@ class AddDonation extends React.Component {
     this.props.fetchDonorDetails(this.id);
   }
 
+  onDismiss() {
+      redirect()
+  }
+
   render() {
     return (
       <div>
-        <Modal/>
+        <Modal onDismiss = {this.onDismiss}/>
       </div>
     );
   }
