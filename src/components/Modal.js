@@ -3,45 +3,31 @@ This component renders a modal to add a donor to donor details without
 going through full edit process.
  */
 import React from "react";
-import ReactDOM from "react-dom";
 
-
-
-  //define onDismiss in AddDonation componenet (redirect to detail)
-  const Modal = props => {
-    return ReactDOM.createPortal(
-      <div className='modal'>
-        <div className='modal-dialog' onClick={e => e.stopPropagation()}>
-          <div className='modal-content'>
-            <div className='modal-header'>
-              <h5 className='modal-title'>Modal title</h5>
-              {/* <button
-                type='button'
-                class='close'
-                data-dismiss='modal'
-                aria-label='Close'>
-                <span aria-hidden='true'>&times;</span>
-              </button> */}
-            </div>
-            <div className='modal-body'>
-              <p>Modal body text goes here.</p>
-            </div>
-            <div className='modal-footer'>
-              <button type='button' className='btn btn-primary'>
-                Save changes
-              </button>
-              <button
-                type='button'
-                className='btn btn-secondary'>
-                Close
-              </button>
-            </div>
-          </div>
+const Modal = ({ closeModal, title, message, action }) => {
+  return (
+    <div className='modal-content'>
+      <div className='modal-header'>
+        <h5 className='modal-title'>{title}</h5>
+        <button
+          type='button'
+          className='close'
+          aria-label='Close'
+          onClick={closeModal}>
+          <span aria-hidden='true'>&times;</span>
+        </button>
+        <div className='modal-body'>
+          <p>{message}</p>
         </div>
-      </div>,
-      document.getElementById("modal")
-    );
-  };
-
+        <div className='modal-footer'>
+          {action}
+          <button type='button' className='btn btn-info' onClick={closeModal}>
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Modal;
