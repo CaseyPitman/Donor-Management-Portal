@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { fetchDonorDetails } from "../../actions/index.js";
 
 //Components
+
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
@@ -32,7 +33,6 @@ class DonorDetails extends React.Component {
 
   //Only show notes field if notes exist
   renderNotes = () => {
-    console.log(this.props.donor.id);
 
     if (this.props.donor.notes !== "none") {
       return (
@@ -59,8 +59,6 @@ class DonorDetails extends React.Component {
       );
     });
   };
-
-  handleAddDonation = () => {};
 
   render() {
     //Avoids error on refreshing page.
@@ -160,15 +158,13 @@ class DonorDetails extends React.Component {
                     <tbody>{this.renderDonationHistory()}</tbody>
                   </Table>
                   <div className='donor-details-add-donation-button-container'>
-                    <Link to={`/add-donation/${this.props.match.params.id}`}>
-                      <Button
-                        variant='secondary'
-                        size='sm'
-                        className='donor-details-add-donation-button'
-                        onClick={this.onAddDonor}>
-                        + Add Donation
-                      </Button>
-                    </Link>
+                    {/* <Button
+                      variant='secondary'
+                      size='sm'
+                      className='donor-details-add-donation-button'
+                      onClick={this.addDonation}>
+                      + Add Donation
+                    </Button> */}
                   </div>
                 </div>
               </div>

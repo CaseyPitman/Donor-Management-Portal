@@ -69,6 +69,10 @@
 }
 
 
+.modal-overlay {
+  z-index:100;
+}
+
 /* .donor-history-table {
   border:1px solid rgb(255, 255, 255, 0.5);
 } */
