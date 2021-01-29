@@ -6,13 +6,13 @@ import React from "react";
 import { connect } from "react-redux";
 import Modal from "../Modal";
 
-import redirect from "../../helper-funcs/redirect"
+import redirect from "../../helper-funcs/redirect";
 
 //Actions
-import { fetchDonorDetails } from "../../actions/index.js";
+import { fetchDonorDetails, editDonor } from "../../actions/index.js";
 
 //Styles
-import "../../css/modal.css"
+// import "../../css/modal.css";
 
 class AddDonation extends React.Component {
   id = this.props.match.params.id;
@@ -22,13 +22,13 @@ class AddDonation extends React.Component {
   }
 
   onDismiss() {
-      redirect()
+    console.log('you wish to dismiss');
   }
 
   render() {
     return (
       <div>
-        <Modal onDismiss = {this.onDismiss}/>
+        <Modal />
       </div>
     );
   }
@@ -38,4 +38,4 @@ const mapStateToProps = (state, ownProps) => {
   return { donor: state.donors[ownProps.match.params.id] };
 };
 
-export default connect(mapStateToProps, { fetchDonorDetails })(AddDonation);
+export default connect(mapStateToProps, { fetchDonorDetails, editDonor })(AddDonation);

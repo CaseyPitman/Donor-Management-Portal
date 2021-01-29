@@ -6,6 +6,8 @@ import {
   FETCH_DONOR_DETAILS,
   EDIT_DONOR,
   DELETE_DONOR,
+  SHOW_MODAL,
+  HIDE_MODAL,
 } from "./types";
 
 //Use for axios calls.
@@ -57,4 +59,14 @@ export const deleteDonor = (id, props) => async dispatch => {
   await DMP.delete(`/donors/${id}`);
   dispatch({ type: DELETE_DONOR, payload: id });
   redirectToList(props);
+};
+
+// SHOW A MODAL
+
+export const showModal = ({ modalProps, modalType }) => dispatch => {
+  dispatch({ type: SHOW_MODAL, modalProps, modalType });
+};
+
+export const hideModal = () => dispatch => {
+  dispatch({ type: HIDE_MODAL });
 };

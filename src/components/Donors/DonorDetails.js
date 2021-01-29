@@ -33,7 +33,6 @@ class DonorDetails extends React.Component {
 
   //Only show notes field if notes exist
   renderNotes = () => {
-
     if (this.props.donor.notes !== "none") {
       return (
         <div className='donor-detail-notes'>
@@ -59,6 +58,11 @@ class DonorDetails extends React.Component {
       );
     });
   };
+
+  addDonation = () => {
+    console.log('you wish to add donation.')
+  }
+
 
   render() {
     //Avoids error on refreshing page.
@@ -158,13 +162,13 @@ class DonorDetails extends React.Component {
                     <tbody>{this.renderDonationHistory()}</tbody>
                   </Table>
                   <div className='donor-details-add-donation-button-container'>
-                    {/* <Button
+                    <Button
                       variant='secondary'
                       size='sm'
                       className='donor-details-add-donation-button'
                       onClick={this.addDonation}>
                       + Add Donation
-                    </Button> */}
+                    </Button>
                   </div>
                 </div>
               </div>

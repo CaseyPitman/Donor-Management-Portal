@@ -15,6 +15,7 @@ import {
   DonorDetails,
   EditDonor,
   DeleteDonor,
+  AddDonation
 } from "./Donors/index";
 
 import { usePromiseTracker } from "react-promise-tracker";
@@ -36,8 +37,8 @@ const App = props => {
             <ProtectedRoute
               path='/donor-details/:id'
               component={DonorDetails}
-              test = 'test'
             />
+            {/* <ProtectedRoute path = '/add-donation/:id' component={AddDonation}/> */}
             <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
             <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
           </Switch>
