@@ -4,7 +4,13 @@ import React from "react";
 import { connect } from "react-redux";
 import ReactModal from "react-modal";
 
-import Modal from "./Modal";
+import AddDonationModal from "./AddDonationModal";
+import DeleteDonorModal from "./DeleteDonorModal";
+
+const MODAL_TYPES = {
+  "add donation": AddDonationModal,
+  "delete donor": DeleteDonorModal,
+};
 
 class ModalContainer extends React.Component {
   constructor(props) {
@@ -33,6 +39,9 @@ class ModalContainer extends React.Component {
       return null;
     }
 
+
+    const SpecifiedModal = MODAL_TYPES[this.props.modalType];
+
     return (
       <div>
         <ReactModal
@@ -43,8 +52,7 @@ class ModalContainer extends React.Component {
           ariaHideApp={false}
           // overlayClassName='modal fade show'
           bodyOpenClassName='modal-open'
-          className='modal-dialog modal-dialog-centered'
-          >
+          className='modal-dialog modal-dialog-centered'>
           {/* <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
           <button onClick={this.closeModal}>close</button>
           <div>I am a modal</div>
@@ -56,7 +64,8 @@ class ModalContainer extends React.Component {
             <button>the modal</button>
           </form> */}
 
-          <Modal closeModal={this.closeModal} {...this.props.modalProps} />
+
+          <SpecifiedModal closeModal={this.closeModal} {...this.props.modalProps} />
         </ReactModal>
       </div>
     );

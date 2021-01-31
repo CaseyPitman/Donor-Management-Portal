@@ -19,9 +19,9 @@ const AddDonationModal = ({ closeModal, message, action }) => {
         </button>
       </div>
       <div className='modal-body'>
-        <input>Date</input>
-        <input>Amount</input>
-        <input>Type</input>
+        Date
+        Amount
+        Type
       </div>
       <div className='modal-footer'>
         <Button variant = 'primary'>Add Donation</Button>
