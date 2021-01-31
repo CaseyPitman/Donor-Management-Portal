@@ -1,16 +1,15 @@
-/* 
-This component renders a modal to add a donor to donor details without 
-going through full edit process.
- */
+/* Renders the modal to add a single donation to a donor 
+record without going through the full edit process. */
+
 import React from "react";
+
 import Button from "react-bootstrap/Button";
 
-const Modal = ({ closeModal, title, message, action }) => {
-  
+const AddDonationModal = ({ closeModal, message, action }) => {
   return (
     <div className='modal-content'>
       <div className='modal-header'>
-        <h5 className='modal-title'>Title</h5>
+        <h5 className='modal-title'>Add a Donation</h5>
         <button
           type='button'
           className='close'
@@ -20,18 +19,18 @@ const Modal = ({ closeModal, title, message, action }) => {
         </button>
       </div>
       <div className='modal-body'>
-        <p>content</p>
-        <p>content</p>
+        <input>Date</input>
+        <input>Amount</input>
+        <input>Type</input>
       </div>
       <div className='modal-footer'>
-        
-        <Button type='button' variant='info' onClick={closeModal}>
+        <Button variant = 'primary'>Add Donation</Button>
+        <Button variant='info' onClick={closeModal}>
           Cancel
         </Button>
-        action button
       </div>
     </div>
   );
 };
 
-export default Modal;
+export default AddDonationModal;
