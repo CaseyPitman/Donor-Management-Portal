@@ -8,10 +8,14 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 //Actions
-import { fetchDonorDetails } from "../../actions/index.js";
+import {
+  fetchDonorDetails,
+  showModal,
+  hideModal,
+} from "../../actions/index.js";
 
 //Components
-
+import ModalRoot from '../Modal/ModalRoot'
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
@@ -28,7 +32,7 @@ class DonorDetails extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchDonorDetails(this.props.match.params.id);
+    this.props.fetchDonorDetails();
   }
 
   //Only show notes field if notes exist
@@ -59,9 +63,21 @@ class DonorDetails extends React.Component {
     });
   };
 
-  addDonation = () => {
-    console.log('you wish to add donation.')
+
+  closeModal() {
+    this.props.hideModal()
   }
+
+  openAddDonationModal = () => {
+    console.log("you wish to add donation.");
+    this.props.showModal({
+      open: true,
+      title: "Add Donation",
+      message: "Enter Donor Information",
+      closeModal: this.closeModal,
+    }, 'add donation');
+  };
+
 
 
   render() {
@@ -166,7 +182,7 @@ class DonorDetails extends React.Component {
                       variant='secondary'
                       size='sm'
                       className='donor-details-add-donation-button'
-                      onClick={this.addDonation}>
+                      onClick={this.openAddDonationModal}>
                       + Add Donation
                     </Button>
                   </div>
@@ -175,13 +191,23 @@ class DonorDetails extends React.Component {
             </div>
           </div>
         </div>
+        <ModalRoot hideModal={this.props.hideModal} />
       </div>
     );
   }
 }
 
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  hideModal: () => dispatch(hideModal()),
+  showModal: (modalProps, modalType) => {
+    dispatch(showModal({ modalProps, modalType }));
+  },
+  fetchDonorDetails: () =>
+    dispatch(fetchDonorDetails(ownProps.match.params.id)),
+});
+
 const mapStateToProps = (state, ownProps) => {
   return { donor: state.donors[ownProps.match.params.id] };
 };
 
-export default connect(mapStateToProps, { fetchDonorDetails })(DonorDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(DonorDetails);

@@ -2,7 +2,6 @@
 criteria - alphabetical or total donation amount */
 
 const sortDonors = (donors, sortBy = "alphabet") => {
-  console.log(donors);
   let sortedDonors = [];
 
   // Sort by total donations
@@ -28,14 +27,6 @@ const sortDonors = (donors, sortBy = "alphabet") => {
       return 0;
     });
   }
-  // Sort by total donations
-  // else if (sortBy === "totalDonations") {
-  //   sortedDonors = donors.sort((a, b) => {
-  //     return b.totalDonations - a.totalDonations;
-  //   });
-  // }
-
-  console.log(sortedDonors);
 
   return "sorted donors list";
 };
