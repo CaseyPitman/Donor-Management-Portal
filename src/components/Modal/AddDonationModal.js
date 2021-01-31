@@ -19,12 +19,29 @@ const AddDonationModal = ({ closeModal, message, action }) => {
         </button>
       </div>
       <div className='modal-body'>
-        Date
-        Amount
-        Type
+
+
+
+
+        <form>
+          <div className='form-group'>
+            <input placeholder='date' />
+            <input placeholder='amount' />
+            <select>
+              <option>Cash</option>
+              <option>Property</option>
+              <option>Endowment</option>
+              <option>Sponsorship</option>
+            </select>
+          </div>
+        </form>
+
+
+
+        
       </div>
       <div className='modal-footer'>
-        <Button variant = 'primary'>Add Donation</Button>
+        <Button variant='primary'>Add Donation</Button>
         <Button variant='info' onClick={closeModal}>
           Cancel
         </Button>

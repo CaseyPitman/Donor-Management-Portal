@@ -39,7 +39,6 @@ class ModalContainer extends React.Component {
       return null;
     }
 
-
     const SpecifiedModal = MODAL_TYPES[this.props.modalType];
 
     return (
@@ -52,7 +51,12 @@ class ModalContainer extends React.Component {
           ariaHideApp={false}
           // overlayClassName='modal fade show'
           bodyOpenClassName='modal-open'
-          className='modal-dialog modal-dialog-centered'>
+          className='modal-dialog modal-dialog-centered'
+          style={{
+            overlay: {
+              backgroundColor: 'rgb(44,44,44, 0.75)',
+            },
+          }}>
           {/* <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
           <button onClick={this.closeModal}>close</button>
           <div>I am a modal</div>
@@ -64,8 +68,10 @@ class ModalContainer extends React.Component {
             <button>the modal</button>
           </form> */}
 
-
-          <SpecifiedModal closeModal={this.closeModal} {...this.props.modalProps} />
+          <SpecifiedModal
+            closeModal={this.closeModal}
+            {...this.props.modalProps}
+          />
         </ReactModal>
       </div>
     );
