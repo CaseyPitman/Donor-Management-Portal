@@ -15,8 +15,10 @@ import {
   DonorDetails,
   EditDonor,
   DeleteDonor,
-  AddDonation
 } from "./Donors/index";
+
+//Actions
+import { showModal, hideModal } from "../actions/index.js";
 
 import { usePromiseTracker } from "react-promise-tracker";
 import Loader from "react-promise-loader";
@@ -24,7 +26,14 @@ import Loader from "react-promise-loader";
 //Styles
 import "../css/app.css";
 
+
+
+
+
 const App = props => {
+
+
+
   return (
     <Router>
       <div className='app'>
