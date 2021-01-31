@@ -15,7 +15,7 @@ import {
 } from "../../actions/index.js";
 
 //Components
-import ModalRoot from '../Modal/ModalRoot'
+import ModalRoot from "../Modal/ModalRoot";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
@@ -63,22 +63,21 @@ class DonorDetails extends React.Component {
     });
   };
 
-
-  closeModal() {
-    this.props.hideModal()
-  }
-
-  openAddDonationModal = () => {
-    console.log("you wish to add donation.");
-    this.props.showModal({
-      open: true,
-      title: "Add Donation",
-      message: "Enter Donor Information",
-      closeModal: this.closeModal,
-    }, 'add donation');
+  closeModal = () => {
+    this.props.hideModal();
   };
 
-
+  openAddDonationModal = () => {
+    this.props.showModal(
+      {
+        open: true,
+        title: "Add Donation",
+        message: "Enter Donor Information",
+        closeModal: this.closeModal,
+      },
+      "add donation"
+    );
+  };
 
   render() {
     //Avoids error on refreshing page.

@@ -4,6 +4,8 @@ import React from "react";
 import { connect } from "react-redux";
 import ReactModal from "react-modal";
 
+import Modal from "./Modal";
+
 class ModalContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -38,10 +40,12 @@ class ModalContainer extends React.Component {
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           contentLabel='Modal'
-          ariaHideApp={false}>
-
-
-          <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
+          ariaHideApp={false}
+          // overlayClassName='modal fade show'
+          bodyOpenClassName='modal-open'
+          className='modal-dialog modal-dialog-centered'
+          >
+          {/* <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
           <button onClick={this.closeModal}>close</button>
           <div>I am a modal</div>
           <form>
@@ -50,9 +54,9 @@ class ModalContainer extends React.Component {
             <button>stays</button>
             <button>inside</button>
             <button>the modal</button>
-          </form>
+          </form> */}
 
-          
+          <Modal closeModal={this.closeModal} {...this.props.modalProps} />
         </ReactModal>
       </div>
     );

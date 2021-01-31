@@ -5,10 +5,11 @@ going through full edit process.
 import React from "react";
 
 const Modal = ({ closeModal, title, message, action }) => {
+  console.log('modal open')
   return (
     <div className='modal-content'>
       <div className='modal-header'>
-        <h5 className='modal-title'>{title}</h5>
+        <h5 className='modal-title'>Title</h5>
         <button
           type='button'
           className='close'
@@ -17,10 +18,10 @@ const Modal = ({ closeModal, title, message, action }) => {
           <span aria-hidden='true'>&times;</span>
         </button>
         <div className='modal-body'>
-          <p>{message}</p>
+          <p>message</p>
         </div>
         <div className='modal-footer'>
-          {action}
+          action
           <button type='button' className='btn btn-info' onClick={closeModal}>
             Cancel
           </button>
