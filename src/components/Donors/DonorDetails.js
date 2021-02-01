@@ -97,6 +97,7 @@ class DonorDetails extends React.Component {
     this.props.showModal(
       {
         open: true,
+        donor: this.props.donor,
         // title: "Add Donation",
         // message: "Enter Donor Information",
         closeModal: this.closeModal,
