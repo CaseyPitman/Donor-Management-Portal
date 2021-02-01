@@ -45,9 +45,11 @@ class EditDonor extends React.Component {
                 <Link to='../../donor-list'>
                   <Button variant='info'>Cancel</Button>
                 </Link>
-                <Link to={`../../delete-donor/${this.props.match.params.id}`} className = 'edit-donor-delete-button'>
+                {/* <Link
+                  to={`../../delete-donor/${this.props.match.params.id}`}
+                  className='edit-donor-delete-button'>
                   <Button variant='danger'>Delete</Button>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <DonorForm

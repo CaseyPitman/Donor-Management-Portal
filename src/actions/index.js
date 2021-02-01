@@ -49,6 +49,7 @@ export const fetchDonorDetails = id => async dispatch => {
 
 //Edit a recored for a specified donor
 export const editDonor = (id, formData, props) => async dispatch => {
+  console.log(`action received data - ${formData}`)
   const response = await DMP.patch(`donors/${id}`, formData);
   dispatch({ type: EDIT_DONOR, payload: response.data });
   redirectToList(props);
