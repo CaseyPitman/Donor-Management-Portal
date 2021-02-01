@@ -14,11 +14,7 @@ import {
   CreateDonor,
   DonorDetails,
   EditDonor,
-  DeleteDonor,
 } from "./Donors/index";
-
-//Actions
-import { showModal, hideModal } from "../actions/index.js";
 
 import { usePromiseTracker } from "react-promise-tracker";
 import Loader from "react-promise-loader";
@@ -26,14 +22,7 @@ import Loader from "react-promise-loader";
 //Styles
 import "../css/app.css";
 
-
-
-
-
 const App = props => {
-
-
-
   return (
     <Router>
       <div className='app'>
@@ -47,12 +36,10 @@ const App = props => {
               path='/donor-details/:id'
               component={DonorDetails}
             />
-            {/* <ProtectedRoute path = '/add-donation/:id' component={AddDonation}/> */}
             <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
-            <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
           </Switch>
         </div>
-        <Loader promiseTracker={usePromiseTracker}/>
+        <Loader promiseTracker={usePromiseTracker} />
       </div>
     </Router>
   );
