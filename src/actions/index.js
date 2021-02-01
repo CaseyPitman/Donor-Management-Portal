@@ -57,9 +57,9 @@ export const editDonor = (id, formData, props) => async dispatch => {
 
 //Delete a donor record
 export const deleteDonor = (id, props) => async dispatch => {
-  await DMP.delete(`/donors/${id}`);
+  await trackPromise(DMP.delete(`/donors/${id}`));
   dispatch({ type: DELETE_DONOR, payload: id });
-  redirectToList(props);
+  // redirectToList(props);
 };
 
 // SHOW A MODAL

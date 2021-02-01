@@ -2,21 +2,25 @@
 Renders the modal to confirm deletion of a donor record
 */
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 // Components
 import Button from "react-bootstrap/Button";
 
+//Actions
+import { deleteDonor } from "../../actions/index";
+
 const DeleteDonorModal = ({ closeModal, donor }) => {
+  console.log(donor);
 
+  const dispatch = useDispatch()
 
-console.log(donor);
+//Confirm deletion of donor record. 
+  const confirmDelete = async () => {
+    await dispatch(deleteDonor(donor.id))
 
-  const confirmDelete = () => {
-    console.log('you confirmed deletion ');
     closeModal();
-  }
-
-
+  };
 
   return (
     <div className='modal-content'>
@@ -31,7 +35,6 @@ console.log(donor);
         </button>
       </div>
       <div className='modal-body'>
-      
         <strong className='text-dark'>
           Are you sure you want to delete&nbsp;
           {donor.firstName} {donor.lastName}?
@@ -41,7 +44,9 @@ console.log(donor);
         <Button variant='info' onClick={closeModal}>
           Cancel
         </Button>
-        <Button variant='danger' onClick = {confirmDelete}>Confirm</Button>
+        <Button variant='danger' onClick={confirmDelete}>
+          Confirm
+        </Button>
       </div>
     </div>
   );
