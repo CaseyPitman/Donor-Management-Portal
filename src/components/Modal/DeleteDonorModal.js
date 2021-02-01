@@ -10,16 +10,18 @@ import Button from "react-bootstrap/Button";
 //Actions
 import { deleteDonor } from "../../actions/index";
 
+//Hooks
+import { useHistory } from "react-router-dom";
+
 const DeleteDonorModal = ({ closeModal, donor }) => {
-  console.log(donor);
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-  const dispatch = useDispatch()
-
-//Confirm deletion of donor record. 
+  //Confirm deletion of donor record.
   const confirmDelete = async () => {
-    await dispatch(deleteDonor(donor.id))
-
     closeModal();
+    history.push("/donor-list")
+    await dispatch(deleteDonor(donor.id));
   };
 
   return (

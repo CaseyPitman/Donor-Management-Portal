@@ -31,7 +31,8 @@ class EditDonor extends React.Component {
   }
 
   onSubmitForm = updatedFormData => {
-    this.props.editDonor(this.id, updatedFormData, this.props);
+    const redirectDestination = `/donor-details/${this.id}`
+    this.props.editDonor(this.id, updatedFormData, this.props, redirectDestination);
   };
 
   render() {

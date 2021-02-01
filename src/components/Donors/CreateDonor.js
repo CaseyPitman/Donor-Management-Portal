@@ -4,7 +4,7 @@ information on a new donor.
 */
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 
 import { nanoid } from "nanoid";
@@ -21,14 +21,15 @@ import "../../css/create-edit-donor.css";
 
 const CreateDonor = props => {
   const dispatch = useDispatch();
-
+  const history = useHistory();
   //Dispatch CREATE_DONOR action and then redirect to DonorList
-  const onSubmitForm = formData => {
+  const onSubmitForm = async formData => {
     //Creates id for newly created record
 
     formData.id = nanoid(19);
 
-    dispatch(createDonor(formData, props));
+    await dispatch(createDonor(formData, props));
+    history.push("donor-list")
   };
 
   return (

@@ -14,7 +14,8 @@ import {
 import DMP from "../axios/DMP";
 
 import { trackPromise } from "react-promise-tracker";
-import redirectToList from "../helper-funcs/redirect";
+import redirect from "../helper-funcs/redirect";
+// import redirect from "../helper-funcs/redirect";
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
@@ -30,10 +31,14 @@ export const fetchDonorList = () => async dispatch => {
 //Create new donor record
 export const createDonor = (formData, props) => {
   return async dispatch => {
-    const response = await DMP.post("/donors", formData);
-    dispatch({ type: CREATE_DONOR, payload: response.data });
-    redirectToList(props);
+    try {
+      const response = await DMP.post("/donors", formData);
+      dispatch({ type: CREATE_DONOR, payload: response.data });
+    } catch (error) {
+      console.log(error);
+    }
   };
+  // redirectToList(props);
 };
 
 // Retrieve record for single donor
@@ -48,18 +53,26 @@ export const fetchDonorDetails = id => async dispatch => {
 };
 
 //Edit a recored for a specified donor
-export const editDonor = (id, formData, props) => async dispatch => {
-  console.log(`action received data - ${formData}`)
-  const response = await DMP.patch(`donors/${id}`, formData);
-  dispatch({ type: EDIT_DONOR, payload: response.data });
-  redirectToList(props);
+export const editDonor = (
+  id,
+  formData,
+  props,
+  redirectDestination
+) => async dispatch => {
+  try {
+    const response = await trackPromise(DMP.patch(`donors/${id}`, formData));
+    dispatch({ type: EDIT_DONOR, payload: response.data });
+  } catch (error) {
+    console.log(error);
+  }
+  redirect(props, redirectDestination);
 };
 
 //Delete a donor record
 export const deleteDonor = (id, props) => async dispatch => {
   await trackPromise(DMP.delete(`/donors/${id}`));
   dispatch({ type: DELETE_DONOR, payload: id });
-  // redirectToList(props);
+  // redirect(props, "/donor-list");
 };
 
 // SHOW A MODAL

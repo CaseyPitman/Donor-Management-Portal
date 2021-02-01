@@ -52,7 +52,7 @@ const App = props => {
             <ProtectedRoute path='/delete-donor/:id' component={DeleteDonor} />
           </Switch>
         </div>
-        <Loader promiseTracker={usePromiseTracker} />
+        <Loader promiseTracker={usePromiseTracker}/>
       </div>
     </Router>
   );
