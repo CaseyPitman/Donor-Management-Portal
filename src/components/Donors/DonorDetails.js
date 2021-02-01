@@ -55,9 +55,11 @@ class DonorDetails extends React.Component {
   };
 
   renderDonationHistory = () => {
-
-    const sortedDonationHistory = sortDonors(this.props.donor.donations, 'donations', this.state.sortBy)
-    console.log(sortedDonationHistory);
+    const sortedDonationHistory = sortDonors(
+      this.props.donor.donations,
+      "donations",
+      this.state.sortBy
+    );
     return sortedDonationHistory.map((donation, idx) => {
       //Don't forget to format donation amounts.
 
@@ -70,7 +72,6 @@ class DonorDetails extends React.Component {
         </tr>
       );
     });
-
   };
 
   onSort = e => {
@@ -189,8 +190,12 @@ class DonorDetails extends React.Component {
                   <InputGroup className=''>
                     <Form.Control size='sm' as='select' onChange={this.onSort}>
                       <option defaultValue>Sort Donations</option>
-                      <option value='date descending'>Date - Newest First</option>
-                      <option value='date ascending'>Date - Oldest First</option>
+                      <option value='date descending'>
+                        Date - Newest First
+                      </option>
+                      <option value='date ascending'>
+                        Date - Oldest First
+                      </option>
                       <option value='donation amount'>Amount</option>
                       <option value='donation type'>Type</option>
                     </Form.Control>
