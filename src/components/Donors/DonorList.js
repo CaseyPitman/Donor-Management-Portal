@@ -163,7 +163,7 @@ class DonorList extends React.Component {
               </div>
             </div>
 
-            <div className='donor-list-table border border-info rounded'>
+            <div className='donor-list-table border border-primary rounded'>
               <Table striped responsive text='center' className='rounded'>
                 <thead className='rounded'>
                   <tr className='table-primary table-heading'>
