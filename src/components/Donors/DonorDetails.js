@@ -18,6 +18,8 @@ import {
 import ModalRoot from "../Modal/ModalRoot";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
+import InputGroup from "react-bootstrap/InputGroup";
+import Form from "react-bootstrap/Form";
 
 //Styles
 import "../../css/donor-details.css";
@@ -25,10 +27,12 @@ import "../../css/donor-details.css";
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
 import formatDate from "../../helper-funcs/formatDate";
+import sortDonors from "../../helper-funcs/sortDonors";
 
 class DonorDetails extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { sortBy: "date descending" };
   }
 
   componentDidMount() {
@@ -51,8 +55,13 @@ class DonorDetails extends React.Component {
   };
 
   renderDonationHistory = () => {
-    return this.props.donor.donations.map((donation, idx) => {
+
+    const sortedDonationHistory = sortDonors(this.props.donor.donations, 'donations', this.state.sortBy)
+    console.log(sortedDonationHistory);
+    return sortedDonationHistory.map((donation, idx) => {
       //Don't forget to format donation amounts.
+
+      //sort goes in here somewhere
       return (
         <tr key={idx}>
           <td className='text-dark'>{formatDate(donation.date)}</td>
@@ -61,6 +70,11 @@ class DonorDetails extends React.Component {
         </tr>
       );
     });
+
+  };
+
+  onSort = e => {
+    this.setState({ sortBy: e.target.value });
   };
 
   closeModal = () => {
@@ -115,7 +129,9 @@ class DonorDetails extends React.Component {
                 {/* <Link
                   to={`/delete-donor/${this.props.match.params.id}`}
                   className='donor-details-delete-btn'> */}
-                <Button variant='danger' onClick = {this.openDeleteModal}>Delete</Button>
+                <Button variant='danger' onClick={this.openDeleteModal}>
+                  Delete
+                </Button>
                 {/* </Link> */}
               </div>
             </div>
@@ -170,6 +186,14 @@ class DonorDetails extends React.Component {
               <div className='donor-detail-donations'>
                 <div className='donor-detail-donation-heading-container'>
                   <h2 className='donor-details-section-heading'>Donations</h2>
+                  <InputGroup className=''>
+                    <Form.Control size='sm' as='select' onChange={this.onSort}>
+                      <option defaultValue>Sort Donations</option>
+                      <option value='date descending'>Date - Newest First</option>
+                      <option value='date ascending'>Date - Oldest First</option>
+                      <option value='donation amount'>By Amount</option>
+                    </Form.Control>
+                  </InputGroup>
                   <h5>
                     Total Donations:{" "}
                     {formatAmount(this.props.donor.totalDonations)}

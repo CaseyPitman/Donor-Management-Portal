@@ -30,7 +30,7 @@ import sortDonors from "../../helper-funcs/sortDonors";
 import "../../css/donor-list.css";
 
 const DonorList = () => {
-  const [sortType, setSortType] = useState('alphabet');
+  const [sortBy, setSortBy] = useState('alphabet');
 
   const list = useSelector(state => state.donors);
   const dispatch = useDispatch();
@@ -66,7 +66,7 @@ const DonorList = () => {
   };
 
   const onSort = e => {
-    setSortType(e.target.value);
+    setSortBy(e.target.value);
     return;
   };
 
@@ -76,7 +76,7 @@ const DonorList = () => {
 
     //Sort list of donors by either alphabetcial or totalDonations descending
     //Default to alphabetcial
-    sortDonors(newList, sortType);
+    sortDonors(newList, 'donor list', sortBy);
 
     return newList.map((donor, idx) => {
       return (
