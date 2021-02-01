@@ -15,7 +15,7 @@ import {
 } from "../../actions/index.js";
 
 //Components
-import ModalRoot from "../Modal/ModalRoot";
+import ModalContainer from "../Modal/ModalRoot";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -82,7 +82,7 @@ class DonorDetails extends React.Component {
     this.props.hideModal();
   };
 
-  openDeleteModal = () => {
+  openDeleteModal = (donor) => {
     this.props.showModal(
       {
         open: true,
@@ -231,7 +231,7 @@ class DonorDetails extends React.Component {
             </div>
           </div>
         </div>
-        <ModalRoot hideModal={this.props.hideModal} />
+        <ModalContainer hideModal={this.props.hideModal} />
       </div>
     );
   }

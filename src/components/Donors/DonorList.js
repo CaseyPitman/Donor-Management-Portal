@@ -6,8 +6,6 @@ contact information, along with action choices for each entry.
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-//Hooks
-// import { useDispatch, useSelector } from "react-redux";
 
 //Actions
 import { fetchDonorList, showModal, hideModal } from "../../actions";
@@ -18,7 +16,8 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
-import Dropdown from "react-bootstrap/DropdownButton";
+import ModalContainer from "../Modal/ModalRoot";
+
 // import Loader from 'react-promise-loader';
 // import { usePromiseTracker } from 'react-promise-tracker';
 
@@ -28,7 +27,6 @@ import sortData from "../../helper-funcs/sortData";
 
 // Styles
 import "../../css/donor-list.css";
-import { render } from "@testing-library/react";
 
 class DonorList extends React.Component {
   constructor(props) {
@@ -36,18 +34,10 @@ class DonorList extends React.Component {
     this.state = { sortBy: "alphabet" };
   }
 
-  // const [sortBy, setSortBy] = useState('alphabet');
-
-  // const list = useSelector(state => state.donors);
-  // const dispatch = useDispatch();
-
+  //Fetch the list on mount
   componentDidMount() {
-    this.props.fetchDonorList()
+    this.props.fetchDonorList();
   }
-  //MAKE A CALL FOR LIST OF DONORS
-  // useEffect(() => {
-  //   dispatch(fetchDonorList());
-  // }, [dispatch]);
 
   //Renders action buttons.
   renderActions = id => {
@@ -64,11 +54,15 @@ class DonorList extends React.Component {
               Edit
             </Button>
           </Link>
-          <Link to={`/delete-donor/${id}`}>
-            <Button variant='danger' size='sm'>
-              Delete
-            </Button>
-          </Link>
+          {/* <Link to={`/delete-donor/${id}`}> */}{" "}
+          {/* Pass id as prop to this button when you refactor */}
+          <Button
+            variant='danger'
+            size='sm'
+            onClick={() => this.openDeleteModal(id)}>
+            Delete
+          </Button>
+          {/* </Link> */}
         </ButtonGroup>
       </div>
     );
@@ -76,7 +70,6 @@ class DonorList extends React.Component {
 
   onSort = e => {
     this.setState({ sortBy: e.target.value });
-
     return;
   };
 
@@ -108,6 +101,24 @@ class DonorList extends React.Component {
         </tr>
       );
     });
+  };
+
+  //Open delete modal
+  openDeleteModal = id => {
+    const donorToDelete = this.props.donors[id];
+    this.props.showModal(
+      {
+        open: true,
+        donor: donorToDelete,
+        closeModal: this.closeModal,
+      },
+      "delete donor"
+    );
+  };
+
+  //Close delete modal
+  closeModal = () => {
+    this.props.hideModal();
   };
 
   render() {
@@ -169,6 +180,7 @@ class DonorList extends React.Component {
             </div>
           </div>
         </div>
+        <ModalContainer hideModal={this.props.hideModal} />
       </div>
     );
   }

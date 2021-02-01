@@ -9,6 +9,7 @@ import Button from "react-bootstrap/Button";
 const DeleteDonorModal = ({ closeModal, donor }) => {
 
 
+console.log(donor);
 
   const confirmDelete = () => {
     console.log('you confirmed deletion ');
