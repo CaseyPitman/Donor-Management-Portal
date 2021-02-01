@@ -67,6 +67,16 @@ class DonorDetails extends React.Component {
     this.props.hideModal();
   };
 
+  openDeleteModal = () => {
+    this.props.showModal(
+      {
+        open: true,
+        closeModal: this.closeModal,
+      },
+      "delete donor"
+    );
+  };
+
   openAddDonationModal = () => {
     this.props.showModal(
       {
@@ -101,11 +111,11 @@ class DonorDetails extends React.Component {
                   className='donor-details-edit-btn'>
                   <Button variant='success'>Edit</Button>
                 </Link>
-                <Link
+                {/* <Link
                   to={`/delete-donor/${this.props.match.params.id}`}
-                  className='donor-details-delete-btn'>
-                  <Button variant='danger'>Delete</Button>
-                </Link>
+                  className='donor-details-delete-btn'> */}
+                <Button variant='danger' onClick = {this.openDeleteModal}>Delete</Button>
+                {/* </Link> */}
               </div>
             </div>
             <div className='donor-details-contents'>

@@ -38,13 +38,13 @@ const AddDonationModal = ({ closeModal, message, action }) => {
 
 
 
-        
+
       </div>
       <div className='modal-footer'>
-        <Button variant='primary'>Add Donation</Button>
         <Button variant='info' onClick={closeModal}>
           Cancel
         </Button>
+        <Button variant='primary'>Add Donation</Button>
       </div>
     </div>
   );
