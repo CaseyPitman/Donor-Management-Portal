@@ -191,7 +191,8 @@ class DonorDetails extends React.Component {
                       <option defaultValue>Sort Donations</option>
                       <option value='date descending'>Date - Newest First</option>
                       <option value='date ascending'>Date - Oldest First</option>
-                      <option value='donation amount'>By Amount</option>
+                      <option value='donation amount'>Amount</option>
+                      <option value='donation type'>Type</option>
                     </Form.Control>
                   </InputGroup>
                   <h5>

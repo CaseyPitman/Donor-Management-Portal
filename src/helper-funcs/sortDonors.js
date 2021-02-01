@@ -37,7 +37,26 @@ const sortDonors = (data, dataType, sortBy) => {
       sortedData = data.sort((a, b) => {
         return b.amount - a.amount;
       });
-    } else if (sortBy === "date ascending") {
+    }
+    //Sort by donation type
+    else if (sortBy === "donation type") {
+      sortedData = data.sort((a, b) => {
+        const typeA = a.type.toUpperCase();
+        const typeB = b.type.toUpperCase();
+
+        if (typeA < typeB) {
+          return -1;
+        }
+        if (typeA > typeB) {
+          return 1;
+        }
+        //Same types
+        return 0;
+      });
+    }
+
+    //Sort by date, oldest first
+    else if (sortBy === "date ascending") {
       //Oldest Date First
       sortedData = data.sort((a, b) => {
         //Use regex to remove dashes from the date during sort.
