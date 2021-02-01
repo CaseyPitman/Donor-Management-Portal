@@ -4,15 +4,23 @@ Renders the modal to confirm deletion of a donor record
 import React from "react";
 
 // Components
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
+
+const DeleteDonorModal = ({ closeModal, donor }) => {
 
 
 
-const DeleteDonorModal = ({closeModal}) => {
+  const confirmDelete = () => {
+    console.log('you confirmed deletion ');
+    closeModal();
+  }
+
+
+
   return (
     <div className='modal-content'>
       <div className='modal-header'>
-        <h5 className='modal-title'>Title</h5>
+        <h5 className='modal-title'>Confirm Delete</h5>
         <button
           type='button'
           className='close'
@@ -22,13 +30,17 @@ const DeleteDonorModal = ({closeModal}) => {
         </button>
       </div>
       <div className='modal-body'>
-        delte modal content
+      
+        <strong className='text-dark'>
+          Are you sure you want to delete&nbsp;
+          {donor.firstName} {donor.lastName}?
+        </strong>
       </div>
       <div className='modal-footer'>
-        <Button type='button' variant='info' onClick={closeModal}>
+        <Button variant='info' onClick={closeModal}>
           Cancel
         </Button>
-        action button
+        <Button variant='danger' onClick = {confirmDelete}>Confirm</Button>
       </div>
     </div>
   );

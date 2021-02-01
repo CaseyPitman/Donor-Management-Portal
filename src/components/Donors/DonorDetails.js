@@ -71,6 +71,7 @@ class DonorDetails extends React.Component {
     this.props.showModal(
       {
         open: true,
+        donor: this.props.donor,
         closeModal: this.closeModal,
       },
       "delete donor"
