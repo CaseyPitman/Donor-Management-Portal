@@ -1,7 +1,7 @@
 /* This function will take a list of donors and sort them based on chosen 
 criteria - alphabetical or total donation amount */
 
-const sortDonors = (data, dataType, sortBy) => {
+const sortData = (data, dataType, sortBy) => {
   let sortedData = [];
 
   if (dataType === "donor list") {
@@ -70,4 +70,4 @@ const sortDonors = (data, dataType, sortBy) => {
   return sortedData;
 };
 
-export default sortDonors;
+export default sortData;

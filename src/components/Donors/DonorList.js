@@ -24,7 +24,7 @@ import Dropdown from "react-bootstrap/DropdownButton";
 
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
-import sortDonors from "../../helper-funcs/sortDonors";
+import sortData from "../../helper-funcs/sortData";
 
 // Styles
 import "../../css/donor-list.css";
@@ -76,7 +76,7 @@ const DonorList = () => {
 
     //Sort list of donors by either alphabetcial or totalDonations descending
     //Default to alphabetcial
-    sortDonors(newList, 'donor list', sortBy);
+    sortData(newList, 'donor list', sortBy);
 
     return newList.map((donor, idx) => {
       return (

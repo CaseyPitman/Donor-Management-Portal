@@ -27,7 +27,7 @@ import "../../css/donor-details.css";
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
 import formatDate from "../../helper-funcs/formatDate";
-import sortDonors from "../../helper-funcs/sortDonors";
+import sortData from "../../helper-funcs/sortData";
 
 class DonorDetails extends React.Component {
   constructor(props) {
@@ -55,7 +55,7 @@ class DonorDetails extends React.Component {
   };
 
   renderDonationHistory = () => {
-    const sortedDonationHistory = sortDonors(
+    const sortedDonationHistory = sortData(
       this.props.donor.donations,
       "donations",
       this.state.sortBy
