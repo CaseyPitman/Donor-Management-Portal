@@ -17,7 +17,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import ModalContainer from "../Modal/ModalRoot";
-
+import Search from "../Search";
 // import Loader from 'react-promise-loader';
 // import { usePromiseTracker } from 'react-promise-tracker';
 
@@ -143,7 +143,7 @@ class DonorList extends React.Component {
                   </Form.Control>
                 </InputGroup>
 
-                <InputGroup className='donation-list-search'>
+                {/* <InputGroup className='donation-list-search'>
                   <Form.Control
                     placeholder='Search Coming Soon'
                     aria-label='Search Donor'
@@ -159,7 +159,11 @@ class DonorList extends React.Component {
                       Search
                     </Button>
                   </InputGroup.Append>
-                </InputGroup>
+                </InputGroup> */}
+
+                <Search />
+
+                
               </div>
             </div>
 

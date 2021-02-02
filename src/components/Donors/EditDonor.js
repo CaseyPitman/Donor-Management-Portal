@@ -11,8 +11,6 @@ import { connect } from "react-redux";
 //Actions
 import { fetchDonorDetails, editDonor } from "../../actions";
 
-//Helper
-import redirectToList from "../../helper-funcs/redirect";
 
 //Components
 import DonorForm from "./DonorForm";
