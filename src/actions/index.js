@@ -60,11 +60,12 @@ export const editDonor = (
   redirectDestination
 ) => async dispatch => {
   try {
-    const response = await trackPromise(DMP.patch(`donors/${id}`, formData));
+    const response = await DMP.patch(`donors/${id}`, formData);
     dispatch({ type: EDIT_DONOR, payload: response.data });
   } catch (error) {
     console.log(error);
   }
+  if (props && redirectDestination)
   redirect(props, redirectDestination);
 };
 
