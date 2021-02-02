@@ -15,7 +15,6 @@ import { fetchDonorDetails, editDonor } from "../../actions";
 import redirectToList from "../../helper-funcs/redirect";
 
 //Components
-import UserProfile from "../Auth/UserProfile";
 import DonorForm from "./DonorForm";
 import Button from "react-bootstrap/Button";
 
@@ -43,7 +42,7 @@ class EditDonor extends React.Component {
             <div className='edit-donor-heading'>
               <h1 className='edit-donor-title'>Edit Donor</h1>
               <div className='edit-donor-actions'>
-                <Link to='../../donor-list'>
+                <Link to={`../../donor-details/${this.id}`}>     {/* dynamically render based on where you clicked in from and go back there. */}
                   <Button variant='info'>Cancel</Button>
                 </Link>
                 {/* <Link

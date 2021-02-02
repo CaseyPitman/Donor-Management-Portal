@@ -45,10 +45,6 @@ const AddDonationModal = ({ closeModal, donor }) => {
 
   //onSubmit, modify into the donor info with the edit actions
   const onAddDonation = async () => {
-    // console.log(`confirmed new donation`);
-    // console.log("old donations");
-    // console.log(donor.donations);
-
     let donationsRecord = donor.donations;
 
     const newDonation = {
@@ -64,11 +60,6 @@ const AddDonationModal = ({ closeModal, donor }) => {
       donations: donationsRecord,
       totalDonations: totalDonations(donationsRecord),
     };
-
-    // console.log(updatedRecord);
-
-    //Add new donation to donation array
-    //pass id, formData
 
     closeModal();
     await dispatch(editDonor(donor.id, updatedRecord));
@@ -90,18 +81,25 @@ const AddDonationModal = ({ closeModal, donor }) => {
       <div className='modal-body'>
         <form>
           <div className='form-group'>
-            <input
-              placeholder='date'
-              value={newDate}
-              onChange={e => onDateChange(e)}
-            />
-            <input
-              type='number'
-              placeholder='amount'
-              value={newAmount}
-              onChange={e => onAmountChange(e)}
-            />
-            <InputGroup className=''>
+            <InputGroup>
+              <Form.Control
+                className='form-control'
+                type='date'
+                placeholder='Date'
+                value={newDate}
+                onChange={e => onDateChange(e)}
+              />
+            </InputGroup>
+            <InputGroup className='my-3'>
+              <Form.Control
+                type='number'
+                placeholder='Amount'
+                value={newAmount}
+                onChange={e => onAmountChange(e)}
+              />
+            </InputGroup>
+
+            <InputGroup>
               <Form.Control
                 size='sm'
                 as='select'
