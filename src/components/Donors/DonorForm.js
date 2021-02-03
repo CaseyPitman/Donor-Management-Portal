@@ -117,22 +117,19 @@ const DonorForm = props => {
     //Create key value fullName for sorting later
     formData.fullName = `${formData.lastName}, ${formData.firstName}`;
 
-    console.log(formData);
     props.onSubmitForm(formData);
   };
 
   return (
     <Form
-      className='form'
+      className='form rounded border border-primary'
       schema={schema}
       uiSchema={uiSchema}
       onSubmit={onSubmitForm}
       formData={formData}
       onChange={e => {
         setFormData(e.formData);
-      }}>
-      {/* <button type = "button">add stuff</button> add the submit button i want */}
-    </Form>
+      }}></Form>
   );
 };
 
