@@ -11,7 +11,6 @@ import { connect } from "react-redux";
 //Actions
 import { fetchDonorDetails, editDonor } from "../../actions";
 
-
 //Components
 import DonorForm from "./DonorForm";
 import Button from "react-bootstrap/Button";
@@ -23,13 +22,19 @@ class EditDonor extends React.Component {
   id = this.props.match.params.id;
 
   async componentDidMount() {
+    window.scrollTo(0, 0);
     //Fetch prexisting donor details
     await this.props.fetchDonorDetails(this.id);
   }
 
   onSubmitForm = updatedFormData => {
-    const redirectDestination = `/donor-details/${this.id}`
-    this.props.editDonor(this.id, updatedFormData, this.props, redirectDestination);
+    const redirectDestination = `/donor-details/${this.id}`;
+    this.props.editDonor(
+      this.id,
+      updatedFormData,
+      this.props,
+      redirectDestination
+    );
   };
 
   render() {
@@ -40,7 +45,9 @@ class EditDonor extends React.Component {
             <div className='edit-donor-heading'>
               <h1 className='edit-donor-title'>Edit Donor</h1>
               <div className='edit-donor-actions'>
-                <Link to={`../../donor-details/${this.id}`}>     {/* dynamically render based on where you clicked in from and go back there. */}
+                <Link to={`../../donor-details/${this.id}`}>
+                  {" "}
+                  {/* dynamically render based on where you clicked in from and go back there. */}
                   <Button variant='info'>Cancel</Button>
                 </Link>
                 {/* <Link

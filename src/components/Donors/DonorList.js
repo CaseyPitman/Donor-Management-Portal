@@ -36,6 +36,7 @@ class DonorList extends React.Component {
 
   //Fetch the list on mount
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchDonorList();
   }
 
