@@ -3,28 +3,21 @@ This component renders a search field and handles autosuggest search of all dono
 */
 
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import Autosuggest from "react-autosuggest";
 
-import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
-import Form from "react-bootstrap/Form";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const Search = () => {
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-
-  //   console.log(suggestions);
-  //Convert donor list object to array of objects.
-  //   const donorsArr = Object.values(donors);
+  const history = useHistory();
 
   //Grab the list of donors from redux store.
   const donorList = useSelector(state => state.donors);
 
   //Convert list of donors from object to array of objects.
   const searchableDonors = Object.values(donorList);
-
-  //   console.log(searchableDonors);
 
   //Retrieve suggestions
   const getSuggestions = value => {
@@ -62,11 +55,14 @@ const Search = () => {
 
   //User selects name and action is initiatied.
   const onSuggestionSelected = (event, { suggestion }) => {
-    console.log("selection has been made.");
-    console.log(suggestion);
+    //put some error handling in here in case they try to enter some bunk
+
+    if (!suggestion){
+       console.log('nope');
+    }
+
+    history.push(`/donor-details/${suggestion.id}`);
   };
-
-
 
   const inputProps = {
     placeholder: "SearchDonors",
