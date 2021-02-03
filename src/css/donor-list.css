@@ -39,8 +39,9 @@ This file contains the styles for the donor-list view.
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  margin: 15px auto;
+  margin: 15px auto 15px;
 }
+
 
 /* .search-form {
   width: 20% !important;
@@ -126,15 +127,37 @@ th {
 
 /* Tablet Adjustments */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
+
+  th, td, .action-button {
+    font-size:12px!important;
+  }
+
+  
+
+  
 }
 
 /* Small tablet adjustments */
 @media only screen and (max-width: 767px) {
+
+  .donor-list-container {
+    margin:30px auto 50px;
+  }
+
   .search-form {
     margin-top: 10px;
     width: 100% !important;
   }
+
+  .donation-list-sort-search {
+    margin:15px auto 0;
+    width: 100%;
+
+  }
+
+
+  
 }
 
 @media only screen and (max-width: 280px) {

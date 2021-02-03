@@ -18,8 +18,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import ModalContainer from "../Modal/ModalRoot";
 import Search from "../Search";
-// import Loader from 'react-promise-loader';
-// import { usePromiseTracker } from 'react-promise-tracker';
+import Loader from "react-promise-loader";
+import { usePromiseTracker } from "react-promise-tracker";
 
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
@@ -45,24 +45,24 @@ class DonorList extends React.Component {
       <div className='donor-list-action-buttons'>
         <ButtonGroup size='sm'>
           <Link to={`/donor-details/${id}`}>
-            <Button variant='info' size='sm'>
+            <Button variant='info' size='sm' className='action-button'>
               Details
             </Button>
           </Link>
-          <Link to={`/edit-donor/${id}`} className='mx-2'>
-            <Button variant='success' size='sm'>
+          <Link to={`/edit-donor/${id}`} className='mx-3'>
+            <Button variant='success' size='sm' className='action-button'>
               Edit
             </Button>
           </Link>
-          {/* <Link to={`/delete-donor/${id}`}> */}{" "}
-          {/* Pass id as prop to this button when you refactor */}
-          <Button
-            variant='danger'
-            size='sm'
-            onClick={() => this.openDeleteModal(id)}>
-            Delete
-          </Button>
-          {/* </Link> */}
+          <div>
+            <Button
+              className='action-button'
+              variant='danger'
+              size='sm'
+              onClick={() => this.openDeleteModal(id)}>
+              Delete
+            </Button>
+          </div>
         </ButtonGroup>
       </div>
     );
@@ -142,33 +142,17 @@ class DonorList extends React.Component {
                     <option value='totalDonations'>Total Donations</option>
                   </Form.Control>
                 </InputGroup>
-
-                {/* <InputGroup className='donation-list-search'>
-                  <Form.Control
-                    placeholder='Search Coming Soon'
-                    aria-label='Search Donor'
-                    aria-describedby='basic-addon2'
-                    size='sm'
-                    className='donor-search-field'
-                  />
-                  <InputGroup.Append>
-                    <Button
-                      variant='dark'
-                      size='sm'
-                      className='search-donor-button'>
-                      Search
-                    </Button>
-                  </InputGroup.Append>
-                </InputGroup> */}
-
                 <Search />
-
-
               </div>
             </div>
 
-            <div className='donor-list-table border border-primary rounded'>
-              <Table striped responsive text='center' className='rounded'>
+            <div className='donor-list-table rounded'>
+              <Table
+                striped
+                bordered
+                responsive
+                text='center'
+                className='rounded'>
                 <thead className='rounded'>
                   <tr className='table-primary table-heading'>
                     <th>Name</th>
@@ -179,7 +163,7 @@ class DonorList extends React.Component {
                   </tr>
                 </thead>
                 <tbody>{this.renderList()}</tbody>
-                {/* <Loader promiseTracker={usePromiseTracker}> Loading </Loader> */}
+                <Loader promiseTracker={usePromiseTracker}> Loading </Loader>
               </Table>
             </div>
           </div>
