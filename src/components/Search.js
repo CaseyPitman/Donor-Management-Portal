@@ -72,20 +72,6 @@ const Search = () => {
   };
 
   return (
-    //  <InputGroup className='donation-list-search'>
-    //    <Form.Control
-    //      placeholder='Search Coming Soon'
-    //      aria-label='Search Donor'
-    //      aria-describedby='basic-addon2'
-    //      size='sm'
-    //      className='donor-search-field'
-    //    />
-    //    <InputGroup.Append>
-    //      <Button variant='dark' size='sm' className='search-donor-button'>
-    //        Search
-    //      </Button>
-    //    </InputGroup.Append>
-    //  </InputGroup>
 
     <Autosuggest
       suggestions={suggestions}
@@ -95,6 +81,7 @@ const Search = () => {
       renderSuggestion={renderSuggestion}
       inputProps={inputProps}
       onSuggestionSelected={onSuggestionSelected}
+      highlightFirstSuggestion ={true}
     />
   );
 };
