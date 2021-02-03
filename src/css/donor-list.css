@@ -48,7 +48,7 @@ This file contains the styles for the donor-list view.
 
 .donation-list-sort-search {
   display: flex;
-  justify-content:center;
+  justify-content:flex-end;
   align-items: center;
   width: 50%;
 }
@@ -56,7 +56,14 @@ This file contains the styles for the donor-list view.
 .donation-list-sort{
   align-self: center;
   margin-right:15px;
+  width:48%!important;
 }
+
+.react-autosuggest__container {
+  width:48%;
+}
+
+
 th{
   border-top:none!important;
 }
