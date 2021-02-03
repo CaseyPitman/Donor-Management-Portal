@@ -14,6 +14,7 @@ const Search = () => {
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
+  //   console.log(suggestions);
   //Convert donor list object to array of objects.
   //   const donorsArr = Object.values(donors);
 
@@ -23,7 +24,7 @@ const Search = () => {
   //Convert list of donors from object to array of objects.
   const searchableDonors = Object.values(donorList);
 
-  console.log(searchableDonors);
+  //   console.log(searchableDonors);
 
   //Retrieve suggestions
   const getSuggestions = value => {
@@ -33,17 +34,21 @@ const Search = () => {
     return inputLength === 0
       ? []
       : searchableDonors.filter(
-          donor => donor.name.toLowerCase().slice(0, inputLength) === inputValue
+          //  donor => donor.fullName.toLowerCase().slice(0, inputLength) === inputValue
+          donor => donor.fullName.toLowerCase().includes(inputValue)
         );
   };
 
-  const getSuggestionValue = suggestion => suggestion.name;
+  const getSuggestionValue = suggestion =>
+    `${suggestion.firstName} ${suggestion.lastName}`;
 
   // Use your imagination to render suggestions.
-  const renderSuggestion = suggestion => <div>{suggestion.name}</div>;
+  const renderSuggestion = suggestion => (
+    <div>{`${suggestion.firstName} ${suggestion.lastName}`}</div>
+  );
 
   const onChange = (event, { newValue }) => {
-    setValue("newValue");
+    setValue(newValue);
   };
 
   const onSuggestionsFetchRequested = ({ value }) => {
@@ -55,11 +60,19 @@ const Search = () => {
     setSuggestions([]);
   };
 
+  //User selects name and action is initiatied.
+  const onSuggestionSelected = (event, { suggestion }) => {
+    console.log("selection has been made.");
+    console.log(suggestion);
+  };
+
+
+
   const inputProps = {
     placeholder: "SearchDonors",
     value,
     onChange: onChange,
-    className: 'form-control form-control-sm donor-search-field'
+    className: "form-control form-control-sm donor-search-field",
   };
 
   return (
@@ -78,17 +91,15 @@ const Search = () => {
     //    </InputGroup.Append>
     //  </InputGroup>
 
-   //  <InputGroup >
-      <Autosuggest
-        
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-      />
-   //  </InputGroup>
+    <Autosuggest
+      suggestions={suggestions}
+      onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+      onSuggestionsClearRequested={onSuggestionsClearRequested}
+      getSuggestionValue={getSuggestionValue}
+      renderSuggestion={renderSuggestion}
+      inputProps={inputProps}
+      onSuggestionSelected={onSuggestionSelected}
+    />
   );
 };
 
