@@ -13,6 +13,8 @@ import stateNames from "../../data/stateNames";
 //Helper Functions
 import totalDonations from "../../helper-funcs/totalDonations";
 
+import "../../css/form.css"
+
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
 
@@ -42,6 +44,7 @@ const DonorForm = props => {
       email: {
         type: "string",
         title: "Email",
+        formt:"email"
       },
       phone: {
         type: "string",
@@ -125,6 +128,12 @@ const DonorForm = props => {
     props.onSubmitForm(formData);
   };
 
+  const onChangeFormData = (e) => {
+    setFormData(e.formData);
+  }
+
+
+  console.log(formData)
   return (
     <Form
       className='form rounded border border-primary'
@@ -132,9 +141,7 @@ const DonorForm = props => {
       uiSchema={uiSchema}
       onSubmit={onSubmitForm}
       formData={formData}
-      onChange={e => {
-        setFormData(e.formData);
-      }}></Form>
+      onChange={onChangeFormData}></Form>
   );
 };
 
