@@ -137,20 +137,37 @@ const DonorForm = props => {
   };
 
   const onChangeFormData = e => {
-    // format phone data here
-    // if not a digit or dash set as "Enter number"
-    // if phone exists, call format func (length less than 13)
-    // if (e.formData.phone && e.formData.phone.length < 13) {
-    //   console.log(`continue phone ${e.formData.phone.length}`);
-    // } 
-    // if (e.formData.phone && e.formData.phone.length > 13){
-    //   e.formData.phone = e.formData.phone.slice(0,11);
-    //   return;
-    // }
 
-    setFormData(e.formData);
-    // console.log(formData);
+    //retrieve key pressed to determine if i can backspace?
+
+
+    const formatPhone = phone => {
+      console.log(`phone ${phone}`);
+
+
+//figure out how to back space through dashes!
+
+      if (phone && phone.length <= 3) {
+        return phone;
+
+
+      } else if (phone && phone.length === 3) {
+        let formattedPhone = phone.concat("-");
+        return formattedPhone;
+      } else if (phone && phone.length === 7) {
+        let formattedPhone = phone.concat("-");
+        return formattedPhone;
+      } else return phone;
+    };
+
+    setFormData(prevData => {
+      return {
+        ...prevData,
+        phone: formatPhone(e.formData.phone),
+      };
+    });
   };
+  console.log(formData);
 
   return (
     <Form
