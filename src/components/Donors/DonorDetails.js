@@ -36,7 +36,7 @@ class DonorDetails extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
     this.props.fetchDonorDetails();
   }
 
@@ -45,9 +45,9 @@ class DonorDetails extends React.Component {
     if (this.props.donor.notes !== "none") {
       return (
         <div className='donor-detail-notes'>
-          <h2 className='donor-details-section-heading'>Notes</h2>
+          <h3 className='donor-details-section-heading'>Notes</h3>
+          {/* <hr className='border border-secondary'></hr> */}
           <p className='text-dark'>{`${this.props.donor.notes}`}</p>
-          <hr></hr>
         </div>
       );
     } else {
@@ -83,7 +83,7 @@ class DonorDetails extends React.Component {
     this.props.hideModal();
   };
 
-  openDeleteModal = (donor) => {
+  openDeleteModal = donor => {
     this.props.showModal(
       {
         open: true,
@@ -138,25 +138,25 @@ class DonorDetails extends React.Component {
                 {/* </Link> */}
               </div>
             </div>
-            <div className='donor-details-contents'>
-              <h2 className='donor-details-section-heading'>Contact Info</h2>
-              <hr></hr>
+            <div className='donor-details-contents border border-primary rounded'>
+              <h3 className='donor-details-section-heading'>Contact Info</h3>
+              {/* <hr className='border border-secondary'></hr> */}
 
-              <div className='donor-details-contact'>
+              <div className='donor-details-contact mt-3'>
                 <div className='contact-block-left'>
                   <div className='donor-detail-name'>
-                    <h4>Name</h4>
+                    <h6 className='font-weight-bold'>NAME</h6>
                     <p className='text-dark'>{`${this.props.donor.firstName} ${this.props.donor.lastName}`}</p>
                   </div>
                   <div className='donor-detail-organization'>
-                    <h4>Organization</h4>
+                    <h6 className='font-weight-bold '>ORGANIZATION</h6>
                     <p className='text-dark'>{`${this.props.donor.organization}`}</p>
                   </div>
                 </div>
 
                 <div className='contact-block-center'>
                   <div className='donor-detail-email'>
-                    <h4>Email</h4>
+                    <h6 className='font-weight-bold'>EMAIL</h6>
                     {/* <a href = 'mailto:' */}
                     {/* <p className = "text-dark">{`${this.props.donor.email}`}</p> */}
                     <a href={`mailto:${this.props.donor.email}`} target='blank'>
@@ -165,14 +165,14 @@ class DonorDetails extends React.Component {
                   </div>
 
                   <div className='donor-detail-phone'>
-                    <h4>Phone</h4>
+                    <h6 className='font-weight-bold '>PHONE</h6>
                     <p className='text-dark'>{`${this.props.donor.phone}`}</p>
                   </div>
                 </div>
 
                 <div className='contact-block-right'>
                   <div className='donor-detail-address'>
-                    <h4>Address</h4>
+                    <h6 className='font-weight-bold '>ADDRESS</h6>
                     <p className='text-dark'>
                       {`${this.props.donor.street}`}
                       <br></br>
@@ -183,29 +183,35 @@ class DonorDetails extends React.Component {
                   </div>
                 </div>
               </div>
-              <hr></hr>
+
               {this.renderNotes()}
 
               <div className='donor-detail-donations'>
                 <div className='donor-detail-donation-heading-container'>
-                  <h2 className='donor-details-section-heading'>Donations</h2>
-                  <InputGroup className=''>
-                    <Form.Control size='sm' as='select' onChange={this.onSort}>
-                      <option defaultValue>Sort Donations</option>
-                      <option value='date descending'>
-                        Date - Newest First
-                      </option>
-                      <option value='date ascending'>
-                        Date - Oldest First
-                      </option>
-                      <option value='donation amount'>Amount</option>
-                      <option value='donation type'>Type</option>
-                    </Form.Control>
-                  </InputGroup>
-                  <h5>
-                    Total Donations:{" "}
-                    {formatAmount(this.props.donor.totalDonations)}
-                  </h5>
+                  <h3 className='donor-details-section-heading'>Donations</h3>
+                  {/* <hr className='border border-secondary'></hr> */}
+                  <div className='donation-history-actions'>
+                    <InputGroup className='sort-donations-field'>
+                      <Form.Control
+                        size='sm'
+                        as='select'
+                        onChange={this.onSort}>
+                        <option defaultValue>Sort Donations</option>
+                        <option value='date descending'>
+                          Date - Newest First
+                        </option>
+                        <option value='date ascending'>
+                          Date - Oldest First
+                        </option>
+                        <option value='donation amount'>Amount</option>
+                        <option value='donation type'>Type</option>
+                      </Form.Control>
+                    </InputGroup>
+                    <h6 className='font-weight-bold total-donations-field'>
+                      TOTAL DONATIONS:{" "}
+                      {formatAmount(this.props.donor.totalDonations)}
+                    </h6>
+                  </div>
                 </div>
 
                 <div className='donor-history-table'>
