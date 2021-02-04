@@ -131,6 +131,8 @@ const DonorForm = props => {
   const onChangeFormData = (e) => {
     
     // format phone data here
+    // if not a digit or dash set as "Enter number"
+    // if phone exists, call format func (length less than 13)
     
 
     
