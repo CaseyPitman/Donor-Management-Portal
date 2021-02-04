@@ -129,6 +129,9 @@ const DonorForm = props => {
   };
 
   const onChangeFormData = (e) => {
+
+    //format formData.phone
+
     setFormData(e.formData);
   }
 
