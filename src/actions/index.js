@@ -29,7 +29,7 @@ export const fetchDonorList = () => async dispatch => {
 };
 
 //Create new donor record
-export const createDonor = (formData, props) => {
+export const createDonor = formData => {
   return async dispatch => {
     try {
       const response = await DMP.post("/donors", formData);
@@ -38,7 +38,6 @@ export const createDonor = (formData, props) => {
       console.log(error);
     }
   };
-  // redirectToList(props);
 };
 
 // Retrieve record for single donor
@@ -53,20 +52,17 @@ export const fetchDonorDetails = id => async dispatch => {
 };
 
 //Edit a recored for a specified donor
-export const editDonor = (
-  id,
-  formData,
-  props,
-  redirectDestination
-) => async dispatch => {
+export const editDonor = (id, formData, props) => async dispatch => {
   try {
     const response = await DMP.patch(`donors/${id}`, formData);
     dispatch({ type: EDIT_DONOR, payload: response.data });
   } catch (error) {
     console.log(error);
   }
-  if (props && redirectDestination)
-  redirect(props, redirectDestination);
+  //Take user back to page they clicked in from.
+  if (props) {
+    props.history.goBack();
+  }
 };
 
 //Delete a donor record

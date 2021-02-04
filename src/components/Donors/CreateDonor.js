@@ -28,13 +28,13 @@ const CreateDonor = props => {
   }, []);
 
   //Dispatch CREATE_DONOR action and then redirect to DonorList
-  const onSubmitForm = async formData => {
+  const onSubmitForm = async (formData) => {
     //Creates id for newly created record
 
     formData.id = nanoid(19);
 
     await dispatch(createDonor(formData, props));
-    history.push("donor-list");
+    history.push("/donor-list");
   };
 
   return (

@@ -27,6 +27,11 @@ class EditDonor extends React.Component {
     await this.props.fetchDonorDetails(this.id);
   }
 
+  //Takes you back to from whence you came. (The page you clicked in from.)
+  goBack = () => {
+    this.props.history.goBack();
+  };
+
   onSubmitForm = updatedFormData => {
     const redirectDestination = `/donor-details/${this.id}`;
     this.props.editDonor(
@@ -45,16 +50,11 @@ class EditDonor extends React.Component {
             <div className='edit-donor-heading'>
               <h1 className='edit-donor-title'>Edit Donor</h1>
               <div className='edit-donor-actions'>
-                <Link to={`../../donor-details/${this.id}`}>
-                  {" "}
-                  {/* dynamically render based on where you clicked in from and go back there. */}
-                  <Button variant='info'>Cancel</Button>
-                </Link>
-                {/* <Link
-                  to={`../../delete-donor/${this.props.match.params.id}`}
-                  className='edit-donor-delete-button'>
-                  <Button variant='danger'>Delete</Button>
-                </Link> */}
+                <Button
+                  variant='info'
+                  onClick={() => this.props.history.goBack()}>
+                  Cancel
+                </Button>
               </div>
             </div>
             <DonorForm

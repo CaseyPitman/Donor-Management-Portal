@@ -93,7 +93,8 @@ class DonorList extends React.Component {
             <a
               href={`mailto:${donor.email}`}
               target='blank'
-              className='text-muted'>
+              className='text-dark'
+              >
               {donor.email}
             </a>
           </td>
