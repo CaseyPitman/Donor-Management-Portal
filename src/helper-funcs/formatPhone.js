@@ -1,20 +1,18 @@
 //Formats phone numbers as they are input
 
-
-const formatPhone = (input) => {
-   console.log(input);
-
-   //if length === 3 then add on a dash
-   // 903-
-
-   //if length === 7 add a dash
-   // 903-691
-
-   // if length === 12 stop. don't take any more
-   // 903-691-4472
-
-   return;
-}
+const formatPhone = input => {
+  if (!input) return input;
+  const phoneNumber = input.replace(/[^\d]/g, "");
+  const phoneNumberLength = phoneNumber.length;
+  if (phoneNumberLength < 4) return phoneNumber;
+  if (phoneNumberLength < 7) {
+    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+  }
+  return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+    3,
+    6
+  )}-${phoneNumber.slice(6, 10)}`;
+};
 
 
-export default formatPhone; 
+export default formatPhone;

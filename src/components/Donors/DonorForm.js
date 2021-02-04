@@ -12,7 +12,9 @@ import stateNames from "../../data/stateNames";
 
 //Helper Functions
 import totalDonations from "../../helper-funcs/totalDonations";
+import formatPhone from "../../helper-funcs/formatPhone";
 
+//Styles
 import "../../css/form.css";
 
 const DonorForm = props => {
@@ -137,37 +139,10 @@ const DonorForm = props => {
   };
 
   const onChangeFormData = e => {
+    const newData = { ...e.formData, phone: formatPhone(e.formData.phone) };
 
-    //retrieve key pressed to determine if i can backspace?
-
-
-    const formatPhone = phone => {
-      console.log(`phone ${phone}`);
-
-
-//figure out how to back space through dashes!
-
-      if (phone && phone.length <= 3) {
-        return phone;
-
-
-      } else if (phone && phone.length === 3) {
-        let formattedPhone = phone.concat("-");
-        return formattedPhone;
-      } else if (phone && phone.length === 7) {
-        let formattedPhone = phone.concat("-");
-        return formattedPhone;
-      } else return phone;
-    };
-
-    setFormData(prevData => {
-      return {
-        ...prevData,
-        phone: formatPhone(e.formData.phone),
-      };
-    });
+    setFormData(newData);
   };
-  console.log(formData);
 
   return (
     <Form
