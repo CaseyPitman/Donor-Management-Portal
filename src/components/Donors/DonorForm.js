@@ -129,14 +129,18 @@ const DonorForm = props => {
   };
 
   const onChangeFormData = (e) => {
+    
+    // format phone data here
+    
 
-    //format formData.phone
-
+    
     setFormData(e.formData);
+    console.log(formData)
   }
 
 
-  console.log(formData)
+  
+
   return (
     <Form
       className='form rounded border border-primary'
