@@ -13,7 +13,7 @@ import stateNames from "../../data/stateNames";
 //Helper Functions
 import totalDonations from "../../helper-funcs/totalDonations";
 
-import "../../css/form.css"
+import "../../css/form.css";
 
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
@@ -26,7 +26,16 @@ const DonorForm = props => {
 
   const schema = {
     type: "object",
-    required: ["firstName", "lastName", "email", "phone", "street", "city", "state", "zip"],
+    required: [
+      "firstName",
+      "lastName",
+      "email",
+      "phone",
+      "street",
+      "city",
+      "state",
+      "zip",
+    ],
     title: "Contact Info",
     properties: {
       firstName: {
@@ -44,7 +53,7 @@ const DonorForm = props => {
       email: {
         type: "string",
         title: "Email",
-        formt:"email"
+        formt: "email",
       },
       phone: {
         type: "string",
@@ -110,13 +119,12 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
-
     if (!formData.notes) {
       formData.notes = "none";
-    } 
+    }
 
-    if (!formData.organization){
-      formData.organization = "None"
+    if (!formData.organization) {
+      formData.organization = "None";
     }
 
     //Create key value totalDonations
@@ -128,20 +136,21 @@ const DonorForm = props => {
     props.onSubmitForm(formData);
   };
 
-  const onChangeFormData = (e) => {
-    
+  const onChangeFormData = e => {
     // format phone data here
     // if not a digit or dash set as "Enter number"
     // if phone exists, call format func (length less than 13)
-    
+    // if (e.formData.phone && e.formData.phone.length < 13) {
+    //   console.log(`continue phone ${e.formData.phone.length}`);
+    // } 
+    // if (e.formData.phone && e.formData.phone.length > 13){
+    //   e.formData.phone = e.formData.phone.slice(0,11);
+    //   return;
+    // }
 
-    
     setFormData(e.formData);
-    console.log(formData)
-  }
-
-
-  
+    // console.log(formData);
+  };
 
   return (
     <Form
