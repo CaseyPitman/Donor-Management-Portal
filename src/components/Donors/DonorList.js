@@ -43,29 +43,29 @@ class DonorList extends React.Component {
   //Renders action buttons.
   renderActions = id => {
     return (
-      <div className='donor-list-action-buttons'>
-        <ButtonGroup size='sm'>
-          <Link to={`/donor-details/${id}`}>
-            <Button variant='info' size='sm' className='action-button'>
-              Details
-            </Button>
-          </Link>
-          <Link to={`/edit-donor/${id}`} className='mx-3'>
-            <Button variant='success' size='sm' className='action-button'>
-              Edit
-            </Button>
-          </Link>
-          <div>
-            <Button
-              className='action-button'
-              variant='danger'
-              size='sm'
-              onClick={() => this.openDeleteModal(id)}>
-              Delete
-            </Button>
-          </div>
-        </ButtonGroup>
-      </div>
+      // <div className='donor-list-action-buttons'>
+      <ButtonGroup size='sm'>
+        <Link to={`/donor-details/${id}`}>
+          <Button variant='info' size='sm' className='action-button'>
+            Details
+          </Button>
+        </Link>
+        <Link to={`/edit-donor/${id}`} className='mx-3'>
+          <Button variant='success' size='sm' className='action-button'>
+            Edit
+          </Button>
+        </Link>
+        <div>
+          <Button
+            className='action-button'
+            variant='danger'
+            size='sm'
+            onClick={() => this.openDeleteModal(id)}>
+            Delete
+          </Button>
+        </div>
+      </ButtonGroup>
+      // </div>
     );
   };
 
@@ -164,11 +164,11 @@ class DonorList extends React.Component {
                   </tr>
                 </thead>
                 <tbody>{this.renderList()}</tbody>
-                <Loader promiseTracker={usePromiseTracker}> Loading </Loader>
               </Table>
             </div>
           </div>
         </div>
+        <Loader promiseTracker={usePromiseTracker}> Loading </Loader>
         <ModalContainer hideModal={this.props.hideModal} />
       </div>
     );

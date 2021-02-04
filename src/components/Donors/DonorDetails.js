@@ -157,8 +157,6 @@ class DonorDetails extends React.Component {
                 <div className='contact-block-center'>
                   <div className='donor-detail-email'>
                     <h6 className='font-weight-bold'>EMAIL</h6>
-                    {/* <a href = 'mailto:' */}
-                    {/* <p className = "text-dark">{`${this.props.donor.email}`}</p> */}
                     <a href={`mailto:${this.props.donor.email}`} target='blank'>
                       <p className='text-dark'>{`${this.props.donor.email}`}</p>
                     </a>

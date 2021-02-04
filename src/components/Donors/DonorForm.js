@@ -24,7 +24,7 @@ const DonorForm = props => {
 
   const schema = {
     type: "object",
-    required: ["firstName", "lastName", "email", "phone"],
+    required: ["firstName", "lastName", "email", "phone", "street", "city", "state", "zip"],
     title: "Contact Info",
     properties: {
       firstName: {
@@ -107,8 +107,13 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
+
     if (!formData.notes) {
       formData.notes = "none";
+    } 
+
+    if (!formData.organization){
+      formData.organization = "None"
     }
 
     //Create key value totalDonations

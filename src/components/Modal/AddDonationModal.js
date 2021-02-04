@@ -44,7 +44,7 @@ const AddDonationModal = ({ closeModal, donor }) => {
   };
 
   //onSubmit, modify into the donor info with the edit actions
-  const onAddDonation = async () => {
+  const handleSubmit = async () => {
     let donationsRecord = donor.donations;
 
     const newDonation = {
@@ -78,11 +78,12 @@ const AddDonationModal = ({ closeModal, donor }) => {
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
-      <div className='modal-body'>
-        <form>
+      <Form onSubmit = {handleSubmit}>
+        <div className='modal-body'>
           <div className='form-group'>
             <InputGroup>
               <Form.Control
+                required
                 className='form-control'
                 type='date'
                 placeholder='Date'
@@ -92,6 +93,7 @@ const AddDonationModal = ({ closeModal, donor }) => {
             </InputGroup>
             <InputGroup className='my-3'>
               <Form.Control
+                required
                 type='number'
                 placeholder='Amount'
                 value={newAmount}
@@ -101,6 +103,7 @@ const AddDonationModal = ({ closeModal, donor }) => {
 
             <InputGroup>
               <Form.Control
+                required
                 size='sm'
                 as='select'
                 value={newType}
@@ -113,16 +116,16 @@ const AddDonationModal = ({ closeModal, donor }) => {
               </Form.Control>
             </InputGroup>
           </div>
-        </form>
-      </div>
-      <div className='modal-footer'>
-        <Button variant='info' onClick={closeModal}>
-          Cancel
-        </Button>
-        <Button variant='primary' onClick={onAddDonation}>
-          Add Donation
-        </Button>
-      </div>
+        </div>
+        <div className='modal-footer'>
+          <Button variant='info' onClick={closeModal}>
+            Cancel
+          </Button>
+          <Button variant='primary' type="submit" >
+            Add Donation
+          </Button>
+        </div>
+      </Form>
     </div>
   );
 };

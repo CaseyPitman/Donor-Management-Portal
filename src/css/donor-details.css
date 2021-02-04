@@ -56,33 +56,34 @@
   flex-flow: row wrap;
 }
 
-
 .donor-details-contact {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-flow: row wrap;
+  width: 90%;
 }
 
 .donor-detail-notes {
-  margin:40px auto;
+  margin: 40px 0px;
+  width: 80%;
 }
 
-.donation-history-actions{
+.donation-history-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  margin:10px auto;
-  width:100%
+  margin: 10px auto;
+  width: 100%;
 }
 
 .sort-donations-field {
-  width:33%!important;
+  width: 33% !important;
 }
 
-.total-donations-field{
-  margin:0;
+.total-donations-field {
+  margin: 0;
 }
 
 .donor-details-add-donation-button-container {
