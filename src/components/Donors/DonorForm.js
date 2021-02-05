@@ -13,6 +13,7 @@ import stateNames from "../../data/stateNames";
 //Helper Functions
 import totalDonations from "../../helper-funcs/totalDonations";
 import formatPhone from "../../helper-funcs/formatPhone";
+import validateZip from "../../helper-funcs/validateZip";
 
 //Styles
 import "../../css/form.css";
@@ -138,8 +139,13 @@ const DonorForm = props => {
     props.onSubmitForm(formData);
   };
 
+  //User changes input values
   const onChangeFormData = e => {
-    const newData = { ...e.formData, phone: formatPhone(e.formData.phone) };
+    const newData = {
+      ...e.formData,
+      phone: formatPhone(e.formData.phone),
+      zip: validateZip(e.formData.zip),
+    };
 
     setFormData(newData);
   };
