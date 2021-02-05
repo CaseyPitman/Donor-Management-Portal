@@ -29,3 +29,8 @@ body {
   /* height: 100%; */
 }
 
+.app-viewport {
+  margin:auto;
+  max-width:1600px;
+}
+
