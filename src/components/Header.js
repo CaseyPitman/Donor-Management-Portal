@@ -13,18 +13,18 @@ import Navbar from "react-bootstrap/Navbar";
 import Spinner from "react-bootstrap/Spinner";
 
 // Assets
-import logo from "../images/logo.svg";
 import UserProfile from "../components/Auth/UserProfile";
 
 // Styles
 import "../css/header.css";
 
 const Header = () => {
+  //Determine auth and loading status
   const { isAuthenticated, isLoading } = useAuth0();
 
   // Determine whether to show sign in or sign out button.
   const renderButton = () => {
-    //If loading show empty div
+    //If loading show spinner
     if (isLoading) {
       return (
         <Spinner animation='border' variant='light' role='login status'>
@@ -36,6 +36,7 @@ const Header = () => {
     return isAuthenticated ? <LogoutButton /> : <LoginButton />;
   };
 
+  //User thumbnail image.
   const renderUserImage = () => {
     return isAuthenticated ? <UserProfile /> : <div></div>;
   };
@@ -45,11 +46,8 @@ const Header = () => {
       <div className='header-content'>
         <div className='header-branding'>
           <div className='logo-container'>
-            {/* <img src={logo} className='logo' alt='Literacy Council Logo' /> */}
-            <i className="fas fa-book-reader text-light logo"></i>
-
+            <i className='fas fa-book-reader text-light logo'></i>
           </div>
-
           <h1 className='header-title text-light'>
             The Literacy Council
             <br></br>
