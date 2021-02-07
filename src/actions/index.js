@@ -1,5 +1,6 @@
-//Creates the CRUD actions
+//Actions
 
+//Action types
 import {
   FETCH_DONOR_LIST,
   CREATE_DONOR,
@@ -13,9 +14,9 @@ import {
 //Use for axios calls.
 import DMP from "../axios/DMP";
 
+//Tracks promise status for loding spinner render
 import { trackPromise } from "react-promise-tracker";
-import redirect from "../helper-funcs/redirect";
-// import redirect from "../helper-funcs/redirect";
+
 
 // Retreive list of donors
 export const fetchDonorList = () => async dispatch => {
@@ -35,6 +36,7 @@ export const createDonor = formData => {
       const response = await DMP.post("/donors", formData);
       dispatch({ type: CREATE_DONOR, payload: response.data });
     } catch (error) {
+      //Add error handling
       console.log(error);
     }
   };
@@ -57,6 +59,7 @@ export const editDonor = (id, formData, props) => async dispatch => {
     const response = await DMP.patch(`donors/${id}`, formData);
     dispatch({ type: EDIT_DONOR, payload: response.data });
   } catch (error) {
+    //Add error handling
     console.log(error);
   }
   //Take user back to page they clicked in from.
@@ -69,15 +72,14 @@ export const editDonor = (id, formData, props) => async dispatch => {
 export const deleteDonor = (id, props) => async dispatch => {
   await trackPromise(DMP.delete(`/donors/${id}`));
   dispatch({ type: DELETE_DONOR, payload: id });
-  // redirect(props, "/donor-list");
 };
 
-// SHOW A MODAL
-
+// Show a modal
 export const showModal = ({ modalProps, modalType }) => dispatch => {
   dispatch({ type: SHOW_MODAL, modalProps, modalType });
 };
 
+//Hide a modal
 export const hideModal = () => dispatch => {
   dispatch({ type: HIDE_MODAL });
 };

@@ -19,25 +19,28 @@ const Home = () => {
   //If already logged in, redirect to donor-list
   if (isAuthenticated) {
     history.push("/donor-list");
-  }
+    return <div></div>;
+  } 
+  
 
-  return (
-    <div className='home'>
-      <div className='quote-container'>
-        <h1 className='quote'>
-          <i className='fas fa-quote-left quotation-mark'></i>
-          The more that you read,
-          <br></br>
-          the more things you will know.
-          <br></br>
-          The more that you learn,
-          <br></br>
-          the more places you’ll go.
-        </h1>
-        <h2 className='quote-attribution'>- Dr. Seuss</h2>
+    return (
+      <div className='home'>
+        <div className='quote-container'>
+          <h1 className='quote'>
+            <i className='fas fa-quote-left quotation-mark'></i>
+            The more that you read,
+            <br></br>
+            the more things you will know.
+            <br></br>
+            The more that you learn,
+            <br></br>
+            the more places you’ll go.
+          </h1>
+          <h2 className='quote-attribution'>- Dr. Seuss</h2>
+        </div>
       </div>
-    </div>
-  );
+    );
+
 };
 
 export default Home;
