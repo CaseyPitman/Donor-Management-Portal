@@ -107,7 +107,6 @@ const AddDonationModal = ({ closeModal, donor }) => {
                 onChange={e => onAmountChange(e)}
               />
             </InputGroup>
-
             <InputGroup>
               <Form.Control
                 required

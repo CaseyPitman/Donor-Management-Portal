@@ -1,8 +1,9 @@
 /* 
 Renders the modal to confirm deletion of a donor record
 */
+
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 // Components
 import Button from "react-bootstrap/Button";
@@ -18,10 +19,12 @@ const DeleteDonorModal = ({ closeModal, donor }) => {
   const history = useHistory();
 
   //Confirm deletion of donor record.
-  const confirmDelete = async () => {
+  const confirmDelete = () => {
     closeModal();
-    history.push("/donor-list")
-    await dispatch(deleteDonor(donor.id));
+    //Send use back to main list view
+    history.push("/donor-list");
+    //Call deleteDonor action
+    dispatch(deleteDonor(donor.id));
   };
 
   return (
