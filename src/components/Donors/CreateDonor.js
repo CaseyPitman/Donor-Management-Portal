@@ -1,5 +1,5 @@
 /* 
-This component renders a form for a user to create a new recored with 
+This component renders a form component for a user to create a new recored with 
 information on a new donor.
 */
 
@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 
+//Generate random id for record
 import { nanoid } from "nanoid";
 
 //Actions
@@ -23,17 +24,18 @@ const CreateDonor = props => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  //Scroll to top of viewport on render
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   //Dispatch CREATE_DONOR action and then redirect to DonorList
-  const onSubmitForm = async (formData) => {
+  const onSubmitForm = formData => {
     //Creates id for newly created record
-
     formData.id = nanoid(19);
-
-    await dispatch(createDonor(formData, props));
+    //Await successful post of new record
+    dispatch(createDonor(formData, props));
+    //Redirect to home list view
     history.push("/donor-list");
   };
 
@@ -53,7 +55,5 @@ const CreateDonor = props => {
     </div>
   );
 };
-
-// export default CreateDonor;
 
 export default connect(null, { createDonor })(CreateDonor);
