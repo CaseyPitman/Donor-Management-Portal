@@ -18,10 +18,9 @@ class ModalContainer extends React.Component {
     this.state = {
       modalIsOpen: props.modalProps.open,
     };
-
-    //  this.closeModal = this.closeModal.bind(this); probably not necessary w/ arrow func
   }
 
+  //Toggle open close
   componentWillReceiveProps(nextProps) {
     if (nextProps.modalProps.open !== this.props.modalProps.open) {
       this.setState({
@@ -30,6 +29,7 @@ class ModalContainer extends React.Component {
     }
   }
 
+  //Close a modal
   closeModal = () => {
     this.props.hideModal();
   };
@@ -39,6 +39,7 @@ class ModalContainer extends React.Component {
       return null;
     }
 
+    //Define specific type of modal to open.
     const SpecifiedModal = MODAL_TYPES[this.props.modalType];
 
     return (
@@ -49,25 +50,13 @@ class ModalContainer extends React.Component {
           onRequestClose={this.closeModal}
           contentLabel='Modal'
           ariaHideApp={false}
-          // overlayClassName='modal fade show'
           bodyOpenClassName='modal-open'
           className='modal-dialog modal-dialog-centered'
           style={{
             overlay: {
-              backgroundColor: 'rgb(44,44,44, 0.75)',
+              backgroundColor: "rgb(44,44,44, 0.75)",
             },
           }}>
-          {/* <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form> */}
-
           <SpecifiedModal
             closeModal={this.closeModal}
             {...this.props.modalProps}
