@@ -5,7 +5,7 @@ This component renders a search field and handles autosuggest search of all dono
 import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 const Search = () => {
@@ -21,17 +21,19 @@ const Search = () => {
 
   //Retrieve suggestions
   const getSuggestions = value => {
+    //Format value for search and get length.
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
+    //Return records that contain substring of current input.
     return inputLength === 0
       ? []
-      : searchableDonors.filter(
-          //  donor => donor.fullName.toLowerCase().slice(0, inputLength) === inputValue
-          donor => donor.fullName.toLowerCase().includes(inputValue)
+      : searchableDonors.filter(donor =>
+          donor.fullName.toLowerCase().includes(inputValue)
         );
   };
 
+  //Get the value of the suggestion for display.
   const getSuggestionValue = suggestion =>
     `${suggestion.firstName} ${suggestion.lastName}`;
 
@@ -40,10 +42,12 @@ const Search = () => {
     <div>{`${suggestion.firstName} ${suggestion.lastName}`}</div>
   );
 
+  //User types in search
   const onChange = (event, { newValue }) => {
     setValue(newValue);
   };
 
+  //Update suggestions
   const onSuggestionsFetchRequested = ({ value }) => {
     setSuggestions(getSuggestions(value));
   };
@@ -55,15 +59,16 @@ const Search = () => {
 
   //User selects name and action is initiatied.
   const onSuggestionSelected = (event, { suggestion }) => {
-    //put some error handling in here in case they try to enter some bunk
-
-    if (!suggestion){
-       console.log('nope');
+    //No match to user's input
+    if (!suggestion) {
+      //put some error handling in here in case they try to enter some bunk
+      console.log("nope");
     }
-
+    //Push to the details page for the record selected
     history.push(`/donor-details/${suggestion.id}`);
   };
 
+  //Props for the input field
   const inputProps = {
     placeholder: "SearchDonors",
     value,
@@ -72,7 +77,6 @@ const Search = () => {
   };
 
   return (
-
     <Autosuggest
       suggestions={suggestions}
       onSuggestionsFetchRequested={onSuggestionsFetchRequested}
@@ -81,7 +85,7 @@ const Search = () => {
       renderSuggestion={renderSuggestion}
       inputProps={inputProps}
       onSuggestionSelected={onSuggestionSelected}
-      highlightFirstSuggestion ={true}
+      highlightFirstSuggestion={true}
     />
   );
 };
