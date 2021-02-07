@@ -1,4 +1,4 @@
-//This function totals all donations by all donors.
+//This function totals all of a donor's donations. 
 
 
 const totalDonations = (donations) => {

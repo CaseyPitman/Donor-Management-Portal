@@ -32,7 +32,7 @@ const sortData = (data, dataType, sortBy) => {
       });
     }
   }
-  
+
   //USER WISHES TO SORT INDIVIDUAL DONOR'S DONATION HISTORY
   else if (dataType === "donations") {
     //Sort donations by donation amount descending
