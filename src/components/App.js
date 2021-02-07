@@ -1,6 +1,6 @@
 //App parent component
 
-import React, { useState } from "react";
+import React from "react";
 
 //Routing
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
