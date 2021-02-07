@@ -6,6 +6,7 @@ contact information, along with action choices for each entry.
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { usePromiseTracker } from "react-promise-tracker";
 
 //Actions
 import { fetchDonorList, showModal, hideModal } from "../../actions";
@@ -19,7 +20,6 @@ import Form from "react-bootstrap/Form";
 import ModalContainer from "../Modal/ModalRoot";
 import Search from "../Search";
 import Loader from "react-promise-loader";
-import { usePromiseTracker } from "react-promise-tracker";
 
 //Helper functions
 import formatAmount from "../../helper-funcs/formatAmount";
@@ -43,7 +43,6 @@ class DonorList extends React.Component {
   //Renders action buttons.
   renderActions = id => {
     return (
-      // <div className='donor-list-action-buttons'>
       <ButtonGroup size='sm'>
         <Link to={`/donor-details/${id}`}>
           <Button variant='info' size='sm' className='action-button'>
@@ -65,10 +64,10 @@ class DonorList extends React.Component {
           </Button>
         </div>
       </ButtonGroup>
-      // </div>
     );
   };
 
+  //User sorts the list alphabetically or by total donations descending.
   onSort = e => {
     this.setState({ sortBy: e.target.value });
     return;
@@ -76,13 +75,15 @@ class DonorList extends React.Component {
 
   //Render the list of donors.
   renderList = () => {
+    //Convert list object to array of objects in order to iterate.
     const newList = Object.values(this.props.donors);
 
-    //Sort list of donors by either alphabetcial or totalDonations descending
-    //Default to alphabetcial
+    // Sort list of donors by either alphabetcial or totalDonations descending
+    // Default to alphabetcial
     sortData(newList, "donor list", this.state.sortBy);
 
-    return newList.map((donor, idx) => {
+    //Iterate the list and return the list as table rows
+    return newList.map(donor => {
       return (
         <tr key={donor.id}>
           <td className='text-dark'>
@@ -134,7 +135,6 @@ class DonorList extends React.Component {
                   + Add New Donor
                 </Button>
               </Link>
-
               <div className='donation-list-sort-search'>
                 <InputGroup className='donation-list-sort'>
                   <Form.Control size='sm' as='select' onChange={this.onSort}>
@@ -146,7 +146,6 @@ class DonorList extends React.Component {
                 <Search />
               </div>
             </div>
-
             <div className='donor-list-table rounded'>
               <Table
                 striped
@@ -175,14 +174,12 @@ class DonorList extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = dispatch => ({
   hideModal: () => dispatch(hideModal()),
   showModal: (modalProps, modalType) => {
     dispatch(showModal({ modalProps, modalType }));
   },
   fetchDonorList: () => dispatch(fetchDonorList()),
-  // fetchDonorDetails: () =>
-  //   dispatch(fetchDonorDetails(ownProps.match.params.id)),
 });
 
 const mapStateToProps = state => {
