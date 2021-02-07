@@ -1,5 +1,7 @@
-/* Renders the modal to add a single donation to a donor 
-record without going through the full edit process. */
+/* 
+Renders the modal to add a single donation to a donor 
+record without going through the full edit process. 
+*/
 
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -27,34 +29,37 @@ const AddDonationModal = ({ closeModal, donor }) => {
   //Isolate donations array
   const donations = donor.donations;
 
-  // Make inputs contolled
-  //Controlled date
+  // CONTROLLED INPUTS
+  //Date
   const onDateChange = e => {
     setNewDate(e.target.value);
   };
-  //Controlled amount
 
+  //Amount
   const onAmountChange = e => {
     setNewAmount(e.target.value);
   };
 
-  //Controlled type
+  //Donation type
   const onTypeChange = e => {
     setNewType(e.target.value);
   };
 
-  //onSubmit, modify into the donor info with the edit actions
-  const handleSubmit = async () => {
-    let donationsRecord = donor.donations;
+  //Use submits new donation
+  const handleSubmit = () => {
+    let donationsRecord = donations;
 
+    //Assemble new donation object
     const newDonation = {
       date: newDate,
       amount: parseFloat(newAmount),
       type: newType,
     };
 
+    //Insert new donation object into donation record
     donationsRecord.push(newDonation);
 
+    //Assemble full record with new donation and new total donations
     const updatedRecord = {
       ...donor,
       donations: donationsRecord,
@@ -62,7 +67,9 @@ const AddDonationModal = ({ closeModal, donor }) => {
     };
 
     closeModal();
-    await dispatch(editDonor(donor.id, updatedRecord));
+    //Call edit donor action
+    dispatch(editDonor(donor.id, updatedRecord));
+    //Send back to donor details
     history.push(`/donor-details/${donor.id}`);
   };
 
@@ -78,7 +85,7 @@ const AddDonationModal = ({ closeModal, donor }) => {
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
-      <Form onSubmit = {handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <div className='modal-body'>
           <div className='form-group'>
             <InputGroup>
@@ -121,7 +128,7 @@ const AddDonationModal = ({ closeModal, donor }) => {
           <Button variant='info' onClick={closeModal}>
             Cancel
           </Button>
-          <Button variant='primary' type="submit" >
+          <Button variant='primary' type='submit'>
             Add Donation
           </Button>
         </div>

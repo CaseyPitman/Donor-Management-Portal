@@ -45,7 +45,7 @@ export const createDonor = formData => {
 // Retrieve record for single donor
 export const fetchDonorDetails = id => async dispatch => {
   try {
-    const response = await DMP.get(`/donors/${id}`);
+    const response = await trackPromise(DMP.get(`/donors/${id}`));
     dispatch({ type: FETCH_DONOR_DETAILS, payload: response.data });
   } catch (error) {
     //Add Error handling

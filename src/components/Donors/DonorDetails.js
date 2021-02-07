@@ -29,6 +29,9 @@ import formatAmount from "../../helper-funcs/formatAmount";
 import formatDate from "../../helper-funcs/formatDate";
 import sortData from "../../helper-funcs/sortData";
 
+import { usePromiseTracker } from "react-promise-tracker";
+import Loader from "react-promise-loader";
+
 class DonorDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -237,6 +240,7 @@ class DonorDetails extends React.Component {
             </div>
           </div>
         </div>
+        <Loader promiseTracker={usePromiseTracker}> Loading </Loader>
         <ModalContainer hideModal={this.props.hideModal} />
       </div>
     );
