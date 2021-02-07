@@ -1,5 +1,7 @@
-// This component renders the form used both for creating a new donor record and
-// updating an existing record.
+/* 
+This component renders the form used both for creating a new donor record and
+updating an existing record. react-jsonschema-form used to build the form.
+ */
 
 import React, { useState, useEffect } from "react";
 
@@ -21,12 +23,14 @@ import "../../css/form.css";
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
 
+  //If donor info passed as props (i.e. - editing a record) populate the form with existing
   useEffect(() => {
     if (props.donorInfo) {
       setFormData(props.donorInfo);
     }
   }, [props.donorInfo]);
 
+  //Form schema
   const schema = {
     type: "object",
     required: [
@@ -108,6 +112,7 @@ const DonorForm = props => {
     },
   };
 
+  //Schema for UI
   const uiSchema = {
     firstName: {
       "ui:autofocus": true,
@@ -122,10 +127,11 @@ const DonorForm = props => {
 
   //User submits form.
   const onSubmitForm = ({ formData }) => {
+    //If there are no notes, set notes value as none.
     if (!formData.notes) {
       formData.notes = "none";
     }
-
+    //If no organization, set organization as none.
     if (!formData.organization) {
       formData.organization = "None";
     }
@@ -136,11 +142,13 @@ const DonorForm = props => {
     //Create key value fullName for sorting later
     formData.fullName = `${formData.lastName}, ${formData.firstName}`;
 
+    //Submit form via func passed from parent.
     props.onSubmitForm(formData);
   };
 
   //User changes input values
   const onChangeFormData = e => {
+    //phone and zip will be formatted via helper funcs.
     const newData = {
       ...e.formData,
       phone: formatPhone(e.formData.phone),
