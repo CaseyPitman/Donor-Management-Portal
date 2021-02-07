@@ -5,7 +5,6 @@ delete new donations.
  */
 
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 //Actions
@@ -16,30 +15,24 @@ import DonorForm from "./DonorForm";
 import Button from "react-bootstrap/Button";
 
 class EditDonor extends React.Component {
-  //MOVE TO FORM?
   state = { formData: {} };
-
   id = this.props.match.params.id;
 
+  //Fetch prexisting donor details on mount
   async componentDidMount() {
     window.scrollTo(0, 0);
-    //Fetch prexisting donor details
     await this.props.fetchDonorDetails(this.id);
   }
 
-  //Takes you back to from whence you came. (The page you clicked in from.)
+  //Takes user back to from whence she came.
   goBack = () => {
     this.props.history.goBack();
   };
 
+  //User submits form
   onSubmitForm = updatedFormData => {
-    const redirectDestination = `/donor-details/${this.id}`;
-    this.props.editDonor(
-      this.id,
-      updatedFormData,
-      this.props,
-      redirectDestination
-    );
+    //Call the edit action
+    this.props.editDonor(this.id, updatedFormData, this.props);
   };
 
   render() {
