@@ -22,7 +22,7 @@ import Loader from "react-promise-loader";
 //Styles
 import "../css/app.css";
 
-const App = props => {
+const App = () => {
   return (
     <Router>
       <div className='app'>
