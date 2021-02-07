@@ -3,7 +3,6 @@
 import { SHOW_MODAL, HIDE_MODAL } from "../actions/types";
 
 //Initial state for modals
-
 const initialState = {
   modalType: null,
   modalProps: {

@@ -2,6 +2,7 @@
 
 import _ from "lodash";
 
+//Action types
 import {
   FETCH_DONOR_LIST,
   CREATE_DONOR,
@@ -10,7 +11,7 @@ import {
   DELETE_DONOR,
 } from "../actions/types";
 
- const donorReducer = (state = {}, action) => {
+const donorReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_DONOR_LIST:
       return { ...state, ..._.mapKeys(action.payload, "id") };
@@ -27,8 +28,8 @@ import {
     case DELETE_DONOR:
       return _.omit(state, action.payload);
 
-      default:
-         return state;
+    default:
+      return state;
   }
 };
 
