@@ -3,9 +3,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
-// Styles
-import "../../css/userInfo.css";
-
 const UserProfile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
