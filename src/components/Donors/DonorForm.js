@@ -17,8 +17,6 @@ import totalDonations from "../../helper-funcs/totalDonations";
 import formatPhone from "../../helper-funcs/formatPhone";
 import validateZip from "../../helper-funcs/validateZip";
 
-//Styles
-import "../../css/form.css";
 
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
