@@ -38,18 +38,18 @@ class DonorDetails extends React.Component {
     this.state = { sortBy: "date descending" };
   }
 
+  //Fetch donor details on mount
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchDonorDetails();
   }
 
-  //Only show notes field if notes exist
+  //Only show notes field if notes extant
   renderNotes = () => {
     if (this.props.donor.notes !== "none") {
       return (
         <div className='donor-detail-notes'>
           <h3 className='donor-details-section-heading'>Notes</h3>
-          {/* <hr className='border border-secondary'></hr> */}
           <p className='text-dark'>{`${this.props.donor.notes}`}</p>
         </div>
       );
@@ -59,15 +59,14 @@ class DonorDetails extends React.Component {
   };
 
   renderDonationHistory = () => {
+    //Sort donation history
     const sortedDonationHistory = sortData(
       this.props.donor.donations,
       "donations",
       this.state.sortBy
     );
+    //Render sorted donation history
     return sortedDonationHistory.map((donation, idx) => {
-      //Don't forget to format donation amounts.
-
-      //sort goes in here somewhere
       return (
         <tr key={idx}>
           <td className='text-dark'>{formatDate(donation.date)}</td>
@@ -78,14 +77,17 @@ class DonorDetails extends React.Component {
     });
   };
 
+  //Set criteria for sorting
   onSort = e => {
     this.setState({ sortBy: e.target.value });
   };
 
+  //Close a modal
   closeModal = () => {
     this.props.hideModal();
   };
 
+  //Show a modal
   openDeleteModal = donor => {
     this.props.showModal(
       {
@@ -97,13 +99,12 @@ class DonorDetails extends React.Component {
     );
   };
 
+  //Open the add donation modal
   openAddDonationModal = () => {
     this.props.showModal(
       {
         open: true,
         donor: this.props.donor,
-        // title: "Add Donation",
-        // message: "Enter Donor Information",
         closeModal: this.closeModal,
       },
       "add donation"
@@ -126,25 +127,18 @@ class DonorDetails extends React.Component {
                 <Link to='/donor-list' className='donor-details-back-btn'>
                   <Button variant='info'>Back</Button>
                 </Link>
-
                 <Link
                   to={`/edit-donor/${this.props.match.params.id}`}
                   className='donor-details-edit-btn'>
                   <Button variant='success'>Edit</Button>
                 </Link>
-                {/* <Link
-                  to={`/delete-donor/${this.props.match.params.id}`}
-                  className='donor-details-delete-btn'> */}
                 <Button variant='danger' onClick={this.openDeleteModal}>
                   Delete
                 </Button>
-                {/* </Link> */}
               </div>
             </div>
             <div className='donor-details-contents border border-primary rounded'>
               <h3 className='donor-details-section-heading'>Contact Info</h3>
-              {/* <hr className='border border-secondary'></hr> */}
-
               <div className='donor-details-contact mt-3'>
                 <div className='contact-block-left'>
                   <div className='donor-detail-name'>
@@ -156,7 +150,6 @@ class DonorDetails extends React.Component {
                     <p className='text-dark'>{`${this.props.donor.organization}`}</p>
                   </div>
                 </div>
-
                 <div className='contact-block-center'>
                   <div className='donor-detail-email'>
                     <h6 className='font-weight-bold'>EMAIL</h6>
@@ -164,13 +157,11 @@ class DonorDetails extends React.Component {
                       <p className='text-dark'>{`${this.props.donor.email}`}</p>
                     </a>
                   </div>
-
                   <div className='donor-detail-phone'>
                     <h6 className='font-weight-bold '>PHONE</h6>
                     <p className='text-dark'>{`${this.props.donor.phone}`}</p>
                   </div>
                 </div>
-
                 <div className='contact-block-right'>
                   <div className='donor-detail-address'>
                     <h6 className='font-weight-bold '>ADDRESS</h6>
@@ -184,13 +175,10 @@ class DonorDetails extends React.Component {
                   </div>
                 </div>
               </div>
-
               {this.renderNotes()}
-
               <div className='donor-detail-donations'>
                 <div className='donor-detail-donation-heading-container'>
                   <h3 className='donor-details-section-heading'>Donations</h3>
-                  {/* <hr className='border border-secondary'></hr> */}
                   <div className='donation-history-actions'>
                     <InputGroup className='sort-donations-field'>
                       <Form.Control
@@ -214,7 +202,6 @@ class DonorDetails extends React.Component {
                     </h6>
                   </div>
                 </div>
-
                 <div className='donor-history-table'>
                   <Table striped responsive bordered text='center'>
                     <thead>

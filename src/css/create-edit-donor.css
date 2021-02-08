@@ -39,7 +39,7 @@
 .form {
   padding: 25px;
 }
-
+/* Mobile adjustments */
 @media only screen and (max-width: 767px) {
   .create-donor-container,
   .edit-donor-container {
