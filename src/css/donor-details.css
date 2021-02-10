@@ -98,6 +98,6 @@
 
   .sort-donations-field {
     margin-bottom: 10px;
-    width: 50%;
+    width: 50%!important;
   }
 }
