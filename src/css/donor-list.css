@@ -2,9 +2,7 @@
 This file contains the styles for the donor-list view.
  */
 
-.app {
-  overflow:auto;
-}
+
 
 .donor-list {
   display: flex;
