@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='quote-container'>
-        <h1 className='quote'>
+        <h1 className='quote text-light'>
           <i className='fas fa-quote-left quotation-mark'></i>
           The more that you read,
           <br></br>
@@ -36,7 +36,7 @@ const Home = () => {
           <br></br>
           the more places you’ll go.
         </h1>
-        <h2 className='quote-attribution'>- Dr. Seuss</h2>
+        <h2 className='quote-attribution text-light'>- Dr. Seuss</h2>
       </div>
     </div>
   );

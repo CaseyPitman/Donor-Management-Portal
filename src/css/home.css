@@ -8,7 +8,7 @@ a splash image and quote about reading.
   justify-content:center;
 
 
-  background-image: url("../images/bookshelf1.jpg");
+  background-image: url("../images/child-reading.jpg");
   background-size: cover;
   height:100vh;
   position:relative;
@@ -16,24 +16,25 @@ a splash image and quote about reading.
 }
 
 .quote-container {
-  background-color: rgba(255,255,255, 0.6);
+  background-color: rgba(255,255,255, 0.5);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
-  border: 1px solid rgb(255, 255, 255, 0.2) ;
-  box-shadow: 5px 8px 32px 5px rgba( 44,44,44, 0.9 );
   line-height: 1.5;
   margin:auto;
   padding: 25px;
   position: fixed;
+  left:50px;
   top: 40%;
 }
 
 .quote {
-  font-size: clamp(12px, 2.5vw, 50px);
+
+  font-size: clamp(12px, 2vw, 50px);
   font-weight: 100;
 }
 
 .quote-attribution {
+
   font-size: clamp(10px, 1.5vw, 40px);
   margin-top: 20px;
 }
