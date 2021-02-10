@@ -83,7 +83,7 @@
 }
 
 /* Mobile adjustments */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .donor-details-container {
     width: 95%;
   }
@@ -94,5 +94,9 @@
   }
   .donor-details-section-heading {
     width: 100%;
+  }
+
+  .sort-donations-field {
+    width: 50%;
   }
 }
