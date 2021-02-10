@@ -3,46 +3,55 @@ This file contains styles for the introductory home page featuring
 a splash image and quote about reading.
 */
 
-.home {
-  display:flex;
-  justify-content:center;
+.app {
+  overflow: hidden;
+}
 
+.home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   background-image: url("../images/child-reading.jpg");
-  background-size: cover;
-  height:100vh;
-  position:relative;
-  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  /* position:relative; */
+  width: 100%;
 }
 
 .quote-container {
-  background-color: rgba(255,255,255, 0.5);
+  align-self:baseline;
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
   line-height: 1.5;
-  margin:auto;
+  /* margin:auto; */
+  margin: 0 50px;
   padding: 25px;
-  position: fixed;
+  /* position: fixed;
   left:50px;
-  top: 40%;
+  top: 40%; */
 }
 
 .quote {
-
-  font-size: clamp(12px, 2vw, 50px);
+  font-size: clamp(12px, 1.75vw, 50px);
   font-weight: 100;
 }
 
 .quote-attribution {
-
   font-size: clamp(10px, 1.5vw, 40px);
   margin-top: 20px;
 }
 
-
 /*  Mobile adjustments */
 @media only screen and (max-width: 767px) {
+  .home {
+    justify-content: center;
+  }
   .quote-container {
-    width:95%;
+    /* width:95%; */
+    margin: auto;
   }
 }
