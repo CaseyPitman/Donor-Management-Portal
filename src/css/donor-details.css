@@ -83,7 +83,7 @@
 }
 
 /* Mobile adjustments */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .donor-details-container {
     width: 95%;
   }
