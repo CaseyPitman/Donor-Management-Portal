@@ -97,6 +97,7 @@
   }
 
   .sort-donations-field {
+    margin-bottom: 10px;
     width: 50%;
   }
 }
