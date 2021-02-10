@@ -46,6 +46,8 @@ The Donor Management Portal is a CRUD operations React/Redux app that allows cha
 
 - I also plan to implement mass email functionality that would allow users to email all past donors during donation drive events.
 
+- I plan to implement pagination for the full donor list. 
+
 ## Notes
 
 - This was my biggest project yet, and I cannot overstate how much I learned in the process. Tutorials are fine for introducing topics, but I don't truly learn something until I do it for myself. I learn by making mistakes, by researching, and by fixing those mistakes. I learn by solving problems.
