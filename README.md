@@ -25,6 +25,7 @@ The Donor Management Portal is a CRUD operations React/Redux app that allows cha
   - [React Promise Tracker](https://lemoncode.github.io/react-promise-tracker/)
   - [React Promise Loader](https://github.com/awibox/react-promise-loader)
 
+- [React Router](https://reactrouter.com/)
 - [Redux](https://redux.js.org/)
 
   - [React Redux](https://react-redux.js.org/)
@@ -39,17 +40,24 @@ The Donor Management Portal is a CRUD operations React/Redux app that allows cha
 
 ## Future
 
-The mock api that handles the data for this app is a simple [JSON server](https://www.npmjs.com/package/json-server) database file hosted on [Glitch](https://glitch.com/). I am currently learning Node.JS. I plan to create my own RESTful api for this app as my first Node project.
+- The mock api that handles the data for this app is a simple [JSON server](https://www.npmjs.com/package/json-server) database file hosted on [Glitch](https://glitch.com/). I am currently learning Node.JS. I plan to create my own RESTful api for this app as my first Node project.
 
-I want to implement report functionality to allow users to generate reports targeting specific criteria (ie - top donors, total donations by type, etc.)
+- I want to implement report functionality to allow users to generate reports targeting specific criteria (ie - top donors, total donations by type, etc.)
 
-I also plan to implement mass email functionality that would allow users to email all past donors during donation drive events.
+- I also plan to implement mass email functionality that would allow users to email all past donors during donation drive events.
 
 ## Notes
 
-- This was my biggest project yet, and I cannot quantify how much I learned in the process. Tutorials are fine for introducing topics, but I don't truly learn something until I do it for myself. I learn more by making mistakes, researching, and fixing those mistakes than I ever could watching someone else explain a topic. Case in point: this was my first use of Redux. Going in, I had a basic theoretical understanding of the data flow and structure of Redux, but it took me acutually coding my way through actions, reducers, and store creation and all the attendant problems that can arise to truly understand the power of Redux. This project pushed me to learn more, to solve intricate problems, and I'm stronger for it.
+- This was my biggest project yet, and I cannot overstate how much I learned in the process. Tutorials are fine for introducing topics, but I don't truly learn something until I do it for myself. I learn by making mistakes, by researching, and by fixing those mistakes. I learn by solving problems.
 
-- The back end requirements for this project are not particularly robust. I simply needed a basic RESTful api to handle CRUD operations. I've used json-server before, and felt comfortable using it here. I settled on hosting the json-server data on Glitch, and it works well enough. Glitch does have some lag time when first initializing the app, though speed improves dramatically as the user begins utilizing CRUD operations. I would prefer to create my own fully functional RESTful api to handle the data. I am beginning to learn Node.js, and intend to build the api for this project soon.
+  Case in point: this was my first use of [Redux](https://redux.js.org/) and [React Redux](https://react-redux.js.org/) in a personal project. Going in I had a basic theoretical understanding of the data flow and structure of Redux, but it took me acutually coding my way through actions, reducers, and store creation - as well as all the attendant problems that can arise - to truly understand the power of Redux. This project pushed me to learn more, to solve intricate problems, and I'm stronger for it.
 
-- One of the issues I ran into early on in this project was handling data for creating and editing operations. I had already built out the data structure for the donor records, and it knowing I wanted to user a donor record to prefill a form for editing purposes, it made sense to reuse the same form for creating and editing purposes. As my form was somewhat large, I felt that assigning incoming data to each input field individually would be cumbersome. After some research I found [React JSON Schema Form](https://react-jsonschema-form.readthedocs.io/en/latest/). It seemed to be the perfect answer to my problem. It allowed me to build the form from the data structure, and the ability to seamlessly integrate with [Bootstrap](https://getbootstrap.com/) and my [Bootswatch](https://bootswatch.com/) theme were nice bonuses.  
-React JSON Schema Form isn't perfect though. I ran into a few limitations, mostly regarding customizing fields, validation, and formatting, that required a bit of workaround. I would like to see a bit more customization added, particularly when it comes to layout and sizing input fields. 
+- The back end requirements for this project are not particularly robust. I needed a basic RESTful api to handle CRUD operations. I've used [JSON Server](https://www.npmjs.com/package/json-server) before, and felt comfortable using it here. I settled on hosting the json-server data on Glitch, and it works well enough. Glitch does have some lag time when first initializing the app, though speed improves dramatically as the user begins performing CRUD operations. I would prefer to create my own fully functional RESTful api to handle the data. I am beginning to learn Node.js, and intend to build the api for this project soon.
+
+- This was my first project to utilize authentication. I had worked with Google OAuth 2.0 before on a tutorial project, and decided I wanted to explore another option this time. I decided to go with [Auth0](https://auth0.com/) for this project. I liked the look and feel of their universal login functionality, as well as the ability to create your own login or choose to login with Google. I was particularly pleased with the protected route functionality via the withAuthenticationRequired HOC. I was able to integrate it with [React Router](https://reactrouter.com/) easily, and I am pleased with the result.
+
+- This was my second project to use both [React-Autosuggest](https://github.com/moroshko/react-autosuggest) and [React-Modal](http://reactcommunity.org/react-modal/) (See my [Pokédex](https://github.com/CaseyPitman/pokedex-2) project). I am a fan of both and intend to use them more going forward.
+
+- One of the issues I ran into early on in this project was handling data for creating and editing operations. I had already built out the data structure for the donor records, and knowing I wanted to use a retrieved donor record to prefill a form for editing purposes, it made sense to reuse the same form for creating and editing purposes. As my form was somewhat large, I felt that assigning incoming data to each input field individually would be cumbersome. After some research I found [React JSON Schema Form](https://react-jsonschema-form.readthedocs.io/en/latest/). It seemed to be the perfect answer to my problem. It allowed me to build the form from the data structure, and the ability to seamlessly integrate with [Bootstrap](https://getbootstrap.com/) and my [Bootswatch](https://bootswatch.com/) theme were nice bonuses.
+
+  React JSON Schema Form isn't perfect though. I ran into a few limitations, mostly regarding customizing fields, validation, and formatting, that required a bit of workaround. I would like to see a more customization options added, particularly when it comes to layout and sizing of input fields.
