@@ -3,8 +3,6 @@ This file contains styles for the introductory home page featuring
 a splash image and quote about reading.
 */
 
-
-
 .home {
   display: flex;
   justify-content: flex-start;
@@ -44,9 +42,11 @@ a splash image and quote about reading.
 /*  Mobile adjustments */
 @media only screen and (max-width: 767px) {
   .home {
-    justify-content: center;
+    /* justify-content: center; */
+
   }
   .quote-container {
+
     /* width:95%; */
     margin: auto;
   }

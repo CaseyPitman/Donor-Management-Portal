@@ -9,6 +9,8 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useHistory } from "react-router-dom";
 
+import LoginButton from "./Auth/LoginButton";
+
 //Styles
 import "../css/home.css";
 
@@ -37,6 +39,8 @@ const Home = () => {
           the more places you’ll go.
         </h1>
         <h2 className='quote-attribution text-light'>- Dr. Seuss</h2>
+
+        <LoginButton/>
       </div>
     </div>
   );

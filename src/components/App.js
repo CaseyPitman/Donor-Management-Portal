@@ -26,17 +26,19 @@ const App = () => {
   return (
     <Router>
       <div className='app'>
-        <Header />
         <div className='app-viewport'>
           <Switch>
             <Route path='/' exact component={Home} />
-            <ProtectedRoute path='/donor-list' component={DonorList} />
-            <ProtectedRoute path='/create-donor' component={CreateDonor} />
-            <ProtectedRoute
-              path='/donor-details/:id'
-              component={DonorDetails}
-            />
-            <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
+            <div>
+              <Header />
+              <ProtectedRoute path='/donor-list' component={DonorList} />
+              <ProtectedRoute path='/create-donor' component={CreateDonor} />
+              <ProtectedRoute
+                path='/donor-details/:id'
+                component={DonorDetails}
+              />
+              <ProtectedRoute path='/edit-donor/:id' component={EditDonor} />
+            </div>
           </Switch>
         </div>
         <Loader promiseTracker={usePromiseTracker} />
