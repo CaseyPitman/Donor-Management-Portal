@@ -70,7 +70,7 @@ const Search = () => {
 
   //Props for the input field
   const inputProps = {
-    placeholder: "SearchDonors",
+    placeholder: "Search Donors",
     value,
     onChange: onChange,
     className: "form-control form-control-sm donor-search-field",
