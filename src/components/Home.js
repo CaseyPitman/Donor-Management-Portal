@@ -27,20 +27,12 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <div className='quote-container'>
-        <h1 className='quote text-light'>
-          <i className='fas fa-quote-left quotation-mark'></i>
-          The more that you read,
-          <br></br>
-          the more things you will know.
-          <br></br>
-          The more that you learn,
-          <br></br>
-          the more places you’ll go.
-        </h1>
-        <h2 className='quote-attribution text-light'>- Dr. Seuss</h2>
-
-        <LoginButton/>
+      <div className='intro-container'>
+        <div className='intro-text'>
+          <h1 className='intro-head text-light'>The Literacy Council</h1>
+          <h2 className='intro-subhead text-muted'>Donor Management Portal</h2>
+        </div>
+        <LoginButton />
       </div>
     </div>
   );

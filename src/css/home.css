@@ -4,50 +4,33 @@ a splash image and quote about reading.
 */
 
 .home {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
   background-image: url("../images/child-reading.jpg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  /* position:relative; */
+  position: relative;
   width: 100%;
 }
 
-.quote-container {
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(11px);
-  line-height: 1.5;
-  /* margin:auto; */
-  margin: 0 50px;
-  padding: 25px;
-  /* position: fixed;
-  left:50px;
-  top: 40%; */
+.intro-container {
+  margin: auto;
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
 }
 
-.quote {
-  font-size: clamp(12px, 1.75vw, 50px);
+.intro-text {
+  margin: 20px auto;
+}
+
+.intro-head {
+  font-size: clamp(12px, 7vw, 60px);
   font-weight: 100;
 }
 
-.quote-attribution {
-  font-size: clamp(10px, 1.5vw, 40px);
-  margin-top: 20px;
-}
-
-/*  Mobile adjustments */
-@media only screen and (max-width: 767px) {
-  .home {
-    /* justify-content: center; */
-
-  }
-  .quote-container {
-
-    /* width:95%; */
-    margin: auto;
-  }
+.intro-subhead {
+  font-size: clamp(10px, 5vw, 40px);
+  font-weight: 100;
 }
