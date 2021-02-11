@@ -23,7 +23,7 @@
 .create-donor-container,
 .edit-donor-container {
   margin: 50px auto 75px;
-  max-width:100px;
+  max-width:1000px;
   width: 50%;
 }
 
