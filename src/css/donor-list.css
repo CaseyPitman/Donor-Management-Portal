@@ -2,13 +2,11 @@
 This file contains the styles for the donor-list view.
  */
 
-
-
 .donor-list {
   display: flex;
   justify-content: center;
   align-content: center;
-  
+
   min-height: 100vh;
   width: 100%;
 }
@@ -23,7 +21,7 @@ This file contains the styles for the donor-list view.
 
 .donor-list-container {
   margin: 50px auto;
-  max-width:1600px;
+  max-width: 1600px;
   width: 95%;
 }
 
@@ -126,7 +124,11 @@ th {
     margin: 30px auto 50px;
   }
 
-  .create-donor-link{
+  .donor-list-title {
+    text-align: center;
+  }
+
+  .create-donor-link {
     margin: auto;
   }
 
