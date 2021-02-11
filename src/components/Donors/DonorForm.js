@@ -17,7 +17,6 @@ import totalDonations from "../../helper-funcs/totalDonations";
 import formatPhone from "../../helper-funcs/formatPhone";
 import validateZip from "../../helper-funcs/validateZip";
 
-
 const DonorForm = props => {
   const [formData, setFormData] = useState(null);
 
@@ -119,6 +118,11 @@ const DonorForm = props => {
       "ui:widget": "textarea",
       "ui:options": {
         rows: 5,
+      },
+    },
+    donations: {
+      "ui:options": {
+        orderable: false,
       },
     },
   };
