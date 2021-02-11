@@ -130,7 +130,7 @@ class DonorList extends React.Component {
           <div className='donor-list-container'>
             <h1 className='display-5 donor-list-title'>Donor History</h1>
             <div className='donor-list-global-actions'>
-              <Link to='/create-donor'>
+              <Link to='/create-donor' className = 'create-donor-link'>
                 <Button variant='dark' size='sm' className='add-donor-button'>
                   + Add New Donor
                 </Button>

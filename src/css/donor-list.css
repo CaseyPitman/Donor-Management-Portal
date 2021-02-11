@@ -25,7 +25,6 @@ This file contains the styles for the donor-list view.
   margin: 50px auto;
   max-width:1600px;
   width: 95%;
-
 }
 
 .donor-list-global-actions {
@@ -125,6 +124,10 @@ th {
 @media only screen and (max-width: 767px) {
   .donor-list-container {
     margin: 30px auto 50px;
+  }
+
+  .create-donor-link{
+    margin: auto;
   }
 
   .search-form {
