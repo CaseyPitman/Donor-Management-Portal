@@ -93,6 +93,11 @@
   .contact-block-right {
     width: 100%;
   }
+
+  .donor-details-heading {
+    justify-content: center;
+  }
+
   .donor-details-section-heading {
     width: 100%;
   }
