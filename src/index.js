@@ -32,7 +32,7 @@ ReactDOM.render(
     <Auth0Provider
       domain='dev-ffw1py4b.us.auth0.com'
       clientId='wVUMCl3SliBeWmfltUuJvjBYPx2LB1De'
-      redirectUri={"https://jovial-wing-04ffc1.netlify.app/donor-list"}>
+      redirectUri={"https://literacy-council-dmp.netlify.app/donor-list"}>
       <App />
     </Auth0Provider>
   </Provider>,
