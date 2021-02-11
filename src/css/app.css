@@ -20,11 +20,10 @@ body {
 
 .app {
   max-height: 100vh;
-
 }
 
 .app-viewport {
   margin:auto;
-  max-width:1600px;
+  /* max-width:1600px; */
 }
 

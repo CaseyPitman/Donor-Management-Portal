@@ -23,7 +23,9 @@ This file contains the styles for the donor-list view.
 
 .donor-list-container {
   margin: 50px auto;
+  max-width:1600px;
   width: 95%;
+
 }
 
 .donor-list-global-actions {
