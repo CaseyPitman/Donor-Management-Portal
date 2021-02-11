@@ -44,6 +44,7 @@
 @media only screen and (max-width: 767px) {
   .create-donor-container,
   .edit-donor-container {
+    margin: 30px auto 50px;
     width: 90%;
   }
   .create-donor-title,
